@@ -1,0 +1,6 @@
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netstandard2.1\ComputerSecurityWeb.Dal.deps.json
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netstandard2.1\ComputerSecurityWeb.Dal.dll
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netstandard2.1\ComputerSecurityWeb.Dal.csprojAssemblyReference.cache
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netstandard2.1\ComputerSecurityWeb.Dal.AssemblyInfoInputs.cache
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netstandard2.1\ComputerSecurityWeb.Dal.AssemblyInfo.cs
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netstandard2.1\ComputerSecurityWeb.Dal.csproj.CoreCompileInputs.cache
