@@ -1,9 +1,12 @@
-/* 
+﻿/* 
 CAFF parser 
 
 1) Reading CAFF file from file system
 2) Extracting first CIFF section from CAFF file
 3) Converint CIFF to BMP
+
+
+
 */
 
 #define _CRT_SECURE_NO_DEPRECATE
@@ -27,6 +30,9 @@ CAFF parser
 #define CIFF_HEADER_HEIGHT_LENGTH 8
 #define CIFF_HEADER_CAPTION_OFFSET 36
 #define BYTES_PER_PIXEL 3
+
+#define HEADER_BLOCK 1
+#define CREDITS_BLOCK 2
 #define CIFF_BLOCK 3
 
 #define BMP_FILE_HEADER_SIZE 14
@@ -36,11 +42,9 @@ CAFF parser
 #define MAX_NUMBER_OF_COLORS 0
 #define IMPORTANT_COLORS_ALL 0
 
-
 typedef unsigned int int32;
 typedef short int16;
 typedef unsigned char byte;
-
 
 using std::cout;
 using std::endl;
@@ -48,48 +52,35 @@ using std::ifstream;
 using std::ofstream;
 using std::ios;
 
-struct BmpHeader {
-	char bitmapSignatureBytes[2] = { 'B', 'M' };
-	uint32_t sizeOfBitmapFile = 54 + 786432; // total size of bitmap file
-	uint32_t reservedBytes = 0;
-	uint32_t pixelDataOffset = 54;
-} bmpHeader;
+/*
+    Returns the number of bytes needed for padding.
+    BMP images can only handly horizontal rows when their size is the multiple of 4 bytes, so a padding might be necessary
 
-struct BmpInfoHeader {
-	uint32_t sizeOfThisHeader = 40;
-	int32_t width = 512; // in pixels
-	int32_t height = 512; // in pixels
-	uint16_t numberOfColorPlanes = 1; // must be 1
-	uint16_t colorDepth = 24;
-	uint32_t compressionMethod = 0;
-	uint32_t rawBitmapDataSize = 0; // generally ignored
-	int32_t horizontalResolution = 3780; // in pixel per meter
-	int32_t verticalResolution = 3780; // in pixel per meter
-	uint32_t colorTableEntries = 0;
-	uint32_t importantColors = 0;
-} bmpInfoHeader;
-
-struct Pixel {
-	uint8_t blue = 255;
-	uint8_t green = 255;
-	uint8_t red = 0;
-} pixel;
-
+    PROBLEM: - width * 3 > MAX_UNSIGNED_INT
+*/
 int getPadding(int32 width)
 {
     return (width * BYTES_PER_PIXEL) % 4;
 }
 
+/*
+    Returns the size of a row in the BME file in bytes.
+
+    PROBLEM: - width * 3 + 3 > MAX_INT
+*/
 int getRowSizeWithPadding(int32 width)
 {
     return BYTES_PER_PIXEL * width + getPadding(width);
 }
 
-int getRowSizeWithoutPadding(int32 width)
-{
-    return BYTES_PER_PIXEL * width;
-}
+/*
+    Creates the File Header of the BMP file. [Signature, File size, Reserved, Data offset]
 
+    PROBLEM: 
+        - bmpFile ?
+        - rowSizeWithPadding * height + BMP_FILE_HEADER_SIZE + BMP_INFO_HEADER_SIZE > MAX_UNSIGNED_INT
+            - ==> (3 * width + 3) * height + 54 > MAX_UNSIGNED_INT
+*/
 void writeBmpFileHeader(FILE* bmpFile, int32 width, int32 height)
 {
     // BM signature
@@ -111,6 +102,14 @@ void writeBmpFileHeader(FILE* bmpFile, int32 width, int32 height)
     fwrite(&dataOffset, 4, 1, bmpFile);
 }
 
+/*
+    Creates the Info Header of the BMP file.
+
+    PROBLEM:
+        - bmpFile ?
+        - height > MAX_INT
+        - width > MAX_UNSIGNED_INT
+*/
 void writeBmpInfoHeader(FILE* bmpFile, int32 width, int32 height)
 {
     // Info header size
@@ -154,18 +153,28 @@ void writeBmpInfoHeader(FILE* bmpFile, int32 width, int32 height)
     fwrite(&importantColors, 4, 1, bmpFile);
 }
 
+// Writes BMP header part to target file
 void writeBmpHeader(FILE* bmpFile, int32 width, int32 height)
 {
     writeBmpFileHeader(bmpFile, width, height);
     writeBmpInfoHeader(bmpFile, width, height);
 }
 
+// Appends 'padding' number of 'NULL' bytes to the end of a row.
 void appendPadding(FILE* file, int padding_length)
 {
     int null_padding = 0;
     fwrite(&null_padding, 1, padding_length, file);
 }
 
+
+/*
+    Reads pixel data from a CIFF block of the CAFF file, converts it to BMP compatible format and writes it to the BMP file.
+
+    PROBLEM: 
+        - height > MAX_INT
+        - width > MAX_INT
+*/
 void writeBmpData(FILE* bmpFile, FILE* caffFile, int32 width, int32 height)
 {
     int padding = getPadding(width);
@@ -187,14 +196,17 @@ void writeBmpData(FILE* bmpFile, FILE* caffFile, int32 width, int32 height)
     }
 }
 
-// Gets CIFF file dimensions and moves to the data part in the CIFF file.
-//
-//***Inputs*****
-//caffFile: the CAFF file we are parsing from 
-//***Outputs****
-//width: An int64 pointer to store the width of the image in pixels
-//height: An int64 pointer to store the height of the image in pixels
-//ciffHeaderLength: An int pointer to store the number of bytes per pixel that are used in the image
+/*  Gets CIFF file dimensions and moves to the data part in the CIFF file.
+
+    Inputs:
+        caffFile: the CAFF file we are parsing from 
+    Outputs:
+        width: An int64 pointer to store the width of the image in pixels
+        height: An int64 pointer to store the height of the image in pixels
+
+    PROBLEM:
+        - 
+*/
 void getCiffDimensions(FILE* caffFile, int64_t* width, int64_t* height)
 {
     int64_t ciffHeaderLength;
@@ -203,27 +215,65 @@ void getCiffDimensions(FILE* caffFile, int64_t* width, int64_t* height)
     fread(&ciffHeaderLength, sizeof(int64_t), 1, caffFile);
     int64_t contentSize;
     fread(&contentSize, sizeof(int64_t), 1, caffFile);
-    //fseek(caffFile, CIFF_HEADER_CONTENT_SIZE_LENGTH, SEEK_CUR);
     fread(width, sizeof(int64_t), 1, caffFile);
     fread(height, sizeof(int64_t), 1, caffFile);
 
-    cout << "width: " << *width << ", height: " << *height << ", content size: " << contentSize << endl;
+    cout << "width: " << *width << ", height: " << *height << ", content size: " << contentSize << endl; // remove
 
     // move to the END of CIFF header
-    cout << "ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET: " << ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET << endl;
+    cout << "ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET: " << ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET << endl; // remove
     fseek(caffFile, ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET, SEEK_CUR);
 }
 
-void parseCaff(const char* fileName)
+// Reads next byte from caffFile assuming its a blocktype field and returns its value.
+char readBlockType(FILE* caffFile)
 {
-    //Open the file for reading in binary mode
-    FILE* caffFile = fopen(fileName, "rb");
-
-    // read blocktype
     char blockType;
     fread(&blockType, 1, 1, caffFile);
-    cout << "blocktype: " << (int)blockType << endl;
+    int numericBlockType = (int)blockType;
+    if (numericBlockType != HEADER_BLOCK && numericBlockType != CREDITS_BLOCK && numericBlockType != CIFF_BLOCK)
+    {
+        throw "Invalid block type";
+    }
+    cout << "blocktype: " << numericBlockType << endl;
 
+    return blockType;
+}
+
+void checkWidthAndHeight(int64_t width, int64_t height) {
+    if (width == 0 || height == 0) {
+        throw "Width or height is 0. Can not generate preview.";
+    }
+
+    const int64_t MAX_WIDTH = 2147483647;
+    const int64_t MAX_HEIGHT = 715827881;
+    const int64_t MAX_WIDTH_TIMES_HEIGTH = 1431655746;
+
+    
+    if (width > MAX_WIDTH || height > MAX_HEIGHT || width > MAX_WIDTH_TIMES_HEIGTH / height + 1) {
+        std::cerr << "width: " << width << ", height: " << height << endl;
+        throw "Can not generate bmp file with the given CAFF's width and height dimensions.";
+    }
+}
+
+/*
+    Parses a BMP image from the first CIFF block of the CAFF file.
+
+    PROBLEM: - opening CAFF, BMP files
+*/
+void parseCaff(const char* caffFileName, const char* bmpFileName)
+{
+    //Open the file for reading in binary mode
+    FILE* caffFile = fopen(caffFileName, "rb");
+    if (caffFile == NULL)
+    {
+        throw "Couldn't open CAFF file.";
+    }
+
+    // read blocktype
+    char blockType = readBlockType(caffFile);
+
+    // Read file untill first CIFF block
     while ((int)blockType != CIFF_BLOCK)
     {
         // read length
@@ -235,8 +285,7 @@ void parseCaff(const char* fileName)
         fseek(caffFile, blockLength, SEEK_CUR);
 
         // read next blocktype
-        fread(&blockType, 1, 1, caffFile);
-        cout << "blocktype: " << (int)blockType << endl;
+        blockType = readBlockType(caffFile);
     }
     
     // read CIFF block length
@@ -250,8 +299,13 @@ void parseCaff(const char* fileName)
     int64_t width;
     int64_t height;
     getCiffDimensions(caffFile, &width, &height);
+    checkWidthAndHeight(width, height);
 
-    FILE* bmpFile = fopen("out.bmp", "wb");
+    FILE* bmpFile = fopen(bmpFileName, "wb");
+    if (bmpFile == NULL)
+    {
+        throw "Couldn't open BMP file for writing.";
+    }
     writeBmpHeader(bmpFile, width, height);
     writeBmpData(bmpFile, caffFile, width, height);
 
@@ -259,47 +313,60 @@ void parseCaff(const char* fileName)
     fclose(caffFile);
 }
 
-// BMP file creation test
-void writeSampleBmp()
+bool endsWith(const char* str, const char* suffix)
 {
-    int32 width = 2;
-    int32 height = 2;
-    FILE* bmpFile = fopen("sample.bmp", "wb");
-    writeBmpHeader(bmpFile, width, height);
-    uint8_t max = 255;
-    uint8_t min = 0;
-
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&min, 1, 1, bmpFile);
-    fwrite(&min, 1, 1, bmpFile);
-
-    fwrite(&min, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&min, 1, 1, bmpFile);
-
-    //padding
-    char null_char = 0x0000;
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-
-    fwrite(&min, 1, 1, bmpFile);
-    fwrite(&min, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-
-    //padding
-    fwrite(&max, 1, 1, bmpFile);
-    fwrite(&max, 1, 1, bmpFile);
-
-    fclose(bmpFile);
+    if (!str || !suffix)
+        return false;
+    size_t lenstr = strlen(str);
+    size_t lensuffix = strlen(suffix);
+    if (lensuffix > lenstr)
+        return false;
+    return strncmp(str + lenstr - lensuffix, suffix, lensuffix) == 0;
 }
 
-int main()
+void checkArguments(int argc, char* argv[]) {
+    if (argc != 3) {
+        throw "The parser anticipates exactly 2 arguments";
+    }
+
+    char* inputFileName = argv[1];
+    char* outputFileName = argv[2];
+    if (!endsWith(inputFileName, ".caff")) {
+        throw "input has to be a .caff file.";
+    }
+    if (!endsWith(outputFileName, ".bmp")) {
+        throw "output has to be a .bmp file.";
+    }
+
+    size_t inputFileNameLength = std::strlen(inputFileName);
+    size_t outputFileNameLength = std::strlen(outputFileName);
+    cout << "Input file name length: " << inputFileNameLength << ", output File name length: " << outputFileNameLength << endl;
+    if (inputFileNameLength < 6 || outputFileNameLength < 5) {
+        throw "file names must be at least 1 character long (without the extension).";
+    }
+    if (inputFileNameLength > 100 || outputFileNameLength > 100) {
+        throw "file names must be at most 100 characters long.";
+    }
+}
+
+int main(int argc, char* argv[])
 {
-    parseCaff("../../caff_files/1.caff");
+    try {
+        checkArguments(argc, argv);
+        const char* inputFileName = argv[1];
+        const char* outputFileName = argv[2];
+        
+        parseCaff(inputFileName, outputFileName);
+    }
+    catch (const char* msg) {
+        std::cerr << msg << endl;  // TODO: we should return the error to the backend later
+        return 1;
+    }
+    catch (...) {
+        std::cerr << "default exception: unknown problem occured during parsing." << endl;
+        return 1;
+    }
+
 	return 0;
 }
 
