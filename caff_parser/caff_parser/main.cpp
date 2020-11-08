@@ -16,6 +16,12 @@ CAFF parser
 #include <stdlib.h>
 #include <math.h>
 
+// for testing
+#include <chrono>
+#include <thread>
+
+
+
 #define CAFF_BLOCK_LENGTH_OFFSET 1
 #define CAFF_BLOCK_LENGTH_LENGTH 8
 #define CAFF_BLOCK_DATA_OFFSET 9
@@ -55,8 +61,6 @@ using std::ios;
 /*
     Returns the number of bytes needed for padding.
     BMP images can only handly horizontal rows when their size is the multiple of 4 bytes, so a padding might be necessary
-
-    PROBLEM: - width * 3 > MAX_UNSIGNED_INT
 */
 int getPadding(int32 width)
 {
@@ -65,8 +69,6 @@ int getPadding(int32 width)
 
 /*
     Returns the size of a row in the BME file in bytes.
-
-    PROBLEM: - width * 3 + 3 > MAX_INT
 */
 int getRowSizeWithPadding(int32 width)
 {
@@ -74,12 +76,37 @@ int getRowSizeWithPadding(int32 width)
 }
 
 /*
-    Creates the File Header of the BMP file. [Signature, File size, Reserved, Data offset]
+    calls fread() and checks if the given amount of bytes were read successfully.
+*/
+size_t fread_s(void* ptr, size_t size, size_t count, FILE* stream) {
+    size_t bytesRead = fread(ptr, size, count, stream);
+    if (bytesRead != count) {
+        throw "File reading error. Probably reached End Of File";
+    }
+    return bytesRead;
+}
 
-    PROBLEM: 
-        - bmpFile ?
-        - rowSizeWithPadding * height + BMP_FILE_HEADER_SIZE + BMP_INFO_HEADER_SIZE > MAX_UNSIGNED_INT
-            - ==> (3 * width + 3) * height + 54 > MAX_UNSIGNED_INT
+int fseek_s(FILE* stream, long int offset, int origin, int fileSize) {
+    switch (origin)
+    {
+    case SEEK_CUR: {
+        int currentPosition = ftell(stream);
+        if (offset > fileSize - currentPosition)
+            throw "Error: moving file pointer over the end of the file";
+    }
+        break;
+    case SEEK_SET:
+        if (offset > fileSize)
+            throw "Error: moving file pointer over the end of the file";
+        break;
+    default:
+        break;
+    }
+    return fseek(stream, offset, origin);
+}
+
+/*
+    Creates the File Header of the BMP file. [Signature, File size, Reserved, Data offset]
 */
 void writeBmpFileHeader(FILE* bmpFile, int32 width, int32 height)
 {
@@ -104,11 +131,6 @@ void writeBmpFileHeader(FILE* bmpFile, int32 width, int32 height)
 
 /*
     Creates the Info Header of the BMP file.
-
-    PROBLEM:
-        - bmpFile ?
-        - height > MAX_INT
-        - width > MAX_UNSIGNED_INT
 */
 void writeBmpInfoHeader(FILE* bmpFile, int32 width, int32 height)
 {
@@ -170,10 +192,6 @@ void appendPadding(FILE* file, int padding_length)
 
 /*
     Reads pixel data from a CIFF block of the CAFF file, converts it to BMP compatible format and writes it to the BMP file.
-
-    PROBLEM: 
-        - height > MAX_INT
-        - width > MAX_INT
 */
 void writeBmpData(FILE* bmpFile, FILE* caffFile, int32 width, int32 height)
 {
@@ -183,9 +201,9 @@ void writeBmpData(FILE* bmpFile, FILE* caffFile, int32 width, int32 height)
         for (int currentPixel = 0; currentPixel < width; currentPixel++)
         {
             uint8_t red, green, blue;
-            fread(&red, 1, 1, caffFile);
-            fread(&green, 1, 1, caffFile);
-            fread(&blue, 1, 1, caffFile);
+            fread_s(&red, 1, 1, caffFile);
+            fread_s(&green, 1, 1, caffFile);
+            fread_s(&blue, 1, 1, caffFile);
 
             fwrite(&blue, 1, 1, bmpFile);
             fwrite(&green, 1, 1, bmpFile);
@@ -203,33 +221,30 @@ void writeBmpData(FILE* bmpFile, FILE* caffFile, int32 width, int32 height)
     Outputs:
         width: An int64 pointer to store the width of the image in pixels
         height: An int64 pointer to store the height of the image in pixels
-
-    PROBLEM:
-        - 
 */
-void getCiffDimensions(FILE* caffFile, int64_t* width, int64_t* height)
+void getCiffDimensions(FILE* caffFile, int64_t* width, int64_t* height, int fileSize)
 {
     int64_t ciffHeaderLength;
 
-    fseek(caffFile, CIFF_HEADER_MAGIC_LENGTH, SEEK_CUR);
-    fread(&ciffHeaderLength, sizeof(int64_t), 1, caffFile);
+    fseek_s(caffFile, CIFF_HEADER_MAGIC_LENGTH, SEEK_CUR, fileSize);
+    fread_s(&ciffHeaderLength, sizeof(int64_t), 1, caffFile);
     int64_t contentSize;
-    fread(&contentSize, sizeof(int64_t), 1, caffFile);
-    fread(width, sizeof(int64_t), 1, caffFile);
-    fread(height, sizeof(int64_t), 1, caffFile);
+    fread_s(&contentSize, sizeof(int64_t), 1, caffFile);
+    fread_s(width, sizeof(int64_t), 1, caffFile);
+    fread_s(height, sizeof(int64_t), 1, caffFile);
 
     cout << "width: " << *width << ", height: " << *height << ", content size: " << contentSize << endl; // remove
 
     // move to the END of CIFF header
     cout << "ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET: " << ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET << endl; // remove
-    fseek(caffFile, ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET, SEEK_CUR);
+    fseek_s(caffFile, ciffHeaderLength - CIFF_HEADER_CAPTION_OFFSET, SEEK_CUR, fileSize);
 }
 
 // Reads next byte from caffFile assuming its a blocktype field and returns its value.
 char readBlockType(FILE* caffFile)
 {
     char blockType;
-    fread(&blockType, 1, 1, caffFile);
+    fread_s(&blockType, 1, 1, caffFile);
     int numericBlockType = (int)blockType;
     if (numericBlockType != HEADER_BLOCK && numericBlockType != CREDITS_BLOCK && numericBlockType != CIFF_BLOCK)
     {
@@ -248,7 +263,6 @@ void checkWidthAndHeight(int64_t width, int64_t height) {
     const int64_t MAX_WIDTH = 2147483647;
     const int64_t MAX_HEIGHT = 715827881;
     const int64_t MAX_WIDTH_TIMES_HEIGTH = 1431655746;
-
     
     if (width > MAX_WIDTH || height > MAX_HEIGHT || width > MAX_WIDTH_TIMES_HEIGTH / height + 1) {
         std::cerr << "width: " << width << ", height: " << height << endl;
@@ -270,6 +284,11 @@ void parseCaff(const char* caffFileName, const char* bmpFileName)
         throw "Couldn't open CAFF file.";
     }
 
+    // caff file size
+    fseek(caffFile, 0L, SEEK_END);
+    int caffFileSize = ftell(caffFile);
+    fseek(caffFile, 0L, SEEK_SET);
+
     // read blocktype
     char blockType = readBlockType(caffFile);
 
@@ -278,11 +297,11 @@ void parseCaff(const char* caffFileName, const char* bmpFileName)
     {
         // read length
         int64_t blockLength;
-        fread(&blockLength, sizeof(int64_t), 1, caffFile);
+        fread_s(&blockLength, sizeof(int64_t), 1, caffFile);
         cout << "block length: " << blockLength << endl;
 
         //move to next block
-        fseek(caffFile, blockLength, SEEK_CUR);
+        fseek_s(caffFile, blockLength, SEEK_CUR, caffFileSize);
 
         // read next blocktype
         blockType = readBlockType(caffFile);
@@ -290,15 +309,15 @@ void parseCaff(const char* caffFileName, const char* bmpFileName)
     
     // read CIFF block length
     int64_t ciffBlockLength;
-    fread(&ciffBlockLength, sizeof(int64_t), 1, caffFile);
+    fread_s(&ciffBlockLength, sizeof(int64_t), 1, caffFile);
     cout << "CIFF block length: " << ciffBlockLength << endl;
 
     // move to CIFF file
-    fseek(caffFile, CIFF_DURATION_FIELD_LENGTH, SEEK_CUR);
+    fseek_s(caffFile, CIFF_DURATION_FIELD_LENGTH, SEEK_CUR, caffFileSize);
 
     int64_t width;
     int64_t height;
-    getCiffDimensions(caffFile, &width, &height);
+    getCiffDimensions(caffFile, &width, &height, caffFileSize);
     checkWidthAndHeight(width, height);
 
     FILE* bmpFile = fopen(bmpFileName, "wb");
@@ -349,8 +368,51 @@ void checkArguments(int argc, char* argv[]) {
     }
 }
 
+void fileReadingTest() {
+    FILE* testFile = fopen("test.bmp", "rb");
+    if (testFile == NULL)
+    {
+        throw "Couldn't open Test file for reading.";
+    }
+
+    fseek(testFile, 0L, SEEK_END);
+    int fileSize = ftell(testFile);
+    fseek(testFile, 0L, SEEK_SET);
+    cout << "file size: " << fileSize << endl;
+    char c;
+    fread(&c, 1, 1, testFile);
+    cout << "current position: " << ftell(testFile) << endl;
+    cout << "character: " << c << endl;
+    fseek(testFile, 1, SEEK_CUR);
+    fread(&c, 1, 1, testFile);
+    cout << "current position: " << ftell(testFile) << endl;
+    cout << "character: " << c << endl;
+    fseek(testFile, 11, SEEK_CUR);
+    cout << "current position: " << ftell(testFile) << endl;
+    cout << "character: " << c << endl;
+    
+    fread(&c, 1, 1, testFile);
+    cout << "current position: " << ftell(testFile) << endl;
+    cout << "character: " << c << endl;
+
+    fseek(testFile, 0L, SEEK_SET);
+
+    char char1;
+    while (fread(&char1, 1, 1, testFile) == 1 && char1 != 'C') {
+        cout << "nem C...   " << char1 << endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    }
+    if (char1 == 'C')
+        cout << "C" << endl;
+    else
+        cout << " No C in file" << endl;
+
+}
+
 int main(int argc, char* argv[])
 {
+    //fileReadingTest();
+    
     try {
         checkArguments(argc, argv);
         const char* inputFileName = argv[1];
@@ -366,6 +428,7 @@ int main(int argc, char* argv[])
         std::cerr << "default exception: unknown problem occured during parsing." << endl;
         return 1;
     }
+    
 
 	return 0;
 }
