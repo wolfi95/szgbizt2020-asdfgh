@@ -1,12 +1,9 @@
 ﻿/* 
 CAFF parser 
 
-1) Reading CAFF file from file system
-2) Extracting first CIFF section from CAFF file
-3) Converint CIFF to BMP
-
-
-
+1) Reads CAFF file from file system
+2) Finds first CIFF block
+3) Converts CIFF block to BMP file
 */
 
 #define _CRT_SECURE_NO_DEPRECATE
@@ -15,11 +12,6 @@ CAFF parser
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-// for testing
-#include <chrono>
-#include <thread>
-
 
 
 #define CAFF_BLOCK_LENGTH_OFFSET 1
@@ -368,51 +360,8 @@ void checkArguments(int argc, char* argv[]) {
     }
 }
 
-void fileReadingTest() {
-    FILE* testFile = fopen("test.bmp", "rb");
-    if (testFile == NULL)
-    {
-        throw "Couldn't open Test file for reading.";
-    }
-
-    fseek(testFile, 0L, SEEK_END);
-    int fileSize = ftell(testFile);
-    fseek(testFile, 0L, SEEK_SET);
-    cout << "file size: " << fileSize << endl;
-    char c;
-    fread(&c, 1, 1, testFile);
-    cout << "current position: " << ftell(testFile) << endl;
-    cout << "character: " << c << endl;
-    fseek(testFile, 1, SEEK_CUR);
-    fread(&c, 1, 1, testFile);
-    cout << "current position: " << ftell(testFile) << endl;
-    cout << "character: " << c << endl;
-    fseek(testFile, 11, SEEK_CUR);
-    cout << "current position: " << ftell(testFile) << endl;
-    cout << "character: " << c << endl;
-    
-    fread(&c, 1, 1, testFile);
-    cout << "current position: " << ftell(testFile) << endl;
-    cout << "character: " << c << endl;
-
-    fseek(testFile, 0L, SEEK_SET);
-
-    char char1;
-    while (fread(&char1, 1, 1, testFile) == 1 && char1 != 'C') {
-        cout << "nem C...   " << char1 << endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    }
-    if (char1 == 'C')
-        cout << "C" << endl;
-    else
-        cout << " No C in file" << endl;
-
-}
-
 int main(int argc, char* argv[])
-{
-    //fileReadingTest();
-    
+{    
     try {
         checkArguments(argc, argv);
         const char* inputFileName = argv[1];
@@ -428,7 +377,6 @@ int main(int argc, char* argv[])
         std::cerr << "default exception: unknown problem occured during parsing." << endl;
         return 1;
     }
-    
 
 	return 0;
 }
