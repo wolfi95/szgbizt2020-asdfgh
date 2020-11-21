@@ -58,7 +58,8 @@ namespace ComputerSecurityWeb.Api
 
             //homemade services
             services
-                .AddScoped<IUserService, UserService>();
+                .AddScoped<IUserService, UserService>()
+                .AddScoped<ICaffService, CaffService>();
 
             services.AddSwaggerGen(c =>
             {

@@ -1,12 +1,8 @@
 ﻿/* 
 CAFF parser 
-
 1) Reading CAFF file from file system
 2) Extracting first CIFF section from CAFF file
 3) Converint CIFF to BMP
-
-
-
 */
 
 #define _CRT_SECURE_NO_DEPRECATE

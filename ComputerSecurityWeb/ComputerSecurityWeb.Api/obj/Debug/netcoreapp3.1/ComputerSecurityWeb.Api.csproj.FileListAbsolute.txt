@@ -1,7 +1,6 @@
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\libman.json
-D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.exe
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.deps.json
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.runtimeconfig.json
@@ -84,3 +83,4 @@ D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\o
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.csproj.CoreCompileInputs.cache
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\ComputerSecurityWeb.Api.styles.css
