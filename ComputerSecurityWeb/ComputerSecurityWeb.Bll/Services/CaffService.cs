@@ -16,13 +16,13 @@ namespace ComputerSecurityWeb.Bll.Services
         }
 
         // Use DllImport to import the Win32 MessageBox function.
-        [DllImport("HelloWorld.dll")]
-        public static extern int Double(int i);
+        [DllImport("caff_parser.dll")]
+        public static extern int Test(int i);
 
         public async Task<int> TestDll(int i)
         {
             var path = Directory.GetCurrentDirectory();
-            return Double(i);
+            return Test(i);
 
         }
     }

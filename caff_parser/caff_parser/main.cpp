@@ -6,6 +6,8 @@ CAFF parser
 */
 
 #define _CRT_SECURE_NO_DEPRECATE
+#include "main.h"
+
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -366,3 +368,9 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
+
+int  Test(int i) {
+
+    return 2 * i;
+
+}
