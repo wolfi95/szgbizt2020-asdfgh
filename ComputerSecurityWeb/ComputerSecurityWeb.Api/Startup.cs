@@ -94,7 +94,6 @@ namespace ComputerSecurityWeb.Api
             {
                 opt.Filters.Add(typeof(ValidateDtoActionFilter));
             })
-              .AddJsonOptions(o => o.JsonSerializerOptions.PropertyNamingPolicy = null)
             .AddFluentValidation(opt =>
             {
                 opt.RunDefaultMvcValidationAfterFluentValidationExecutes = false;

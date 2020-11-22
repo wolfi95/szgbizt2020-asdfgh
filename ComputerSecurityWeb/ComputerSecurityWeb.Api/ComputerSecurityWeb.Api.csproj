@@ -36,5 +36,7 @@
     <ProjectReference Include="..\ComputerSecurityWeb.Dal\ComputerSecurityWeb.Dal.csproj" />
   </ItemGroup>
 
-
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('$(SolutionDir)') And '$(ConfigurationName)'!='' ">
+    <Exec Command="dotnet $(SolutionDir)TSClientGenerator/bin/Debug/netcoreapp3.0/TSClientGenerator.dll &quot;$(SolutionDir)index.ts&quot; &quot;$(SolutionDir)ComputerSecurityWeb.Api/bin/Debug/netcoreapp3.1/ComputerSecurityWeb.Api.dll&quot; &quot;ComputerSecurityWeb.Api.Common.ComputerSecurityControllerBase&quot;" />
+  </Target>
 </Project>

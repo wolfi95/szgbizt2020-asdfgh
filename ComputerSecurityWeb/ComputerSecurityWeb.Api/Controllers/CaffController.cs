@@ -1,4 +1,5 @@
-﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
+﻿using ComputerSecurityWeb.Api.Common;
+using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -15,7 +16,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 {
     [Route("caff")]
     [ApiController]
-    public class CaffController : ControllerBase
+    public class CaffController : ComputerSecurityControllerBase
     {
         private readonly ICaffService caffService;
         private readonly UserManager<AppUser> userManager;
