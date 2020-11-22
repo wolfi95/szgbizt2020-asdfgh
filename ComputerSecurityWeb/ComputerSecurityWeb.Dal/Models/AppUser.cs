@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
+using System.Collections.Generic;
 
 namespace ComputerSecurityWeb.Dal.Models
 {
@@ -10,6 +11,8 @@ namespace ComputerSecurityWeb.Dal.Models
         public string LastName { get; set; }
 
         public string Role { get; set; }
+
+        public List<Comment> Comments { get; set; }
 
         public AppUser()
         {

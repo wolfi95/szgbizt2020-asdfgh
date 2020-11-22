@@ -13,11 +13,27 @@ namespace ComputerSecurityWeb.Dal
         {
         }
 
-  
+        public DbSet<CaffFileModel> CaffFiles { get; set; }
+
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Comment>(c =>
+            {
+                c.HasOne(c => c.User)
+                .WithMany(u => u.Comments)
+                .HasForeignKey(m => m.UserId);
+            });
+
+            modelBuilder.Entity<Comment>(c =>
+            {
+                c.HasOne(c => c.CaffFile)
+                .WithMany(u => u.Comments)
+                .HasForeignKey(m => m.CaffId);
+            });
         }
     }
 }
