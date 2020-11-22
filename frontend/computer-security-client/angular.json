@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "computer-security-client"
+  "defaultProject": "computer-security-client",
+  "cli": {
+    "analytics": false
+  }
 }
