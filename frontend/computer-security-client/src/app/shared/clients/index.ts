@@ -166,7 +166,7 @@ export class CaffTestClient {
         this.baseUrl = baseUrl ? baseUrl : "";
     }
 
-    test(i: number): Observable<string | null> {
+    test(i: number): Observable<number> {
         let url_ = this.baseUrl + "/caff/test?";
         if (i === undefined || i === null)
             throw new Error("The parameter 'i' must be defined and cannot be null.");
@@ -189,14 +189,14 @@ export class CaffTestClient {
                 try {
                     return this.processTest(<any>response_);
                 } catch (e) {
-                    return <Observable<string | null>><any>_observableThrow(e);
+                    return <Observable<number>><any>_observableThrow(e);
                 }
             } else
-                return <Observable<string | null>><any>_observableThrow(response_);
+                return <Observable<number>><any>_observableThrow(response_);
         }));
     }
 
-    protected processTest(response: HttpResponseBase): Observable<string | null> {
+    protected processTest(response: HttpResponseBase): Observable<number> {
         const status = response.status;
         const responseBlob = 
             response instanceof HttpResponse ? response.body : 
@@ -219,7 +219,7 @@ export class CaffTestClient {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
         }
-        return _observableOf<string | null>(<any>null);
+        return _observableOf<number>(<any>null);
     }
 }
 
@@ -236,13 +236,20 @@ export class CaffUploadClient {
         this.baseUrl = baseUrl ? baseUrl : "";
     }
 
-    uploadCaffFile(name: string | null | undefined): Observable<void> {
+    uploadCaffFile(fileName: string | null, data: FileParameter | null | undefined): Observable<void> {
         let url_ = this.baseUrl + "/caff/upload?";
-        if (name !== undefined)
-            url_ += "name=" + encodeURIComponent("" + name) + "&"; 
+        if (fileName === undefined)
+            throw new Error("The parameter 'fileName' must be defined.");
+        else
+            url_ += "fileName=" + encodeURIComponent("" + fileName) + "&"; 
         url_ = url_.replace(/[?&]$/, "");
 
+        const content_ = new FormData();
+        if (data !== null && data !== undefined)
+            content_.append("data", data.data, data.fileName ? data.fileName : "data");
+
         let options_ : any = {
+            body: content_,
             observe: "response",
             responseType: "blob",
             headers: new HttpHeaders({
@@ -366,8 +373,12 @@ export class CaffGetcafffileClient {
         this.baseUrl = baseUrl ? baseUrl : "";
     }
 
-    getCaffFileById(): Observable<string[] | null> {
-        let url_ = this.baseUrl + "/caff/getcafffile";
+    getCaffFileById(id: string): Observable<CaffHeader | null> {
+        let url_ = this.baseUrl + "/caff/getcafffile?";
+        if (id === undefined || id === null)
+            throw new Error("The parameter 'id' must be defined and cannot be null.");
+        else
+            url_ += "Id=" + encodeURIComponent("" + id) + "&"; 
         url_ = url_.replace(/[?&]$/, "");
 
         let options_ : any = {
@@ -385,14 +396,14 @@ export class CaffGetcafffileClient {
                 try {
                     return this.processGetCaffFileById(<any>response_);
                 } catch (e) {
-                    return <Observable<string[] | null>><any>_observableThrow(e);
+                    return <Observable<CaffHeader | null>><any>_observableThrow(e);
                 }
             } else
-                return <Observable<string[] | null>><any>_observableThrow(response_);
+                return <Observable<CaffHeader | null>><any>_observableThrow(response_);
         }));
     }
 
-    protected processGetCaffFileById(response: HttpResponseBase): Observable<string[] | null> {
+    protected processGetCaffFileById(response: HttpResponseBase): Observable<CaffHeader | null> {
         const status = response.status;
         const responseBlob = 
             response instanceof HttpResponse ? response.body : 
@@ -403,11 +414,7 @@ export class CaffGetcafffileClient {
             return blobToText(responseBlob).pipe(_observableMergeMap(_responseText => {
             let result200: any = null;
             let resultData200 = _responseText === "" ? null : JSON.parse(_responseText, this.jsonParseReviver);
-            if (resultData200 && resultData200.constructor === Array) {
-                result200 = [];
-                for (let item of resultData200)
-                    result200.push(item);
-            }
+            result200 = resultData200 ? CaffHeader.fromJS(resultData200) : <any>null;
             return _observableOf(result200);
             }));
         } else if (status === 400) {
@@ -419,7 +426,7 @@ export class CaffGetcafffileClient {
             return throwException("An unexpected server error occurred.", status, _responseText, _headers);
             }));
         }
-        return _observableOf<string[] | null>(<any>null);
+        return _observableOf<CaffHeader | null>(<any>null);
     }
 }
 
@@ -506,7 +513,7 @@ export class CaffCommentClient {
         this.baseUrl = baseUrl ? baseUrl : "";
     }
 
-    uploadCaffFile2(message: string | null, caffFileId: string): Observable<void> {
+    comment(message: string | null, caffFileId: string): Observable<void> {
         let url_ = this.baseUrl + "/caff/comment?";
         if (message === undefined)
             throw new Error("The parameter 'message' must be defined.");
@@ -526,11 +533,11 @@ export class CaffCommentClient {
         };
 
         return this.http.request("post", url_, options_).pipe(_observableMergeMap((response_ : any) => {
-            return this.processUploadCaffFile2(response_);
+            return this.processComment(response_);
         })).pipe(_observableCatch((response_: any) => {
             if (response_ instanceof HttpResponseBase) {
                 try {
-                    return this.processUploadCaffFile2(<any>response_);
+                    return this.processComment(<any>response_);
                 } catch (e) {
                     return <Observable<void>><any>_observableThrow(e);
                 }
@@ -539,7 +546,7 @@ export class CaffCommentClient {
         }));
     }
 
-    protected processUploadCaffFile2(response: HttpResponseBase): Observable<void> {
+    protected processComment(response: HttpResponseBase): Observable<void> {
         const status = response.status;
         const responseBlob = 
             response instanceof HttpResponse ? response.body : 
@@ -715,6 +722,7 @@ export class CaffHeader implements ICaffHeader {
     id!: string;
     name?: string | undefined;
     imageData?: string | undefined;
+    comments?: CommentDto[] | undefined;
 
     constructor(data?: ICaffHeader) {
         if (data) {
@@ -730,6 +738,11 @@ export class CaffHeader implements ICaffHeader {
             this.id = data["id"];
             this.name = data["name"];
             this.imageData = data["imageData"];
+            if (data["comments"] && data["comments"].constructor === Array) {
+                this.comments = [];
+                for (let item of data["comments"])
+                    this.comments.push(CommentDto.fromJS(item));
+            }
         }
     }
 
@@ -745,6 +758,11 @@ export class CaffHeader implements ICaffHeader {
         data["id"] = this.id;
         data["name"] = this.name;
         data["imageData"] = this.imageData;
+        if (this.comments && this.comments.constructor === Array) {
+            data["comments"] = [];
+            for (let item of this.comments)
+                data["comments"].push(item.toJSON());
+        }
         return data; 
     }
 }
@@ -753,6 +771,64 @@ export interface ICaffHeader {
     id: string;
     name?: string | undefined;
     imageData?: string | undefined;
+    comments?: CommentDto[] | undefined;
+}
+
+export class CommentDto implements ICommentDto {
+    id!: string;
+    userId!: string;
+    userName?: string | undefined;
+    content?: string | undefined;
+    caffFileId!: string;
+
+    constructor(data?: ICommentDto) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(data?: any) {
+        if (data) {
+            this.id = data["id"];
+            this.userId = data["userId"];
+            this.userName = data["userName"];
+            this.content = data["content"];
+            this.caffFileId = data["caffFileId"];
+        }
+    }
+
+    static fromJS(data: any): CommentDto {
+        data = typeof data === 'object' ? data : {};
+        let result = new CommentDto();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["id"] = this.id;
+        data["userId"] = this.userId;
+        data["userName"] = this.userName;
+        data["content"] = this.content;
+        data["caffFileId"] = this.caffFileId;
+        return data; 
+    }
+}
+
+export interface ICommentDto {
+    id: string;
+    userId: string;
+    userName?: string | undefined;
+    content?: string | undefined;
+    caffFileId: string;
+}
+
+export interface FileParameter {
+    data: any;
+    fileName: string;
 }
 
 export class SwaggerException extends Error {

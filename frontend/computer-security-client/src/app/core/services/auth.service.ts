@@ -4,9 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { IUserModel } from '../models/user';
+import { IUserModel, IUserRegisterModel } from '../models/user';
 import { environment } from 'src/environments/environment';
-import { AuthLoginClient, LoginRequestDTO, UserDTO } from 'src/app/shared/clients';
+import { AuthLoginClient, AuthRegisterClient, LoginRequestDTO, RegistrationRequestDTO, UserDTO } from 'src/app/shared/clients';
 import { Role } from '../models/role';
 
 @Injectable({ providedIn: 'root' })
@@ -16,7 +16,8 @@ export class AuthenticationService {
 
     constructor(
         private router: Router,
-        private authLoginClient: AuthLoginClient
+        private authLoginClient: AuthLoginClient,
+        private authRegisterClient: AuthRegisterClient
     ) {
         this.userSubject = new BehaviorSubject<IUserModel>(JSON.parse(localStorage.getItem('user')!));
         this.user = this.userSubject.asObservable();
@@ -32,6 +33,29 @@ export class AuthenticationService {
             password: password
         })
         return this.authLoginClient.login(dto)
+            .pipe(map(dto => {
+                const user: IUserModel = {
+                    id: dto.id,
+                    firstName: dto.firstName,
+                    lastName: dto.lastName,
+                    role: (<any>Role)[dto.role],
+                    token: dto.token
+                };
+                localStorage.setItem('user', JSON.stringify(user));
+                this.userSubject.next(user);
+                return user;
+            }));
+    }
+
+    register(model: IUserRegisterModel): Observable<IUserModel> {
+        const dto = new RegistrationRequestDTO({
+            firstName: model.firstName,
+            lastName: model.lastName,
+            email: model.email,
+            password: model.password,
+            confirmPassword: model.confirmPassword
+        })
+        return this.authRegisterClient.register(dto)
             .pipe(map(dto => {
                 const user: IUserModel = {
                     id: dto.id,

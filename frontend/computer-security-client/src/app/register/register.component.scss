@@ -23,13 +23,14 @@ html {
     font-weight: 600;
     text-transform: uppercase;
     display:inline-block;
-    margin: 40px 8px 10px 8px; 
-    color: #cccccc;
+    margin: 40px 8px 20px 8px; 
+    color: #999999;
+  }
+
+  span {
+      color: #92badd;
   }
   
-  span {
-    color: #92badd;
-}
   
   
   /* STRUCTURE */
@@ -84,7 +85,7 @@ html {
   
   /* FORM TYPOGRAPHY*/
   
-button {
+  button {
     background-color: #56baed;
     border: none;
     color: white;
@@ -261,5 +262,6 @@ button:active{
   } 
   
   #icon {
+    padding-top: 2rem;
     width:60%;
   }

@@ -8,3 +8,11 @@ export interface IUserModel {
     role?: Role;
     token?: string;
 }
+
+export interface IUserRegisterModel {
+    email: string;
+    firstName: string;
+    lastName: string;
+    password: string;
+    confirmPassword: string;
+}

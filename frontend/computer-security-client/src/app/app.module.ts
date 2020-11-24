@@ -11,20 +11,22 @@ import { ErrorInterceptor } from './core/interceptors/error.interceptor';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { API_BASE_URL } from './shared/clients';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  declarations: [
+  declarations: [	
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent
-  ],
+    AdminComponent,
+    RegisterComponent,
+   ],
   providers: [
     { provide: API_BASE_URL, useValue: 'https://localhost:44335'},
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

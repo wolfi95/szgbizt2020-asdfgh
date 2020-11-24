@@ -16,6 +16,7 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
         Task<CaffInfoDto> GetCaffById(Guid id);
 
         Task AddCaffFile(string name);
+        public Task AddComment(Guid userId, Guid caffId, string message);
 
         Task AddComment(Guid userId, Guid caffId, string message);
 
