@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         [HttpPost]
         [Route("test")]
-        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
         public async Task<IActionResult> Test(int i)
@@ -47,15 +48,28 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         public async Task<IActionResult> DownloadCaffFileById(Guid caffFileId)
         {
-            throw new NotImplementedException();
+            //var caffFile = await this.caffService.GetCaffById(caffFileId);
+            //MOCK:
+            var caffFile = new CaffInfoDto
+            {
+                Id = Guid.NewGuid(),
+                Filename = "1.caff",
+                Bytes = System.IO.File.ReadAllBytes($"CaffFiles/1.caff")
+            };
+            var mimeType = "application/caff";
+
+            return new FileContentResult(caffFile.Bytes, mimeType)
+            {
+                FileDownloadName = caffFile.Filename
+            };
         }
 
         [HttpGet]
         [Route("getcafffile")]
-        [ProducesResponseType(typeof(List<string>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(CaffHeader), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> GetCaffFileById()
+        public async Task<IActionResult> GetCaffFileById(Guid Id)
         {
             throw new NotImplementedException();
         }
@@ -67,7 +81,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         public async Task<IActionResult> GetAllCaffFiles()
         {
-            return new JsonResult( await this.caffService.GetAllCaffFiles());
+            return new JsonResult(await this.caffService.GetAllCaffFiles());
         }
 
         [HttpPost]

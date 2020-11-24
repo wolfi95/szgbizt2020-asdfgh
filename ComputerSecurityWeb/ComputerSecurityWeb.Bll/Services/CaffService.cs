@@ -1,8 +1,11 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
+using ComputerSecurityWeb.Dal;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +14,11 @@ namespace ComputerSecurityWeb.Bll.Services
 {
     public class CaffService : ICaffService
     {
+        private readonly ApplicationDbContext context;
 
-        public CaffService()
+        public CaffService(ApplicationDbContext context)
         {
+            this.context = context;
         }
 
         // Use DllImport to import the Win32 MessageBox function.
@@ -48,6 +53,22 @@ namespace ComputerSecurityWeb.Bll.Services
             var path = Directory.GetCurrentDirectory();
             return Test(i);
 
+        }
+
+        public async Task Download(Guid caffFileId)
+        {
+
+        }
+
+        public async Task<CaffInfoDto> GetCaffById(Guid id)
+        {
+            var CaffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == id);
+            if (CaffModel is null)
+            {
+                throw new Exception("Caff file with the given ID was not found");
+            }
+
+            return  new CaffInfoDto(CaffModel);
         }
     }
 }
