@@ -16,7 +16,7 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 
         public Task AddCaffFile(string name);
 
-        public Task AddComment(Guid caffId, string message);
+        public Task AddComment(Guid userId, Guid caffId, string message);
 
     }
 }
