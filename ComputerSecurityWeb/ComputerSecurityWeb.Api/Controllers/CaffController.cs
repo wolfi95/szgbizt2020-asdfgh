@@ -36,9 +36,28 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> UploadCaffFile(CaffUploadDto d)
+        public async Task<IActionResult> UploadCaffFile(string fileName, IFormFile data)
         {
-            throw new NotImplementedException();
+            if (data.Length > 0)
+            {
+                if(fileName.Contains('.') || fileName.Contains("\\") || fileName.Contains("/") )
+                {
+                    throw new Exception("invalid file name!");
+                }
+
+                var filePath = Path.Combine("CaffFiles",
+                    $"{fileName}.caff");
+
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                   await data.CopyToAsync(stream);
+                }
+
+                await this.caffService.AddCaffFile(fileName);
+            }
+
+            return new OkResult();
+
         }
 
         [HttpGet]
@@ -48,19 +67,19 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         public async Task<IActionResult> DownloadCaffFileById(Guid caffFileId)
         {
-            //var caffFile = await this.caffService.GetCaffById(caffFileId);
-            //MOCK:
-            var caffFile = new CaffInfoDto
-            {
-                Id = Guid.NewGuid(),
-                Filename = "1.caff",
-                Bytes = System.IO.File.ReadAllBytes($"CaffFiles/1.caff")
-            };
+            var caffFile = await this.caffService.GetCaffById(caffFileId);
+            ////MOCK:
+            //var caffFile = new CaffInfoDto
+            //{
+            //    Id = Guid.NewGuid(),
+            //    Filename = "1.caff",
+            //    Bytes = System.IO.File.ReadAllBytes($"CaffFiles/1.caff")
+            //};
             var mimeType = "application/caff";
 
             return new FileContentResult(caffFile.Bytes, mimeType)
             {
-                FileDownloadName = caffFile.Filename
+                FileDownloadName = $"{caffFile.Filename}.caff"
             };
         }
 

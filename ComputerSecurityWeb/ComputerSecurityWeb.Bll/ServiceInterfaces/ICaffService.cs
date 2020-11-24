@@ -14,5 +14,7 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 
         public Task<CaffInfoDto> GetCaffById(Guid id);
 
+        public Task AddCaffFile(string name);
+
     }
 }

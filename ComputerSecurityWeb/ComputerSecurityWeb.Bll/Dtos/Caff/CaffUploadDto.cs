@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,6 @@ namespace ComputerSecurityWeb.Bll.Dtos.Caff
     {
         public string Name { get; set; }
 
-        //TODO: CaffFile idk milyen formában
+        public IFormFile Data { get; set; } 
     }
 }

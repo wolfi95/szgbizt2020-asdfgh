@@ -1,6 +1,7 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal;
+using ComputerSecurityWeb.Dal.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -69,6 +70,17 @@ namespace ComputerSecurityWeb.Bll.Services
             }
 
             return  new CaffInfoDto(CaffModel);
+        }
+
+        public async Task AddCaffFile(string name)
+        {
+            await this.context.CaffFiles.AddAsync(new CaffFileModel
+            {
+                Id = Guid.NewGuid(),
+                FileName = name
+            });
+
+            await this.context.SaveChangesAsync();
         }
     }
 }

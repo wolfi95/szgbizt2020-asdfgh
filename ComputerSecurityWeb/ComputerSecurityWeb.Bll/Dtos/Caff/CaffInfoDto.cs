@@ -22,7 +22,7 @@ namespace ComputerSecurityWeb.Bll.Dtos.Caff
         {
             this.Id = model.Id;
             this.Filename = model.FileName;
-            this.Bytes = File.ReadAllBytes($"CaffFiles/{model.FileName}");
+            this.Bytes = File.ReadAllBytes($"CaffFiles/{model.FileName}.caff");
         }
     }
 
