@@ -29,61 +29,46 @@ namespace ComputerSecurityWeb.Bll.Services
 
         public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
-            //TEST: ///////////////////////////////////////////////////////////
-
-            //TODO: Statikus file olvasás helyett a dll függvénye ad itt vissza adatot
+            ////TODO: Statikus file olvasás helyett a dll függvénye ad itt vissza adatot
             byte[] imageArray = File.ReadAllBytes(@"CaffFiles/asd.bmp");
             string base64ImageRepresentation = Convert.ToBase64String(imageArray);
 
             var list = new List<CaffHeader>();
-            list.Add(new CaffHeader
+            List<CaffFileModel> models = await this.context.CaffFiles
+                    .Include(x => x.Comments).ThenInclude(c => c.User)
+                .ToListAsync();
+
+            models.ForEach(x =>
             {
-                Id = Guid.NewGuid(),
-                Name = "Test1",
-                ImageData = base64ImageRepresentation
+                var comments = new List<CommentDto>();
+                x.Comments.ForEach(c =>
+                {
+                    comments.Add(new CommentDto
+                    {
+                        Id = c.Id,
+                        UserId = c.UserId,
+                        UserName = c.User.UserName,
+                        CaffFileId = c.CaffId,
+                        Content = c.Content
+                    });
+                });
+
+                list.Add(new CaffHeader
+                {
+                    Id = x.Id,
+                    Name = x.FileName,
+                    ImageData = base64ImageRepresentation,
+                    Comments = comments
+                });
             });
 
             return list;
-
-
-            //TEST OVER: //////////////////////////////////////////////////////
-
-            //List<CaffFileModel> models = await this.context.CaffFiles
-            //        .Include(x => x.Comments).ThenInclude(c => c.User)
-            //    .ToListAsync();
-
-            //models.ForEach(x =>
-            //{
-            //    var comments = new List<CommentDto>();
-            //    x.Comments.ForEach(c =>
-            //    {
-            //        comments.Add(new CommentDto
-            //        {
-            //            Id = c.Id,
-            //            UserId = c.UserId,
-            //            UserName = c.User.UserName,
-            //            CaffFileId = c.CaffId,
-            //            Content = c.Content
-            //        });
-            //    });
-
-            //    list.Add(new CaffHeader
-            //    {
-            //        Id = x.Id,
-            //        Name = x.FileName,
-            //        //TODO ImageData = "aasd"
-            //        Comments = comments
-            //    });
-            //});
-
-            //return list;
         }
 
         public async Task<int> TestDll(int i)
         {
             var path = Directory.GetCurrentDirectory();
             return Test(i);
-
         }
 
 

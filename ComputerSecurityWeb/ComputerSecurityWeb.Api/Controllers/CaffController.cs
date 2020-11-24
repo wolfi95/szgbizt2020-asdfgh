@@ -60,9 +60,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 
                 await this.caffService.AddCaffFile(fileName);
             }
-
             return new OkResult();
-
         }
 
         [HttpGet]
@@ -73,29 +71,12 @@ namespace ComputerSecurityWeb.Api.Controllers
         public async Task<IActionResult> DownloadCaffFileById(Guid caffFileId)
         {
             var caffFile = await this.caffService.GetCaffById(caffFileId);
-            ////MOCK:
-            //var caffFile = new CaffInfoDto
-            //{
-            //    Id = Guid.NewGuid(),
-            //    Filename = "1.caff",
-            //    Bytes = System.IO.File.ReadAllBytes($"CaffFiles/1.caff")
-            //};
             var mimeType = "application/caff";
 
             return new FileContentResult(caffFile.Bytes, mimeType)
             {
                 FileDownloadName = $"{caffFile.Filename}.caff"
             };
-        }
-
-        [HttpGet]
-        [Route("getcafffile")]
-        [ProducesResponseType(typeof(CaffHeader), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-        public async Task<IActionResult> GetCaffFileById(Guid Id)
-        {
-            throw new NotImplementedException();
         }
 
         [HttpGet]
