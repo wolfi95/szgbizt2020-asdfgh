@@ -47,6 +47,36 @@ namespace ComputerSecurityWeb.Bll.Services
 
 
             //TEST OVER: //////////////////////////////////////////////////////
+
+            //List<CaffFileModel> models = await this.context.CaffFiles
+            //        .Include(x => x.Comments).ThenInclude(c => c.User)
+            //    .ToListAsync();
+
+            //models.ForEach(x =>
+            //{
+            //    var comments = new List<CommentDto>();
+            //    x.Comments.ForEach(c =>
+            //    {
+            //        comments.Add(new CommentDto
+            //        {
+            //            Id = c.Id,
+            //            UserId = c.UserId,
+            //            UserName = c.User.UserName,
+            //            CaffFileId = c.CaffId,
+            //            Content = c.Content
+            //        });
+            //    });
+
+            //    list.Add(new CaffHeader
+            //    {
+            //        Id = x.Id,
+            //        Name = x.FileName,
+            //        //TODO ImageData = "aasd"
+            //        Comments = comments
+            //    });
+            //});
+
+            //return list;
         }
 
         public async Task<int> TestDll(int i)
@@ -56,10 +86,6 @@ namespace ComputerSecurityWeb.Bll.Services
 
         }
 
-        public async Task Download(Guid caffFileId)
-        {
-
-        }
 
         public async Task<CaffInfoDto> GetCaffById(Guid id)
         {
@@ -81,6 +107,26 @@ namespace ComputerSecurityWeb.Bll.Services
             });
 
             await this.context.SaveChangesAsync();
+        }
+
+        public async Task AddComment(Guid userId, Guid caffId, string message)
+        {
+            var CaffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == caffId);
+            if (CaffModel is null)
+            {
+                throw new Exception("Caff file with the given ID was not found");
+            }
+
+            if(message.Length > 0)
+            {
+                await this.context.Comments.AddAsync(new Comment
+                {
+                    CaffId = CaffModel.Id,
+                    UserId = userId,
+                    Content = message
+                });
+                await this.context.SaveChangesAsync();
+            }
         }
     }
 }

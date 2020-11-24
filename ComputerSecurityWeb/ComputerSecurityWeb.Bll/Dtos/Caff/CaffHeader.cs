@@ -11,5 +11,7 @@ namespace ComputerSecurityWeb.Bll.Dtos.Caff
         public string Name { get; set; }
 
         public string ImageData { get; set; }
+
+        public List<CommentDto> Comments { get; set; }
     }
 }

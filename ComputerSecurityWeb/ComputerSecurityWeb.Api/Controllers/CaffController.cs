@@ -1,6 +1,8 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
+using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,10 +17,13 @@ namespace ComputerSecurityWeb.Api.Controllers
     public class CaffController : ControllerBase
     {
         private readonly ICaffService caffService;
+        private readonly UserManager<AppUser> userManager;
 
-        public CaffController(ICaffService caffService)
+        public CaffController(ICaffService caffService,
+            UserManager<AppUser> userManager)
         {
             this.caffService = caffService;
+            this.userManager = userManager;
         }
 
         [HttpPost]
@@ -108,9 +113,11 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> UploadCaffFile(string message, Guid caffFileId)
+        public async Task<IActionResult> Comment(string message, Guid caffFileId)
         {
-            throw new NotImplementedException();
+            var userId = this.userManager.GetUserId(User);
+            await this.caffService.AddComment(new Guid(userId), caffFileId, message);
+            return new OkResult();
         }
     }
 }
