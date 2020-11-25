@@ -14,7 +14,10 @@ export class CafffileService {
     ) { }
 
   getAllCaffFiles(): Observable<ICaffFileListItemModel[]>{
-    return this.caffCafffilesClient.getAllCaffFiles().pipe(map(this.caffHeaderToModel));
+    //return this.caffCafffilesClient.getAllCaffFiles().pipe(map(this.caffHeaderToModel));
+    return this.caffCafffilesClient.getAllCaffFiles().pipe(map(
+      (dtos: CaffHeader[]):ICaffFileListItemModel[] => this.caffHeaderToModel(dtos)
+    ));
   }
 
   private caffHeaderToModel(dtos: CaffHeader[]): ICaffFileListItemModel[] {

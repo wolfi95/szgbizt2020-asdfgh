@@ -89,9 +89,9 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(typeof(List<CaffHeader>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> GetAllCaffFiles()
+        public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
-            return new JsonResult(await this.caffService.GetAllCaffFiles());
+            return await caffService.GetAllCaffFiles();
         }
 
         [HttpPost]
