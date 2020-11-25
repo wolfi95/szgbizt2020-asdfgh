@@ -12,6 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { API_BASE_URL } from './shared/clients';
 import { RegisterComponent } from './register/register.component';
+import { CafffilesComponent } from './cafffiles/cafffiles.component';
+import { CafffileCreateComponent } from './cafffiles/cafffile-create/cafffile-create.component';
+import { CafffileDetailsComponent } from './cafffiles/cafffile-details/cafffile-details.component';
+import { CafffileListComponent } from './cafffiles/cafffile-list/cafffile-list.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
@@ -26,6 +31,11 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     AdminComponent,
     RegisterComponent,
+    CafffilesComponent,
+    CafffileCreateComponent,
+    CafffileDetailsComponent,
+    CafffileListComponent,
+    ProfileComponent,
    ],
   providers: [
     { provide: API_BASE_URL, useValue: 'https://localhost:44335'},
