@@ -19,6 +19,8 @@ import { CafffileListComponent } from './cafffiles/cafffile-list/cafffile-list.c
 import { ProfileComponent } from './profile/profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
+import { CafffileListItemComponent } from './cafffiles/cafffile-list/cafffile-list-item/cafffile-list-item.component';
+import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-start.component';
 
 @NgModule({
   imports: [
@@ -40,6 +42,8 @@ import { ProfileEditComponent } from './profile/profile-edit/profile-edit.compon
     CafffileListComponent,
     ProfileComponent,
     ProfileEditComponent,
+    CafffileListItemComponent,
+    CafffileStartComponent,
    ],
   providers: [
     { provide: API_BASE_URL, useValue: 'https://localhost:44335'},
