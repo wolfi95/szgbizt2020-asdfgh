@@ -1,12 +1,13 @@
 ﻿/* 
 CAFF parser 
-
 1) Reads CAFF file from file system
 2) Finds first CIFF block
 3) Converts CIFF block to BMP file
 */
 
 #define _CRT_SECURE_NO_DEPRECATE
+#include "main.h"
+
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
@@ -436,3 +437,9 @@ int main(int argc, char* argv[])
 	return 0;
 }
 
+
+int  Test(int i) {
+
+    return 2 * i;
+
+}
