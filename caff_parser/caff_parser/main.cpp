@@ -410,6 +410,9 @@ char* parseCaffToBmpStreamV1(const char* caffName) {
         logMessage(msg);
         throw msg;
     }
+    catch (std::exception const& e) {
+        logMessage(e.what());
+    }
     catch (...) {
         logMessage("default exception: unknown problem occured during parsing.");
         throw;
