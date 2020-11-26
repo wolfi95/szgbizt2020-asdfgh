@@ -11,7 +11,7 @@ extern "C" {
 #  define MODULE_API
 #endif
 	MODULE_API int Test(int i);
-	MODULE_API char* parseCaffToBmpStreamV1(const char* caffName, long& fileLength);
+	MODULE_API char* parseCaffToBmpStreamV1(const char* caffName);
 #ifdef __cplusplus
 }
 #endif
