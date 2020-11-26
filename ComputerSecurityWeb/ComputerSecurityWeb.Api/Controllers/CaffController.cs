@@ -1,6 +1,7 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -98,6 +99,30 @@ namespace ComputerSecurityWeb.Api.Controllers
         {
             var userId = this.userManager.GetUserId(User);
             await this.caffService.AddComment(new Guid(userId), caffFileId, message);
+            return new OkResult();
+        }
+
+        [HttpPost]
+        [Authorize(Roles ="Admin")]
+        [Route("editcaff")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> Comment(Guid caffId, string newName)
+        {
+            await this.caffService.EditCaffFile(caffId, newName);
+            return new OkResult();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        [Route("deletecaff")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> DeleteCaffFile(Guid caffId)
+        {
+            await this.caffService.DeleteCaffFile(caffId);
             return new OkResult();
         }
     }

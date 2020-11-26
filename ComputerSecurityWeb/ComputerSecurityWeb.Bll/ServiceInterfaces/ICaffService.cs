@@ -8,15 +8,19 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 {
     public interface ICaffService
     {
-        public Task<int> TestDll(int i);
+        Task<int> TestDll(int i);
 
-        public Task<List<CaffHeader>> GetAllCaffFiles();
+        Task<List<CaffHeader>> GetAllCaffFiles();
 
-        public Task<CaffInfoDto> GetCaffById(Guid id);
+        Task<CaffInfoDto> GetCaffById(Guid id);
 
-        public Task AddCaffFile(string name);
+        Task AddCaffFile(string name);
 
-        public Task AddComment(Guid userId, Guid caffId, string message);
+        Task AddComment(Guid userId, Guid caffId, string message);
+
+        Task EditCaffFile(Guid caffId, string newName);
+
+        Task DeleteCaffFile(Guid caffId);
 
     }
 }

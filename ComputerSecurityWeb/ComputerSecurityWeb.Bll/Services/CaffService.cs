@@ -74,13 +74,13 @@ namespace ComputerSecurityWeb.Bll.Services
 
         public async Task<CaffInfoDto> GetCaffById(Guid id)
         {
-            var CaffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == id);
-            if (CaffModel is null)
+            var caffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == id);
+            if (caffModel is null)
             {
                 throw new Exception("Caff file with the given ID was not found");
             }
 
-            return  new CaffInfoDto(CaffModel);
+            return  new CaffInfoDto(caffModel);
         }
 
         public async Task AddCaffFile(string name)
@@ -96,8 +96,8 @@ namespace ComputerSecurityWeb.Bll.Services
 
         public async Task AddComment(Guid userId, Guid caffId, string message)
         {
-            var CaffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == caffId);
-            if (CaffModel is null)
+            var caffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == caffId);
+            if (caffModel is null)
             {
                 throw new Exception("Caff file with the given ID was not found");
             }
@@ -106,12 +106,51 @@ namespace ComputerSecurityWeb.Bll.Services
             {
                 await this.context.Comments.AddAsync(new Comment
                 {
-                    CaffId = CaffModel.Id,
+                    CaffId = caffModel.Id,
                     UserId = userId,
                     Content = message
                 });
                 await this.context.SaveChangesAsync();
             }
+        }
+
+        public async Task EditCaffFile(Guid caffId, string newName)
+        {
+            if (newName.Contains('.') || newName.Contains("\\") || newName.Contains("/"))
+            {
+                throw new Exception("invalid file name!");
+            }
+
+            var caffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == caffId);
+            if (caffModel is null)
+            {
+                throw new Exception("Caff file with the given ID was not found");
+            }
+
+            var oldPath= Path.Combine("CaffFiles",
+                    $"{caffModel.FileName}.caff");
+
+            var newPath = Path.Combine("CaffFiles",
+                    $"{newName}.caff");
+
+            File.Move(oldPath, newPath);
+            caffModel.FileName = newName;
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task DeleteCaffFile(Guid caffId)
+        {
+            var caffModel = await this.context.CaffFiles.SingleOrDefaultAsync(x => x.Id == caffId);
+            if (caffModel is null)
+            {
+                throw new Exception("Caff file with the given ID was not found");
+            }
+            var filePath = Path.Combine("CaffFiles",
+                    $"{caffModel.FileName}.caff");
+
+            File.Delete(filePath);
+            this.context.CaffFiles.Remove(caffModel);
+            await this.context.SaveChangesAsync();
         }
     }
 }
