@@ -360,6 +360,54 @@ void checkArguments(int argc, char* argv[]) {
     }
 }
 
+char* readFileBytes(const char* fileName, long& length)
+{
+    FILE* f = fopen(fileName, "rb");
+    fseek(f, 0, SEEK_END);
+    length = ftell(f);
+    char* fileBytes = (char*) malloc(length);
+    fseek(f, 0, SEEK_SET);
+    fread(fileBytes, 1, length, f);
+    fclose(f);
+
+    return fileBytes;
+}
+
+void checkCaffName(const char* caffName) {
+    if (!endsWith(caffName, ".caff")) {
+        throw "input has to be a .caff file.";
+    }
+}
+
+char* parseCaffToBmpStreamV1(const char* caffName, long& fileLength) {
+    try {
+        checkCaffName(caffName);
+        const char* outputFileName = "preview.bmp";
+
+        parseCaff(caffName, outputFileName);
+
+        return readFileBytes(outputFileName, fileLength);
+    }
+    catch (const char* msg) {
+        std::cerr << msg << endl;  // TODO: we should return the error to the backend later
+        throw msg;
+    }
+    catch (...) {
+        std::cerr << "default exception: unknown problem occured during parsing." << endl;
+        throw;
+    }
+}
+
+// TODO: remove (for testing only)
+void writeBytesToFile(char* fileBytes, long fileLength) {
+    FILE* outputFileCopy;
+
+    outputFileCopy = fopen("copy.bmp", "wb");  // w for write, b for binary
+
+    fwrite(fileBytes, fileLength, 1, outputFileCopy);
+    fclose(outputFileCopy);
+}
+
 int main(int argc, char* argv[])
 {    
     try {
@@ -368,6 +416,13 @@ int main(int argc, char* argv[])
         const char* outputFileName = argv[2];
         
         parseCaff(inputFileName, outputFileName);
+
+        // testing
+        long fileLength;
+        char* fileBytes = readFileBytes(outputFileName, fileLength);
+
+        // write to file - TODO: remove
+        writeBytesToFile(fileBytes, fileLength);
     }
     catch (const char* msg) {
         std::cerr << msg << endl;  // TODO: we should return the error to the backend later
