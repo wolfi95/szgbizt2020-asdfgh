@@ -41,6 +41,8 @@ CAFF parser
 #define MAX_NUMBER_OF_COLORS 0
 #define IMPORTANT_COLORS_ALL 0
 
+#define LOGFILE "parser_log.txt"
+
 typedef unsigned int int32;
 typedef short int16;
 typedef unsigned char byte;
@@ -265,8 +267,6 @@ void checkWidthAndHeight(int64_t width, int64_t height) {
 
 /*
     Parses a BMP image from the first CIFF block of the CAFF file.
-
-    PROBLEM: - opening CAFF, BMP files
 */
 void parseCaff(const char* caffFileName, const char* bmpFileName)
 {
@@ -380,21 +380,41 @@ void checkCaffName(const char* caffName) {
     }
 }
 
-char* parseCaffToBmpStreamV1(const char* caffName, long& fileLength) {
+void logMessage(const char* msg) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    fprintf(logFile, "%s\n", msg);
+    fclose(logFile);
+}
+
+/*  Returns BMP file in a char*
+
+    Inputs:
+        caffName: absolute or relative path to the CAFF file we are parsing from
+    Outputs:
+        fileLength: length of the returned BMP file in bytes
+        retuns: the BMP file (char* ~ byte[])
+*/
+char* parseCaffToBmpStreamV1(const char* caffName) {
     try {
         checkCaffName(caffName);
         const char* outputFileName = "preview2.bmp";
 
         parseCaff(caffName, outputFileName);
 
-        return readFileBytes(outputFileName, fileLength);
+        long fileLength;    //TODO: remove
+        return readFileBytes(outputFileName, fileLength);   //TODO: remove fileLength parameter?
     }
     catch (const char* msg) {
-        std::cerr << msg << endl;  // TODO: we should return the error to the backend later
+        logMessage(msg);
         throw msg;
     }
+    catch (std::exception const& e) {
+        logMessage(e.what());
+    }
     catch (...) {
-        std::cerr << "default exception: unknown problem occured during parsing." << endl;
+        logMessage("default exception: unknown problem occured during parsing.");
         throw;
     }
 }
@@ -403,7 +423,7 @@ char* parseCaffToBmpStreamV1(const char* caffName, long& fileLength) {
 void writeBytesToFile(char* fileBytes, long fileLength) {
     FILE* outputFileCopy;
 
-    outputFileCopy = fopen("copy.bmp", "wb");  // w for write, b for binary
+    outputFileCopy = fopen("copy.bmp", "wb");
 
     fwrite(fileBytes, fileLength, 1, outputFileCopy);
     fclose(outputFileCopy);
@@ -416,23 +436,24 @@ int main(int argc, char* argv[])
         const char* inputFileName = argv[1];
         const char* outputFileName = argv[2];
         
-        long fileLength;
         /*
         parseCaff(inputFileName, outputFileName);
 
         // testing
+        long fileLength;
         char* fileBytes = readFileBytes(outputFileName, fileLength);
         */
 
 
-        char* fileBytes = parseCaffToBmpStreamV1(inputFileName, fileLength);
+        char* fileBytes = parseCaffToBmpStreamV1(inputFileName);
 
         // write to file - TODO: remove
-        writeBytesToFile(fileBytes, fileLength);
+        //writeBytesToFile(fileBytes, fileLength);
 
     }
     catch (const char* msg) {
         std::cerr << msg << endl;  // TODO: we should return the error to the backend later
+        logMessage(msg);    //TODO: normális logolás
         return 1;
     }
     catch (...) {
