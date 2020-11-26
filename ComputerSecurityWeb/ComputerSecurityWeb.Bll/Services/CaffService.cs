@@ -24,14 +24,14 @@ namespace ComputerSecurityWeb.Bll.Services
 
         // Use DllImport to import the Win32 MessageBox function.
         [DllImport("caff_parser.dll")]
-        public static extern int Test(int i);
-
+        public static unsafe extern char* parseCaffToBmpStreamV1(char* caffName);
 
         public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
             ////TODO: Statikus file olvasás helyett a dll függvénye ad itt vissza adatot
-            byte[] imageArray = File.ReadAllBytes(@"CaffFiles/asd.bmp");
-            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+            //byte[] imageArray = File.ReadAllBytes(@"CaffFiles/asd.bmp");
+            //string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+
 
             var list = new List<CaffHeader>();
             List<CaffFileModel> models = await this.context.CaffFiles
@@ -40,6 +40,16 @@ namespace ComputerSecurityWeb.Bll.Services
 
             models.ForEach(x =>
             {
+                string base64ImageRepresentation;
+                unsafe 
+                {
+                    string p = "D:/Repositories/szgbizt2020-asdfgh/ComputerSecurityWeb/ComputerSecurityWeb.Api/CaffFiles/Asd";
+                    fixed (char* path = p)
+                    {
+                        char* strpointer = parseCaffToBmpStreamV1(path);
+                        base64ImageRepresentation = new string(strpointer);
+                    }
+                }
                 var comments = new List<CommentDto>();
                 x.Comments.ForEach(c =>
                 {
@@ -65,10 +75,12 @@ namespace ComputerSecurityWeb.Bll.Services
             return list;
         }
 
+
         public async Task<int> TestDll(int i)
         {
-            var path = Directory.GetCurrentDirectory();
-            return Test(i);
+            //var path = Directory.GetCurrentDirectory();
+            //return Test(i);
+            return 1;
         }
 
 
@@ -80,7 +92,7 @@ namespace ComputerSecurityWeb.Bll.Services
                 throw new Exception("Caff file with the given ID was not found");
             }
 
-            return  new CaffInfoDto(caffModel);
+            return new CaffInfoDto(caffModel);
         }
 
         public async Task AddCaffFile(string name)
@@ -102,7 +114,7 @@ namespace ComputerSecurityWeb.Bll.Services
                 throw new Exception("Caff file with the given ID was not found");
             }
 
-            if(message.Length > 0)
+            if (message.Length > 0)
             {
                 await this.context.Comments.AddAsync(new Comment
                 {
@@ -127,7 +139,7 @@ namespace ComputerSecurityWeb.Bll.Services
                 throw new Exception("Caff file with the given ID was not found");
             }
 
-            var oldPath= Path.Combine("CaffFiles",
+            var oldPath = Path.Combine("CaffFiles",
                     $"{caffModel.FileName}.caff");
 
             var newPath = Path.Combine("CaffFiles",
