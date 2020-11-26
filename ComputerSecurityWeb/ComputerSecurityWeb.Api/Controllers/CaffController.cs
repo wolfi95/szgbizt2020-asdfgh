@@ -46,7 +46,9 @@ namespace ComputerSecurityWeb.Api.Controllers
         {
             if (data.Length > 0)
             {
-                if(fileName.Contains('.') || fileName.Contains("\\") || fileName.Contains("/") )
+                char[] InvalidFilenameChars = Path.GetInvalidFileNameChars();
+
+                if (fileName.IndexOfAny(InvalidFilenameChars) >= 0)
                 {
                     throw new Exception("invalid file name!");
                 }
@@ -54,7 +56,7 @@ namespace ComputerSecurityWeb.Api.Controllers
                 var filePath = Path.Combine("CaffFiles",
                     $"{fileName}.caff");
 
-                using (var stream = System.IO.File.Create(filePath))
+                using (FileStream stream = System.IO.File.Create(filePath))
                 {
                    await data.CopyToAsync(stream);
                 }

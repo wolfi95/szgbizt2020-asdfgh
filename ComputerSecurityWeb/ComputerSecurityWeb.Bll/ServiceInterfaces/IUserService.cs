@@ -8,7 +8,5 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
         Task<UserDTO> AuthenticateAsync(string email, string password);
 
         Task<UserDTO> RegisterAsync(string firstName, string lastName, string email, string password);
-
-        Task<bool> ChangePassword(string oldPassword, string newPassword);
     }
 }

@@ -18,7 +18,7 @@ namespace ComputerSecurityWeb.Bll.Services
 {
     public class UserService : IUserService
     {
-        private ApplicationDbContext _dbContext;
+        private readonly ApplicationDbContext context;
 
         private readonly IConfiguration configuration;
         private readonly UserManager<AppUser> userManager;
@@ -30,7 +30,7 @@ namespace ComputerSecurityWeb.Bll.Services
             SignInManager<AppUser> signInManager
             )
         {
-            _dbContext = dbContext;
+            context = dbContext;
             this.configuration = configuration;
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -64,7 +64,7 @@ namespace ComputerSecurityWeb.Bll.Services
 
             public async Task<UserDTO> RegisterAsync(string firstName, string lastName, string email, string password)
         {
-            if (_dbContext.Users.Any(u => u.Email == email))
+            if (context.Users.Any(u => u.Email == email))
             {
                 throw new AlreadyExistingException($"A user with the given email: {email} already exists");
             }
@@ -97,11 +97,6 @@ namespace ComputerSecurityWeb.Bll.Services
             {
                 throw new Exception("Unexpected error occured");
             }
-        }
-
-        public async Task<bool> ChangePassword(string oldPassword, string newPassword)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<string> GenerateJwtToken(string email, AppUser user)
