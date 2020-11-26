@@ -10,3 +10,15 @@ D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\b
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.runtimeconfig.dev.json
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.genruntimeconfig.cache
 D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.csproj.CoreCompileInputs.cache
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.deps.json
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.runtimeconfig.json
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.runtimeconfig.dev.json
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.dll
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\bin\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.pdb
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.csprojAssemblyReference.cache
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.AssemblyInfoInputs.cache
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.AssemblyInfo.cs
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.dll
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.pdb
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.genruntimeconfig.cache
+D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Dal\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Dal.csproj.CoreCompileInputs.cache

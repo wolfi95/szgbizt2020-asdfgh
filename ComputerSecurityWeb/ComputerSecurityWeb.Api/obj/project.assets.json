@@ -934,6 +934,9 @@
           }
         }
       },
+      "SecurityCodeScan/3.5.3": {
+        "type": "package"
+      },
       "Serilog/2.10.0": {
         "type": "package",
         "compile": {
@@ -3433,6 +3436,22 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SecurityCodeScan/3.5.3": {
+      "sha512": "+dLvN7an6babMALHuhXqh0P8T8UrhWL0Vr0f2gIDyNETO7LFvIvR9gbLVON0BMAAtWE7tCOdp02XgTDzg9P6vg==",
+      "type": "package",
+      "path": "securitycodescan/3.5.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/SecurityCodeScan.dll",
+        "analyzers/dotnet/YamlDotNet.dll",
+        "securitycodescan.3.5.3.nupkg.sha512",
+        "securitycodescan.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Serilog/2.10.0": {
@@ -7292,6 +7311,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 3.1.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
+      "SecurityCodeScan >= 3.5.3",
       "Serilog >= 2.10.0",
       "Serilog.Settings.Configuration >= 3.1.0",
       "Serilog.Sinks.Console >= 3.1.1",
@@ -7302,24 +7322,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rinya\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Wolfi\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\ComputerSecurityWeb.Api.csproj",
+      "projectUniqueName": "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\ComputerSecurityWeb.Api.csproj",
       "projectName": "ComputerSecurityWeb.Api",
-      "projectPath": "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\ComputerSecurityWeb.Api.csproj",
-      "packagesPath": "C:\\Users\\rinya\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\obj\\",
+      "projectPath": "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\ComputerSecurityWeb.Api.csproj",
+      "packagesPath": "C:\\Users\\Wolfi\\.nuget\\packages\\",
+      "outputPath": "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\rinya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Wolfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7330,13 +7351,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Bll\\ComputerSecurityWeb.Bll.csproj": {
-              "projectPath": "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Bll\\ComputerSecurityWeb.Bll.csproj"
+            "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Bll\\ComputerSecurityWeb.Bll.csproj": {
+              "projectPath": "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Bll\\ComputerSecurityWeb.Bll.csproj"
             },
-            "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Dal\\ComputerSecurityWeb.Dal.csproj": {
-              "projectPath": "D:\\Repositories\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Dal\\ComputerSecurityWeb.Dal.csproj"
+            "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Dal\\ComputerSecurityWeb.Dal.csproj": {
+              "projectPath": "D:\\programok\\szgbizt2020-asdfgh\\ComputerSecurityWeb\\ComputerSecurityWeb.Dal\\ComputerSecurityWeb.Dal.csproj"
             }
           }
         }
@@ -7349,7 +7369,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "FluentValidation.AspNetCore": {
             "target": "Package",
@@ -7382,6 +7401,12 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.9, )"
+          },
+          "SecurityCodeScan": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.5.3, )"
           },
           "Serilog": {
             "target": "Package",
@@ -7430,7 +7455,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

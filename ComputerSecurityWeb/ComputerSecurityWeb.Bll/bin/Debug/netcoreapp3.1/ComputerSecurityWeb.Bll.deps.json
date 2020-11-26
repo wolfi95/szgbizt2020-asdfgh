@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.9",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.9",
+          "SecurityCodeScan": "3.5.3",
           "System.IdentityModel.Tokens.Jwt": "6.8.0"
         },
         "runtime": {
@@ -714,6 +715,7 @@
           }
         }
       },
+      "SecurityCodeScan/3.5.3": {},
       "System.Buffers/4.5.0": {},
       "System.Collections/4.3.0": {
         "dependencies": {
@@ -1810,6 +1812,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SecurityCodeScan/3.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+dLvN7an6babMALHuhXqh0P8T8UrhWL0Vr0f2gIDyNETO7LFvIvR9gbLVON0BMAAtWE7tCOdp02XgTDzg9P6vg==",
+      "path": "securitycodescan/3.5.3",
+      "hashPath": "securitycodescan.3.5.3.nupkg.sha512"
     },
     "System.Buffers/4.5.0": {
       "type": "package",

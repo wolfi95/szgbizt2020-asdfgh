@@ -33,6 +33,7 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.9",
+          "SecurityCodeScan": "3.5.3",
           "Serilog": "2.10.0",
           "Serilog.Settings.Configuration": "3.1.0",
           "Serilog.Sinks.Console": "3.1.1",
@@ -1094,6 +1095,7 @@
           }
         }
       },
+      "SecurityCodeScan/3.5.3": {},
       "Serilog/2.10.0": {
         "runtime": {
           "lib/netstandard2.1/Serilog.dll": {
@@ -3986,6 +3988,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SecurityCodeScan/3.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+dLvN7an6babMALHuhXqh0P8T8UrhWL0Vr0f2gIDyNETO7LFvIvR9gbLVON0BMAAtWE7tCOdp02XgTDzg9P6vg==",
+      "path": "securitycodescan/3.5.3",
+      "hashPath": "securitycodescan.3.5.3.nupkg.sha512"
     },
     "Serilog/2.10.0": {
       "type": "package",
