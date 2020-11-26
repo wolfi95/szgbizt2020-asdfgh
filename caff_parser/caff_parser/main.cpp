@@ -366,7 +366,7 @@ char* readFileBytes(const char* fileName, long& length)
     FILE* f = fopen(fileName, "rb");
     fseek(f, 0, SEEK_END);
     length = ftell(f);
-    char* fileBytes = (char*) malloc(length);
+    char* fileBytes = (char*) malloc(length);   //TODO: free - lehet kell egy freePointer dll endpoint is
     fseek(f, 0, SEEK_SET);
     fread(fileBytes, 1, length, f);
     fclose(f);
@@ -383,7 +383,7 @@ void checkCaffName(const char* caffName) {
 char* parseCaffToBmpStreamV1(const char* caffName, long& fileLength) {
     try {
         checkCaffName(caffName);
-        const char* outputFileName = "preview.bmp";
+        const char* outputFileName = "preview2.bmp";
 
         parseCaff(caffName, outputFileName);
 
@@ -416,14 +416,20 @@ int main(int argc, char* argv[])
         const char* inputFileName = argv[1];
         const char* outputFileName = argv[2];
         
+        long fileLength;
+        /*
         parseCaff(inputFileName, outputFileName);
 
         // testing
-        long fileLength;
         char* fileBytes = readFileBytes(outputFileName, fileLength);
+        */
+
+
+        char* fileBytes = parseCaffToBmpStreamV1(inputFileName, fileLength);
 
         // write to file - TODO: remove
         writeBytesToFile(fileBytes, fileLength);
+
     }
     catch (const char* msg) {
         std::cerr << msg << endl;  // TODO: we should return the error to the backend later
