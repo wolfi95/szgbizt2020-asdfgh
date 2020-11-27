@@ -27,7 +27,7 @@ namespace ComputerSecurityWeb.Bll.Services
 
         // Use DllImport to import the Win32 MessageBox function.
         [DllImport("caff_parser.dll")]
-        public static unsafe extern char* parseCaffToBmpStreamV1(string caffName);
+        public static unsafe extern void parseCaffToBmpStreamV1(string caffName);
 
         public async Task<List<CaffHeader>> GetAllCaffFiles()
         {

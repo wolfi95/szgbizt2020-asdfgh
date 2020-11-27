@@ -18,6 +18,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 
 
     [Route("caff")]
+    [Authorize]
     [ApiController]
     public class CaffController : ControllerBase
     {
@@ -120,6 +121,16 @@ namespace ComputerSecurityWeb.Api.Controllers
         {
             await this.caffService.DeleteCaffFile(caffId);
             return new OkResult();
+        }
+
+        [HttpGet]
+        [Route("getcafffilebyid")]
+        [ProducesResponseType(typeof(CaffFileDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> GetFCaffFileById(Guid id)
+        {
+            return new JsonResult(await this.caffService.GetCaffFileDetailed(id));
         }
 
         [HttpGet]

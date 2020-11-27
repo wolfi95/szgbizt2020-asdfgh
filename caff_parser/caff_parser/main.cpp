@@ -432,8 +432,7 @@ void logMessage(const char* msg1, const char* msg2, const char* msg3, const char
     Outputs:
         fileLength: length of the returned BMP file in bytes
         retuns: the BMP file (char* ~ byte[])
-*/
-char* parseCaffToBmpStreamV1(const char* caffName) {
+*/ void parseCaffToBmpStreamV1(const char* caffName) {
     logMessage("Logging started\n");
     logMessage("File name= ");
     logMessage(caffName);
@@ -444,9 +443,7 @@ char* parseCaffToBmpStreamV1(const char* caffName) {
         parseCaff(caffName, outputFileName);
 
         long fileLength;    //TODO: remove
-        char* returnValue = readFileBytes(outputFileName, fileLength);   //TODO: remove fileLength parameter?
-        logMessage(returnValue);
-        return returnValue;
+        char* returnValue = readFileBytes(outputFileName);   //TODO: remove fileLength parameter?
     }
     catch (const char* msg) {
         logMessage("ERROR: ", msg);
