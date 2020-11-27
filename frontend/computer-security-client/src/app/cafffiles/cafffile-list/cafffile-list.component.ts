@@ -26,4 +26,8 @@ export class CafffileListComponent implements OnInit {
     })
   }
 
+  onNewCaff(){
+    this.router.navigate(['new'], { relativeTo: this.route });
+  }
+
 }

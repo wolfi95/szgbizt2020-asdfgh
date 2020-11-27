@@ -44,7 +44,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> UploadCaffFile(string fileName, IFormFile data)
+        public async Task<IActionResult> UploadCaffFile([FromQuery]string fileName, [FromForm] IFormFile data)
         {
             if (data.Length > 0)
             {
