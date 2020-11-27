@@ -1,4 +1,5 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
+using ComputerSecurityWeb.Bll.Dtos.User;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal;
 using ComputerSecurityWeb.Dal.Models;
@@ -30,11 +31,6 @@ namespace ComputerSecurityWeb.Bll.Services
 
         public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
-            ////TODO: Statikus file olvasás helyett a dll függvénye ad itt vissza adatot
-            //byte[] imageArray = File.ReadAllBytes(@"CaffFiles/asd.bmp");
-            //string base64ImageRepresentation = Convert.ToBase64String(imageArray);
-
-
             var list = new List<CaffHeader>();
             List<CaffFileModel> models = await this.context.CaffFiles
                     .Include(x => x.Comments).ThenInclude(c => c.User)
@@ -49,58 +45,23 @@ namespace ComputerSecurityWeb.Bll.Services
                     string p = $"CaffFiles/{x.FileName}.caff";
                     fixed (char* path = p)
                     {
-                        char* strpointer = parseCaffToBmpStreamV1(p);
-                        base64ImageRepresentation = new string(strpointer);
-
+                        //generates the bmp to send to the client
+                        parseCaffToBmpStreamV1(p);
                         imageArray = File.ReadAllBytes(@"preview2.bmp");
-                        base64ImageRepresentation = Convert.ToBase64String(imageArray);
                         File.Delete(@"preview2.bmp");
+                        base64ImageRepresentation = Convert.ToBase64String(imageArray);
                     }
                 }
-                var comments = new List<CommentDto>();
-                x.Comments.ForEach(c =>
-                {
-                    comments.Add(new CommentDto
-                    {
-                        Id = c.Id,
-                        UserId = c.UserId,
-                        UserName = c.User.UserName,
-                        CaffFileId = c.CaffId,
-                        Content = c.Content
-                    });
-                });
 
                 list.Add(new CaffHeader
                 {
                     Id = x.Id,
                     Name = x.FileName,
-                    ImageData = new FileContentResult(imageArray, "image/bmp"),
-                    Comments = comments
+                    ImageData = base64ImageRepresentation,
                 });
             });
 
             return list;
-        }
-
-        public async Task<byte[]> GetImageForCaff(Guid caffId)
-        {
-            string name = this.context.CaffFiles.SingleOrDefault(x => x.Id == caffId).FileName;
-            if(name is null)
-            {
-                throw new Exception($"Caff file with the given id: {caffId} was not found.");
-            }
-
-            string p = $"CaffFiles/{name}.caff";
-            unsafe
-            {
-                fixed (char* path = p)
-                {
-                    parseCaffToBmpStreamV1(p);
-                    var imageArray = File.ReadAllBytes(@"preview2.bmp");
-                    File.Delete(@"preview2.bmp");
-                    return imageArray;
-                }
-            }
         }
 
         public async Task<CaffInfoDto> GetCaffById(Guid id)
@@ -182,6 +143,100 @@ namespace ComputerSecurityWeb.Bll.Services
             File.Delete(filePath);
             this.context.CaffFiles.Remove(caffModel);
             await this.context.SaveChangesAsync();
+        }
+
+        public async Task<CaffFileDto> GetCaffFileDetailed(Guid id)
+        {
+            var caffModel = await this.context.CaffFiles
+                    .Include(x => x.Comments).ThenInclude(y => y.User)
+                .SingleOrDefaultAsync(x => x.Id == id);
+
+            if (caffModel is null)
+            {
+                throw new Exception("Caff file with the given ID was not found");
+            }
+            string base64ImageRepresentation = string.Empty;
+            byte[] imageArray;
+            unsafe
+            {
+                string p = $"CaffFiles/{caffModel.FileName}.caff";
+                fixed (char* path = p)
+                {
+                    //generates the bmp to send to the client
+                    parseCaffToBmpStreamV1(p);
+                    imageArray = File.ReadAllBytes(@"preview2.bmp");
+                    base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                    File.Delete(@"preview2.bmp");
+                }
+            }
+            List<CommentDto> comments = new List<CommentDto>();
+            caffModel.Comments.ForEach(x =>
+           {
+               comments.Add(new CommentDto
+               {
+                   UserId = x.UserId,
+                   Content = x.Content,
+                   UserName = x.User.UserName,
+               });
+           });
+
+            return new CaffFileDto
+            {
+                Id = caffModel.Id,
+                Name = caffModel.FileName,
+                ImageData = base64ImageRepresentation,
+                Comments = comments
+            };
+        }
+
+        public async Task<List<EditUserDto>> GetAllUsers()
+        {
+            var users = await this.context.Users.Where(x => x.Role == Role.User).ToListAsync();
+            var userDtoList = new List<EditUserDto>();
+
+            users.ForEach(x =>
+            {
+                userDtoList.Add(new EditUserDto
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Email = x.Email
+                });
+            });
+
+            return userDtoList;
+        }
+
+        public async Task EditUserData(EditUserDto dto)
+        {
+            var user = await this.context.Users.SingleOrDefaultAsync(x => x.Id == dto.Id);
+            if(user is null)
+            {
+                throw new Exception($"User with the given id: {dto.Id} was not found! ");
+            }
+
+            user.FirstName = dto.FirstName;
+            user.LastName = dto.LastName;
+            user.Email = dto.Email;
+
+            await this.context.SaveChangesAsync();
+        }
+
+        public async Task<EditUserDto> GetUserData(Guid userId)
+        {
+            var user = await this.context.Users.SingleOrDefaultAsync(x => x.Id == userId);
+            if (user is null)
+            {
+                throw new Exception($"User with the given id: {userId} was not found! ");
+            }
+
+            return new EditUserDto
+            {
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+            };
         }
     }
 }

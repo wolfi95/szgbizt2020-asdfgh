@@ -1,4 +1,5 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
+using ComputerSecurityWeb.Bll.Dtos.User;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -13,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace ComputerSecurityWeb.Api.Controllers
 {
+    //GETALLUSERS, EDITUSERDATA, GETCAFFDETAILED, 
+
+
     [Route("caff")]
     [ApiController]
     public class CaffController : ControllerBase
@@ -25,17 +29,6 @@ namespace ComputerSecurityWeb.Api.Controllers
         {
             this.caffService = caffService;
             this.userManager = userManager;
-        }
-
-        [HttpPost]
-        [Route("getImageById")]
-        [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-        public async Task<IActionResult> GetImageForHeader(Guid caffId)
-        {
-            byte[] imageArray = await this.caffService.GetImageForCaff(caffId);
-            return File(imageArray, "image/bmp");
         }
 
         [HttpPost]
@@ -106,7 +99,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = Role.Administrator)]
         [Route("editcaff")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -118,7 +111,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = Role.Administrator)]
         [Route("deletecaff")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -128,5 +121,40 @@ namespace ComputerSecurityWeb.Api.Controllers
             await this.caffService.DeleteCaffFile(caffId);
             return new OkResult();
         }
+
+        [HttpGet]
+        [Authorize(Roles = Role.Administrator)]
+        [Route("getallusers")]
+        [ProducesResponseType(typeof(List<EditUserDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> GetAllUsers()
+        {
+            return new JsonResult(await this.caffService.GetAllUsers());
+        }
+
+        [HttpPost]
+        [Authorize]
+        [Route("edituserdata")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> EditUser(EditUserDto dto)
+        {
+            await this.caffService.EditUserData(dto);
+            return new OkResult();
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("getuserdatabyid")]
+        [ProducesResponseType(typeof(EditUserDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<IActionResult> GetUserData(Guid userId)
+        {
+            return new JsonResult(await this.caffService.GetUserData(userId));
+        }
+
     }
 }

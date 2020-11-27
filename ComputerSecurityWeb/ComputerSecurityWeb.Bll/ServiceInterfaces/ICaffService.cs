@@ -1,4 +1,5 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
+using ComputerSecurityWeb.Bll.Dtos.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,9 +9,6 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 {
     public interface ICaffService
     {
-
-        Task<byte[]> GetImageForCaff(Guid caffId);
-
         Task<List<CaffHeader>> GetAllCaffFiles();
 
         Task<CaffInfoDto> GetCaffById(Guid id);
@@ -22,6 +20,14 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
         Task EditCaffFile(Guid caffId, string newName);
 
         Task DeleteCaffFile(Guid caffId);
+
+        Task<CaffFileDto> GetCaffFileDetailed(Guid id);
+
+        Task<List<EditUserDto>> GetAllUsers();
+
+        Task EditUserData(EditUserDto dto);
+
+        Task<EditUserDto> GetUserData(Guid userId);
 
     }
 }
