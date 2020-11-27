@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,7 +11,7 @@ namespace ComputerSecurityWeb.Bll.Dtos.Caff
 
         public string Name { get; set; }
 
-        public string ImageData { get; set; }
+        public FileContentResult ImageData { get; set; }
 
         public List<CommentDto> Comments { get; set; }
     }

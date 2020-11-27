@@ -2,6 +2,7 @@
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal;
 using ComputerSecurityWeb.Dal.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,8 @@ namespace ComputerSecurityWeb.Bll.Services
             models.ForEach(x =>
             {
                 string base64ImageRepresentation = string.Empty;
-                unsafe 
+                byte[] imageArray;
+                unsafe
                 {
                     string p = $"CaffFiles/{x.FileName}.caff";
                     fixed (char* path = p)
@@ -50,9 +52,9 @@ namespace ComputerSecurityWeb.Bll.Services
                         char* strpointer = parseCaffToBmpStreamV1(p);
                         base64ImageRepresentation = new string(strpointer);
 
-                        //byte[] imageArray = File.ReadAllBytes(@"preview2.bmp");
-                        //base64ImageRepresentation = Convert.ToBase64String(imageArray);
-
+                        imageArray = File.ReadAllBytes(@"preview2.bmp");
+                        base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                        File.Delete(@"preview2.bmp");
                     }
                 }
                 var comments = new List<CommentDto>();
@@ -72,7 +74,7 @@ namespace ComputerSecurityWeb.Bll.Services
                 {
                     Id = x.Id,
                     Name = x.FileName,
-                    ImageData = base64ImageRepresentation,
+                    ImageData = new FileContentResult(imageArray, "image/bmp"),
                     Comments = comments
                 });
             });
@@ -80,14 +82,26 @@ namespace ComputerSecurityWeb.Bll.Services
             return list;
         }
 
-
-        public async Task<int> TestDll(int i)
+        public async Task<byte[]> GetImageForCaff(Guid caffId)
         {
-            //var path = Directory.GetCurrentDirectory();
-            //return Test(i);
-            return 1;
-        }
+            string name = this.context.CaffFiles.SingleOrDefault(x => x.Id == caffId).FileName;
+            if(name is null)
+            {
+                throw new Exception($"Caff file with the given id: {caffId} was not found.");
+            }
 
+            string p = $"CaffFiles/{name}.caff";
+            unsafe
+            {
+                fixed (char* path = p)
+                {
+                    parseCaffToBmpStreamV1(p);
+                    var imageArray = File.ReadAllBytes(@"preview2.bmp");
+                    File.Delete(@"preview2.bmp");
+                    return imageArray;
+                }
+            }
+        }
 
         public async Task<CaffInfoDto> GetCaffById(Guid id)
         {

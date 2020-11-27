@@ -28,14 +28,13 @@ namespace ComputerSecurityWeb.Api.Controllers
         }
 
         [HttpPost]
-        [Route("test")]
-        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [Route("getImageById")]
+        [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> Test(int i)
+        public async Task<IActionResult> GetImageForHeader(Guid caffId)
         {
-            byte[] imageArray =System.IO.File.ReadAllBytes(@"preview2.bmp");
-            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+            byte[] imageArray = await this.caffService.GetImageForCaff(caffId);
             return File(imageArray, "image/bmp");
         }
 

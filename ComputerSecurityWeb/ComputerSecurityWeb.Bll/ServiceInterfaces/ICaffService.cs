@@ -8,7 +8,8 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 {
     public interface ICaffService
     {
-        Task<int> TestDll(int i);
+
+        Task<byte[]> GetImageForCaff(Guid caffId);
 
         Task<List<CaffHeader>> GetAllCaffFiles();
 
