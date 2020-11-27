@@ -361,11 +361,11 @@ void checkArguments(int argc, char* argv[]) {
     }
 }
 
-char* readFileBytes(const char* fileName, long& length)
+char* readFileBytes(const char* fileName)
 {
     FILE* f = fopen(fileName, "rb");
     fseek(f, 0, SEEK_END);
-    length = ftell(f);
+    long length = ftell(f);
     char* fileBytes = (char*) malloc(length);   //TODO: free - lehet kell egy freePointer dll endpoint is
     fseek(f, 0, SEEK_SET);
     fread(fileBytes, 1, length, f);
@@ -397,14 +397,20 @@ void logMessage(const char* msg) {
         retuns: the BMP file (char* ~ byte[])
 */
 char* parseCaffToBmpStreamV1(const char* caffName) {
+    logMessage("Logging started\n");
+    logMessage("File name= ");
+    logMessage(caffName);
     try {
         checkCaffName(caffName);
         const char* outputFileName = "preview2.bmp";
 
         parseCaff(caffName, outputFileName);
 
-        long fileLength;    //TODO: remove
-        return readFileBytes(outputFileName, fileLength);   //TODO: remove fileLength parameter?
+        char* returnData =  readFileBytes(outputFileName);   //TODO: remove fileLength parameter?
+        logMessage("\n\n Return data:\n");
+        logMessage(returnData);
+        return returnData;
+
     }
     catch (const char* msg) {
         logMessage(msg);

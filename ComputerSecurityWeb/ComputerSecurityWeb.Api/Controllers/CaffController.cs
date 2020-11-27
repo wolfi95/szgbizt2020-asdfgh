@@ -34,7 +34,9 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         public async Task<IActionResult> Test(int i)
         {
-            return new JsonResult(await this.caffService.TestDll(i));
+            byte[] imageArray =System.IO.File.ReadAllBytes(@"preview2.bmp");
+            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+            return File(imageArray, "image/bmp");
         }
 
         [HttpPost]

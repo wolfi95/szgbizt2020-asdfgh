@@ -5,6 +5,7 @@ using ComputerSecurityWeb.Dal.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -24,7 +25,7 @@ namespace ComputerSecurityWeb.Bll.Services
 
         // Use DllImport to import the Win32 MessageBox function.
         [DllImport("caff_parser.dll")]
-        public static unsafe extern char* parseCaffToBmpStreamV1(char* caffName);
+        public static unsafe extern char* parseCaffToBmpStreamV1(string caffName);
 
         public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
@@ -40,14 +41,18 @@ namespace ComputerSecurityWeb.Bll.Services
 
             models.ForEach(x =>
             {
-                string base64ImageRepresentation;
+                string base64ImageRepresentation = string.Empty;
                 unsafe 
                 {
-                    string p = "D:/Repositories/szgbizt2020-asdfgh/ComputerSecurityWeb/ComputerSecurityWeb.Api/CaffFiles/Asd";
+                    string p = $"CaffFiles/{x.FileName}.caff";
                     fixed (char* path = p)
                     {
-                        char* strpointer = parseCaffToBmpStreamV1(path);
+                        char* strpointer = parseCaffToBmpStreamV1(p);
                         base64ImageRepresentation = new string(strpointer);
+
+                        //byte[] imageArray = File.ReadAllBytes(@"preview2.bmp");
+                        //base64ImageRepresentation = Convert.ToBase64String(imageArray);
+
                     }
                 }
                 var comments = new List<CommentDto>();

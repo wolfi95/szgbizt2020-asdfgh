@@ -170,3 +170,8 @@ D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\
 D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.csproj.CoreCompileInputs.cache
 D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\programok\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\obj\Debug\netcoreapp3.1\ComputerSecurityWeb.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Repositories\szgbizt2020-asdfgh\ComputerSecurityWeb\ComputerSecurityWeb.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
