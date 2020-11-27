@@ -17,6 +17,7 @@ using ComputerSecurityWeb.Dal.Models;
 using ComputerSecurityWeb.Api.Middlewares;
 using FluentValidation.AspNetCore;
 using System.Reflection;
+using System.IO;
 
 namespace ComputerSecurityWeb.Api
 {

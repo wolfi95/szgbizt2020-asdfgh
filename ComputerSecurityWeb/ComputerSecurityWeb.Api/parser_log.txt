@@ -178,3 +178,130 @@ CaffFiles/nani.caff
  Return data:
 
 BMžˆ
+Logging started
+
+File name= 
+CaffFiles/nani.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/kek.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+Logging started
+
+File name= 
+CaffFiles/Asd.caff
+
+
+ Return data:
+
+BMžˆ
+27-11-2020 21:26:46	Logging started
+
+27-11-2020 21:26:46	File name= 
+27-11-2020 21:26:46	CaffFiles/Asd.caff
+27-11-2020 21:35:24	Logging started
+
+27-11-2020 21:35:24	File name= 
+27-11-2020 21:35:24	CaffFiles/Asd.caff
+27-11-2020 21:37:21	Logging started
+
+27-11-2020 21:37:21	File name= 
+27-11-2020 21:37:21	CaffFiles/Asd.caff
+27-11-2020 21:37:35	Logging started
+
+27-11-2020 21:37:35	File name= 
+27-11-2020 21:37:36	CaffFiles/Asd.caff
+27-11-2020 21:38:15	Logging started
+
+27-11-2020 21:38:16	File name= 
+27-11-2020 21:38:16	CaffFiles/Asd.caff
+27-11-2020 21:39:13	Logging started
+
+27-11-2020 21:39:13	File name= 
+27-11-2020 21:39:13	CaffFiles/Asd.caff
+27-11-2020 21:42:14	Logging started
+
+27-11-2020 21:42:14	File name= 
+27-11-2020 21:42:14	CaffFiles/Asd.caff

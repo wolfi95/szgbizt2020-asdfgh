@@ -13,6 +13,7 @@ CAFF parser
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctime>
 
 
 #define CAFF_BLOCK_LENGTH_OFFSET 1
@@ -356,8 +357,8 @@ void checkArguments(int argc, char* argv[]) {
     if (inputFileNameLength < 6 || outputFileNameLength < 5) {
         throw "file names must be at least 1 character long (without the extension).";
     }
-    if (inputFileNameLength > 100 || outputFileNameLength > 100) {
-        throw "file names must be at most 100 characters long.";
+    if (inputFileNameLength > 200 || outputFileNameLength > 200) {
+        throw "file names must be at most 200 characters long.";
     }
 }
 
@@ -380,11 +381,47 @@ void checkCaffName(const char* caffName) {
     }
 }
 
+std::string getDateString() {
+    time_t rawtime;
+    struct tm* timeinfo;
+    char buffer[80];
+
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+
+    strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
+    std::string datetimeString(buffer);
+
+    return datetimeString;
+}
+
 void logMessage(const char* msg) {
     FILE* logFile;
     logFile = fopen(LOGFILE, "a");
 
-    fprintf(logFile, "%s\n", msg);
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s\n", datetimeString.c_str(), msg);
+    fclose(logFile);
+}
+
+void logMessage(const char* msg1, const char* msg2) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s%s\n", datetimeString.c_str(), msg1, msg2);
+    fclose(logFile);
+}
+
+void logMessage(const char* msg1, const char* msg2, const char* msg3, const char* msg4) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s%s%s%s\n", datetimeString.c_str(), msg1, msg2, msg3, msg4);
     fclose(logFile);
 }
 
@@ -395,8 +432,7 @@ void logMessage(const char* msg) {
     Outputs:
         fileLength: length of the returned BMP file in bytes
         retuns: the BMP file (char* ~ byte[])
-*/
-char* parseCaffToBmpStreamV1(const char* caffName) {
+*/ void parseCaffToBmpStreamV1(const char* caffName) {
     logMessage("Logging started\n");
     logMessage("File name= ");
     logMessage(caffName);
@@ -406,33 +442,18 @@ char* parseCaffToBmpStreamV1(const char* caffName) {
 
         parseCaff(caffName, outputFileName);
 
-        char* returnData =  readFileBytes(outputFileName);   //TODO: remove fileLength parameter?
-        logMessage("\n\n Return data:\n");
-        logMessage(returnData);
-        return returnData;
-
+        long fileLength;    //TODO: remove
+        char* returnValue = readFileBytes(outputFileName);   //TODO: remove fileLength parameter?
     }
     catch (const char* msg) {
-        logMessage(msg);
-        throw msg;
+        logMessage("ERROR: ", msg);
     }
     catch (std::exception const& e) {
-        logMessage(e.what());
+        logMessage("ERROR: ", e.what());
     }
     catch (...) {
-        logMessage("default exception: unknown problem occured during parsing.");
-        throw;
+        logMessage("ERROR: default exception: unknown problem occured during parsing.");
     }
-}
-
-// TODO: remove (for testing only)
-void writeBytesToFile(char* fileBytes, long fileLength) {
-    FILE* outputFileCopy;
-
-    outputFileCopy = fopen("copy.bmp", "wb");
-
-    fwrite(fileBytes, fileLength, 1, outputFileCopy);
-    fclose(outputFileCopy);
 }
 
 int main(int argc, char* argv[])
@@ -441,38 +462,25 @@ int main(int argc, char* argv[])
         checkArguments(argc, argv);
         const char* inputFileName = argv[1];
         const char* outputFileName = argv[2];
-        
-        /*
+        logMessage("Start parsing ", inputFileName, " to ", outputFileName);
+
         parseCaff(inputFileName, outputFileName);
-
-        // testing
-        long fileLength;
-        char* fileBytes = readFileBytes(outputFileName, fileLength);
-        */
-
-
-        char* fileBytes = parseCaffToBmpStreamV1(inputFileName);
-
-        // write to file - TODO: remove
-        //writeBytesToFile(fileBytes, fileLength);
-
     }
     catch (const char* msg) {
-        std::cerr << msg << endl;  // TODO: we should return the error to the backend later
-        logMessage(msg);    //TODO: normális logolás
+        std::cerr << msg << endl;
+        logMessage("ERROR: ", msg);
+        return 1;
+    }
+    catch (std::exception const& e) {
+        logMessage("ERROR: ", e.what());
         return 1;
     }
     catch (...) {
-        std::cerr << "default exception: unknown problem occured during parsing." << endl;
+        const char* msg = "ERROR: default exception: unknown problem occured during parsing.";
+        std::cerr << msg << endl;
+        logMessage(msg);
         return 1;
     }
 
 	return 0;
-}
-
-
-int  Test(int i) {
-
-    return 2 * i;
-
 }

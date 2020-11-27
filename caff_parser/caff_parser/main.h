@@ -10,8 +10,8 @@ extern "C" {
 #else
 #  define MODULE_API
 #endif
-	MODULE_API int Test(int i);
-	MODULE_API char* parseCaffToBmpStreamV1(const char* caffName);
+	//MODULE_API char* parseCaffToBmpStreamV1(const char* caffName);
+	MODULE_API void parseCaffToBmpStreamV1(const char* caffName);
 #ifdef __cplusplus
 }
 #endif
