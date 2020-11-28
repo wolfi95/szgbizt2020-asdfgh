@@ -18,7 +18,6 @@ export class CafffileDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private cafffileService: CafffileService,
     private sanitizer: DomSanitizer
   ) { }
