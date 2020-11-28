@@ -9,6 +9,13 @@ export interface IUserModel {
     token?: string;
 }
 
+export interface IUserEditModel {
+    id: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+}
+
 export interface IUserRegisterModel {
     email: string;
     firstName: string;

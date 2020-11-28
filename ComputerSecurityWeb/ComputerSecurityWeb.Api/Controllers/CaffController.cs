@@ -1,6 +1,7 @@
 ﻿using ComputerSecurityWeb.Api.Common;
 using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.Dtos.User;
+using ComputerSecurityWeb.Bll.DTOs.User;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -145,16 +146,15 @@ namespace ComputerSecurityWeb.Api.Controllers
             return new JsonResult(await this.caffService.GetAllUsers());
         }
 
-        [HttpPost]
+        [HttpPut]
         [Authorize]
         [Route("edituserdata")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(UserDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> EditUser(EditUserDto dto)
+        public async Task<IActionResult> EditUser([FromBody] EditUserDto dto)
         {
-            await this.caffService.EditUserData(dto);
-            return new OkResult();
+            return new JsonResult(await this.caffService.EditUserData(dto));
         }
 
         [HttpGet]

@@ -23,6 +23,10 @@ export class AuthenticationService {
         this.user = this.userSubject.asObservable();
     }
 
+    public setUserValue(value: IUserModel) {
+        this.userSubject.next(value);
+    }
+
     public get userValue(): IUserModel {
         return this.userSubject.value;
     }
@@ -38,6 +42,7 @@ export class AuthenticationService {
                     id: dto.id,
                     firstName: dto.firstName,
                     lastName: dto.lastName,
+                    email: dto.email,
                     role: (<any>Role)[dto.role],
                     token: dto.token
                 };
@@ -52,8 +57,7 @@ export class AuthenticationService {
             firstName: model.firstName,
             lastName: model.lastName,
             email: model.email,
-            password: model.password,
-            confirmPassword: model.confirmPassword
+            password: model.password
         })
         return this.authRegisterClient.register(dto)
             .pipe(map(dto => {

@@ -12,6 +12,7 @@ import { CafffileService } from 'src/app/core/services/cafffile.service';
 export class CafffileListComponent implements OnInit {
 
   faSearch = faSearch;
+  searchText: any;
   caffList: ICaffFileListItemModel[] = [];
 
   constructor(

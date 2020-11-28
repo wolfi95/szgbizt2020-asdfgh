@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { CafffileDetailsComponent } from './cafffiles/cafffile-details/cafffile-
 import { CafffileListComponent } from './cafffiles/cafffile-list/cafffile-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterPipe } from './shared/filter.pipe';
 import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 import { CafffileListItemComponent } from './cafffiles/cafffile-list/cafffile-list-item/cafffile-list-item.component';
 import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-start.component';
@@ -28,7 +30,8 @@ import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-star
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   declarations: [	
     AppComponent,
@@ -44,6 +47,7 @@ import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-star
     ProfileEditComponent,
     CafffileListItemComponent,
     CafffileStartComponent,
+    FilterPipe
    ],
   providers: [
     { provide: API_BASE_URL, useValue: 'https://localhost:44335'},

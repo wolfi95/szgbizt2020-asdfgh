@@ -1,1 +1,10 @@
-<p>cafffile-details works!</p>
+<h1>{{caffFile?.name}}</h1>
+<button>Download</button>
+<img [src]="imageSource" alt="Preview" class="img-fluid" style="max-height: 8rem;">
+caffFile.imageData
+<div *ngFor="let comment of comments">
+    <h4>{{comment.userName}}</h4>
+    <div>{{comment.content}}</div>
+</div>
+<textarea name="comment"></textarea>
+<button>Add new Comment</button>
