@@ -305,3 +305,7 @@ BMžˆ
 
 27-11-2020 21:42:14	File name= 
 27-11-2020 21:42:14	CaffFiles/Asd.caff
+28-11-2020 16:13:32	Logging started
+
+28-11-2020 16:13:32	File name= 
+28-11-2020 16:13:32	CaffFiles/Asd.caff
