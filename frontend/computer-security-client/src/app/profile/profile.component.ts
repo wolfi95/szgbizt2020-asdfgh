@@ -18,7 +18,6 @@ export class ProfileComponent implements OnInit {
   faEdit = faEdit;
 
   constructor(
-    private userService: UserService,
     private autService: AuthenticationService  
     ) {
     
