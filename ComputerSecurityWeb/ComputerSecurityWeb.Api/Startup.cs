@@ -130,8 +130,8 @@ namespace ComputerSecurityWeb.Api
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins("https://localhost:44319")
-                .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                builder.WithOrigins("http://localhost:4200")
+               .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
             });
 
             app.UseRouting();

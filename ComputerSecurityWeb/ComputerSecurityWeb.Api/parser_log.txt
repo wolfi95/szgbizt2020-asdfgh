@@ -309,3 +309,43 @@ BMžˆ
 
 28-11-2020 16:13:32	File name= 
 28-11-2020 16:13:32	CaffFiles/Asd.caff
+28-11-2020 16:27:00	Logging started
+
+28-11-2020 16:27:00	File name= 
+28-11-2020 16:27:00	CaffFiles/Asd.caff
+28-11-2020 16:27:50	Logging started
+
+28-11-2020 16:27:50	File name= 
+28-11-2020 16:27:50	CaffFiles/Asd.caff
+28-11-2020 16:28:05	Logging started
+
+28-11-2020 16:28:05	File name= 
+28-11-2020 16:28:05	CaffFiles/Asd.caff
+28-11-2020 16:28:19	Logging started
+
+28-11-2020 16:28:19	File name= 
+28-11-2020 16:28:19	CaffFiles/Asd.caff
+28-11-2020 16:28:34	Logging started
+
+28-11-2020 16:28:34	File name= 
+28-11-2020 16:28:34	CaffFiles/Asd.caff
+28-11-2020 16:28:45	Logging started
+
+28-11-2020 16:28:45	File name= 
+28-11-2020 16:28:45	CaffFiles/Asd.caff
+28-11-2020 16:29:05	Logging started
+
+28-11-2020 16:29:05	File name= 
+28-11-2020 16:29:05	CaffFiles/Asd.caff
+28-11-2020 16:30:55	Logging started
+
+28-11-2020 16:30:55	File name= 
+28-11-2020 16:30:55	CaffFiles/Asd.caff
+28-11-2020 16:33:44	Logging started
+
+28-11-2020 16:33:44	File name= 
+28-11-2020 16:33:44	CaffFiles/Asd.caff
+28-11-2020 16:34:17	Logging started
+
+28-11-2020 16:34:17	File name= 
+28-11-2020 16:34:17	CaffFiles/Asd.caff
