@@ -3,7 +3,7 @@ import { AuthenticationService } from '../core/services/auth.service';
 
 import { ProfileComponent } from './profile.component';
 
-fdescribe('ProfileComponent', () => {
+describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
 
