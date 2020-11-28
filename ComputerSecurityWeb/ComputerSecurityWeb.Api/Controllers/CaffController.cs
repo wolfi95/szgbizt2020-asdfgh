@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 ﻿using ComputerSecurityWeb.Api.Common;
 using ComputerSecurityWeb.Bll.Dtos.Caff;
-=======
-﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.Dtos.User;
->>>>>>> backend
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Authorization;
