@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { CaffCafffilesClient, CaffHeader, CaffUploadClient, CaffCommentClient, FileParameter, CaffGetcafffilebyidClient, CaffFileDto, CaffDownloadClient, FileResponse, CaffDeletecaffClient, CaffEditcaffClient } from 'src/app/shared/clients';
 import { map } from 'rxjs/operators';
 import { ICaffEditModel, ICaffFileDetails, ICaffFileListItemModel, ICaffFileUploadModel, IComment, ICommentCreate } from '../models/cafffile';
@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CafffileService {
+  public cafffileListChanged = new Subject<ICaffFileListItemModel[]>();
+  public commentListChanged = new Subject<IComment[]>();
 
   constructor(
     private caffCafffilesClient: CaffCafffilesClient,

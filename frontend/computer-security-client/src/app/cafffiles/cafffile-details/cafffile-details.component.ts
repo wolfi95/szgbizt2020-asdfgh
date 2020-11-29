@@ -44,6 +44,7 @@ export class CafffileDetailsComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.caffId = params['id'];
       this.cafffileService.getCaffFilebyId(this.caffId).subscribe(res => {
+        this.caffNameForm.controls.name.setValue(res.name);
         this.caffForm.controls.name.setValue(res.name);
         this.caffFile = res;
         this.comments = res.comments;
@@ -70,7 +71,10 @@ export class CafffileDetailsComponent implements OnInit {
       message: this.f.comment.value,
       caffFileId: this.caffId
     }
-    this.cafffileService.comment(model).subscribe();
+    this.caffForm.reset();
+    this.cafffileService.comment(model).subscribe(_ => {
+      this.comments.push({ content: model.message, userName: this.user.email, userId: this.user.id });
+    });
   }
 
   editName() {
@@ -78,6 +82,15 @@ export class CafffileDetailsComponent implements OnInit {
       name: this.fName.name.value,
       id: this.caffId
     }
-    this.cafffileService.editName(model).subscribe();
+    this.cafffileService.editName(model).subscribe(res => {
+      this.caffFile.name = model.name;
+      this.cafffileService.getAllCaffFiles().subscribe(res => {
+        this.cafffileService.cafffileListChanged.next(res);
+      });
+    });
+  }
+
+  hasComment() {
+    return this.comments.length != 0;
   }
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
 import { ICaffFileListItemModel } from 'src/app/core/models/cafffile';
 import { CafffileService } from 'src/app/core/services/cafffile.service';
 
@@ -13,18 +14,17 @@ export class CafffileListComponent implements OnInit {
 
   faSearch = faSearch;
   searchText: any;
-  caffList: ICaffFileListItemModel[] = [];
+  @Input() caffList: ICaffFileListItemModel[];
+  subscriptionChange: Subscription;
 
   constructor(
-    private cafffileService: CafffileService,
     private router: Router,
     private route: ActivatedRoute,
+    private service: CafffileService
   ) { }
 
   ngOnInit(): void {
-    this.cafffileService.getAllCaffFiles().subscribe(res => {
-      this.caffList = res;
-    })
+    this.subscriptionChange = this.service.cafffileListChanged.subscribe(list => { this.caffList = list; });
   }
 
   onNewCaff(){

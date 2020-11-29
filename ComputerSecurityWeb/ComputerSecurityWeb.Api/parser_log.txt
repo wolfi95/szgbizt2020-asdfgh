@@ -1661,3 +1661,2193 @@ BMžˆ
 
 29-11-2020 11:53:40	File name= 
 29-11-2020 11:53:40	CaffFiles/asd.caff
+29-11-2020 12:46:50	Logging started
+
+29-11-2020 12:46:51	File name= 
+29-11-2020 12:46:51	CaffFiles/gdf.caff
+29-11-2020 12:46:51	Logging started
+
+29-11-2020 12:46:51	File name= 
+29-11-2020 12:46:51	CaffFiles/sada.caff
+29-11-2020 12:46:52	Logging started
+
+29-11-2020 12:46:52	File name= 
+29-11-2020 12:46:52	CaffFiles/erte.caff
+29-11-2020 12:46:52	Logging started
+
+29-11-2020 12:46:52	File name= 
+29-11-2020 12:46:52	CaffFiles/asdaads.caff
+29-11-2020 12:46:53	Logging started
+
+29-11-2020 12:46:53	File name= 
+29-11-2020 12:46:53	CaffFiles/wrwee.caff
+29-11-2020 12:46:54	Logging started
+
+29-11-2020 12:46:54	File name= 
+29-11-2020 12:46:54	CaffFiles/asd.caff
+29-11-2020 12:46:55	Logging started
+
+29-11-2020 12:46:55	File name= 
+29-11-2020 12:46:55	CaffFiles/asd.caff
+29-11-2020 12:47:22	Logging started
+
+29-11-2020 12:47:22	File name= 
+29-11-2020 12:47:22	CaffFiles/gdf.caff
+29-11-2020 12:47:55	Logging started
+
+29-11-2020 12:47:55	File name= 
+29-11-2020 12:47:55	CaffFiles/gdf.caff
+29-11-2020 12:47:55	Logging started
+
+29-11-2020 12:47:55	File name= 
+29-11-2020 12:47:55	CaffFiles/sada.caff
+29-11-2020 12:47:56	Logging started
+
+29-11-2020 12:47:56	File name= 
+29-11-2020 12:47:56	CaffFiles/erte.caff
+29-11-2020 12:47:57	Logging started
+
+29-11-2020 12:47:57	File name= 
+29-11-2020 12:47:57	CaffFiles/asdaads.caff
+29-11-2020 12:47:57	Logging started
+
+29-11-2020 12:47:57	File name= 
+29-11-2020 12:47:57	CaffFiles/wrwee.caff
+29-11-2020 12:47:58	Logging started
+
+29-11-2020 12:47:58	File name= 
+29-11-2020 12:47:58	CaffFiles/asd.caff
+29-11-2020 12:47:59	Logging started
+
+29-11-2020 12:47:59	File name= 
+29-11-2020 12:47:59	CaffFiles/asd.caff
+29-11-2020 12:48:02	Logging started
+
+29-11-2020 12:48:02	File name= 
+29-11-2020 12:48:02	CaffFiles/gdf.caff
+29-11-2020 13:01:35	Logging started
+
+29-11-2020 13:01:35	File name= 
+29-11-2020 13:01:35	CaffFiles/gdf.caff
+29-11-2020 13:01:35	File name= 
+29-11-2020 13:01:35	CaffFiles/gdf.caff
+29-11-2020 13:01:37	Logging started
+
+29-11-2020 13:01:37	File name= 
+29-11-2020 13:01:37	CaffFiles/sada.caff
+29-11-2020 13:01:39	Logging started
+
+29-11-2020 13:01:39	File name= 
+29-11-2020 13:01:39	CaffFiles/erte.caff
+29-11-2020 13:01:40	Logging started
+
+29-11-2020 13:01:40	File name= 
+29-11-2020 13:01:40	CaffFiles/asdaads.caff
+29-11-2020 13:01:43	Logging started
+
+29-11-2020 13:01:43	File name= 
+29-11-2020 13:01:43	CaffFiles/wrwee.caff
+29-11-2020 13:01:44	Logging started
+
+29-11-2020 13:01:45	File name= 
+29-11-2020 13:01:45	CaffFiles/asd.caff
+29-11-2020 13:01:45	Logging started
+
+29-11-2020 13:01:45	File name= 
+29-11-2020 13:01:45	CaffFiles/gdf.caff
+29-11-2020 13:01:47	Logging started
+
+29-11-2020 13:01:47	File name= 
+29-11-2020 13:01:47	CaffFiles/sada.caff
+29-11-2020 13:01:49	Logging started
+
+29-11-2020 13:01:49	File name= 
+29-11-2020 13:01:49	CaffFiles/erte.caff
+29-11-2020 13:01:50	Logging started
+
+29-11-2020 13:01:50	File name= 
+29-11-2020 13:01:50	CaffFiles/asdaads.caff
+29-11-2020 13:01:52	Logging started
+
+29-11-2020 13:01:52	File name= 
+29-11-2020 13:01:52	CaffFiles/wrwee.caff
+29-11-2020 13:01:53	Logging started
+
+29-11-2020 13:01:53	File name= 
+29-11-2020 13:01:53	CaffFiles/asd.caff
+29-11-2020 13:01:54	Logging started
+
+29-11-2020 13:01:54	File name= 
+29-11-2020 13:01:54	CaffFiles/asd.caff
+29-11-2020 13:01:58	Logging started
+
+29-11-2020 13:01:58	File name= 
+29-11-2020 13:01:58	CaffFiles/gdf.caff
+29-11-2020 13:04:32	Logging started
+
+29-11-2020 13:04:32	Logging started
+
+29-11-2020 13:04:32	File name= 
+29-11-2020 13:04:32	File name= 
+29-11-2020 13:04:32	CaffFiles/gdf.caff
+29-11-2020 13:04:32	CaffFiles/gdf.caff
+29-11-2020 13:04:34	Logging started
+
+29-11-2020 13:04:34	File name= 
+29-11-2020 13:04:34	CaffFiles/sada.caff
+29-11-2020 13:04:36	Logging started
+
+29-11-2020 13:04:36	File name= 
+29-11-2020 13:04:36	CaffFiles/erte.caff
+29-11-2020 13:04:38	Logging started
+
+29-11-2020 13:04:38	File name= 
+29-11-2020 13:04:38	CaffFiles/asdaads.caff
+29-11-2020 13:04:40	Logging started
+
+29-11-2020 13:04:40	File name= 
+29-11-2020 13:04:40	CaffFiles/wrwee.caff
+29-11-2020 13:04:41	Logging started
+
+29-11-2020 13:04:41	File name= 
+29-11-2020 13:04:41	CaffFiles/asd.caff
+29-11-2020 13:04:43	Logging started
+
+29-11-2020 13:04:43	File name= 
+29-11-2020 13:04:43	CaffFiles/asd.caff
+29-11-2020 13:05:06	Logging started
+
+29-11-2020 13:05:06	File name= 
+29-11-2020 13:05:06	Logging started
+
+29-11-2020 13:05:06	File name= 
+29-11-2020 13:05:06	CaffFiles/gdf.caff
+29-11-2020 13:05:06	CaffFiles/gdf.caff
+29-11-2020 13:05:08	Logging started
+
+29-11-2020 13:05:08	File name= 
+29-11-2020 13:05:08	CaffFiles/sada.caff
+29-11-2020 13:05:09	Logging started
+
+29-11-2020 13:05:09	File name= 
+29-11-2020 13:05:09	CaffFiles/erte.caff
+29-11-2020 13:05:11	Logging started
+
+29-11-2020 13:05:11	File name= 
+29-11-2020 13:05:11	CaffFiles/asdaads.caff
+29-11-2020 13:05:13	Logging started
+
+29-11-2020 13:05:13	File name= 
+29-11-2020 13:05:13	CaffFiles/wrwee.caff
+29-11-2020 13:05:14	Logging started
+
+29-11-2020 13:05:14	File name= 
+29-11-2020 13:05:14	CaffFiles/asd.caff
+29-11-2020 13:05:16	Logging started
+
+29-11-2020 13:05:16	File name= 
+29-11-2020 13:05:16	CaffFiles/asd.caff
+29-11-2020 13:05:22	Logging started
+
+29-11-2020 13:05:22	File name= 
+29-11-2020 13:05:22	CaffFiles/sada.caff
+29-11-2020 13:05:34	Logging started
+
+29-11-2020 13:05:34	File name= 
+29-11-2020 13:05:34	CaffFiles/gdf.caff
+29-11-2020 13:05:40	Logging started
+
+29-11-2020 13:05:40	File name= 
+29-11-2020 13:05:40	CaffFiles/sada.caff
+29-11-2020 13:05:42	Logging started
+
+29-11-2020 13:05:42	File name= 
+29-11-2020 13:05:42	CaffFiles/erte.caff
+29-11-2020 13:05:49	Logging started
+
+29-11-2020 13:05:49	File name= 
+29-11-2020 13:05:49	CaffFiles/sada.caff
+29-11-2020 13:05:53	Logging started
+
+29-11-2020 13:05:53	File name= 
+29-11-2020 13:05:53	CaffFiles/gdf.caff
+29-11-2020 13:05:56	Logging started
+
+29-11-2020 13:05:56	File name= 
+29-11-2020 13:05:56	CaffFiles/sada.caff
+29-11-2020 13:05:59	Logging started
+
+29-11-2020 13:05:59	File name= 
+29-11-2020 13:05:59	CaffFiles/erte.caff
+29-11-2020 13:09:38	Logging started
+
+29-11-2020 13:09:38	File name= 
+29-11-2020 13:09:38	CaffFiles/gdf.caff
+29-11-2020 13:09:38	Logging started
+
+29-11-2020 13:09:38	File name= 
+29-11-2020 13:09:38	CaffFiles/erte.caff
+29-11-2020 13:09:41	Logging started
+
+29-11-2020 13:09:41	File name= 
+29-11-2020 13:09:41	CaffFiles/sada.caff
+29-11-2020 13:09:43	Logging started
+
+29-11-2020 13:09:43	File name= 
+29-11-2020 13:09:43	CaffFiles/erte.caff
+29-11-2020 13:09:45	Logging started
+
+29-11-2020 13:09:45	File name= 
+29-11-2020 13:09:45	CaffFiles/asdaads.caff
+29-11-2020 13:09:47	Logging started
+
+29-11-2020 13:09:47	File name= 
+29-11-2020 13:09:47	CaffFiles/wrwee.caff
+29-11-2020 13:09:49	Logging started
+
+29-11-2020 13:09:49	File name= 
+29-11-2020 13:09:49	CaffFiles/asd.caff
+29-11-2020 13:09:50	Logging started
+
+29-11-2020 13:09:50	File name= 
+29-11-2020 13:09:50	CaffFiles/asd.caff
+29-11-2020 13:09:53	Logging started
+
+29-11-2020 13:09:53	File name= 
+29-11-2020 13:09:53	CaffFiles/gdf.caff
+29-11-2020 13:09:57	Logging started
+
+29-11-2020 13:09:57	File name= 
+29-11-2020 13:09:57	CaffFiles/erte.caff
+29-11-2020 13:10:02	Logging started
+
+29-11-2020 13:10:02	File name= 
+29-11-2020 13:10:02	CaffFiles/gdf.caff
+29-11-2020 13:10:24	Logging started
+
+29-11-2020 13:10:24	File name= 
+29-11-2020 13:10:24	CaffFiles/gdf.caff
+29-11-2020 13:11:24	Logging started
+
+29-11-2020 13:11:24	Logging started
+
+29-11-2020 13:11:24	File name= 
+29-11-2020 13:11:24	CaffFiles/gdf.caff
+29-11-2020 13:11:24	File name= 
+29-11-2020 13:11:24	CaffFiles/gdf.caff
+29-11-2020 13:11:26	Logging started
+
+29-11-2020 13:11:26	File name= 
+29-11-2020 13:11:26	CaffFiles/sada.caff
+29-11-2020 13:11:28	Logging started
+
+29-11-2020 13:11:28	File name= 
+29-11-2020 13:11:28	CaffFiles/erte.caff
+29-11-2020 13:11:30	Logging started
+
+29-11-2020 13:11:30	File name= 
+29-11-2020 13:11:30	CaffFiles/asdaads.caff
+29-11-2020 13:11:32	Logging started
+
+29-11-2020 13:11:32	File name= 
+29-11-2020 13:11:32	CaffFiles/wrwee.caff
+29-11-2020 13:11:33	Logging started
+
+29-11-2020 13:11:33	File name= 
+29-11-2020 13:11:33	CaffFiles/asd.caff
+29-11-2020 13:11:34	Logging started
+
+29-11-2020 13:11:34	File name= 
+29-11-2020 13:11:34	CaffFiles/asd.caff
+29-11-2020 13:11:42	Logging started
+
+29-11-2020 13:11:42	File name= 
+29-11-2020 13:11:42	CaffFiles/gdf.caff
+29-11-2020 13:11:43	Logging started
+
+29-11-2020 13:11:43	File name= 
+29-11-2020 13:11:43	CaffFiles/sada.caff
+29-11-2020 13:11:45	Logging started
+
+29-11-2020 13:11:45	File name= 
+29-11-2020 13:11:45	CaffFiles/erte.caff
+29-11-2020 13:11:46	Logging started
+
+29-11-2020 13:11:46	File name= 
+29-11-2020 13:11:46	CaffFiles/asdaads.caff
+29-11-2020 13:11:47	Logging started
+
+29-11-2020 13:11:47	File name= 
+29-11-2020 13:11:47	CaffFiles/wrwee.caff
+29-11-2020 13:11:48	Logging started
+
+29-11-2020 13:11:48	File name= 
+29-11-2020 13:11:49	CaffFiles/asd.caff
+29-11-2020 13:11:50	Logging started
+
+29-11-2020 13:11:50	File name= 
+29-11-2020 13:11:50	CaffFiles/asd.caff
+29-11-2020 13:11:55	Logging started
+
+29-11-2020 13:11:55	File name= 
+29-11-2020 13:11:55	CaffFiles/sada.caff
+29-11-2020 13:12:23	Logging started
+
+29-11-2020 13:12:23	File name= 
+29-11-2020 13:12:23	CaffFiles/asdaads.caff
+29-11-2020 13:13:18	Logging started
+
+29-11-2020 13:13:18	File name= 
+29-11-2020 13:13:18	CaffFiles/gdf.caff
+29-11-2020 13:13:18	Logging started
+
+29-11-2020 13:13:18	File name= 
+29-11-2020 13:13:18	CaffFiles/asdaads.caff
+29-11-2020 13:14:13	Logging started
+
+29-11-2020 13:14:13	File name= 
+29-11-2020 13:14:13	CaffFiles/gdf.caff
+29-11-2020 13:14:15	Logging started
+
+29-11-2020 13:14:15	File name= 
+29-11-2020 13:14:15	CaffFiles/sada.caff
+29-11-2020 13:14:18	Logging started
+
+29-11-2020 13:14:18	File name= 
+29-11-2020 13:14:18	CaffFiles/erte.caff
+29-11-2020 13:14:20	Logging started
+
+29-11-2020 13:14:20	File name= 
+29-11-2020 13:14:20	CaffFiles/asdaads.caff
+29-11-2020 13:14:21	Logging started
+
+29-11-2020 13:14:21	File name= 
+29-11-2020 13:14:21	CaffFiles/wrwee.caff
+29-11-2020 13:14:23	Logging started
+
+29-11-2020 13:14:23	File name= 
+29-11-2020 13:14:23	CaffFiles/asd.caff
+29-11-2020 13:14:24	Logging started
+
+29-11-2020 13:14:24	File name= 
+29-11-2020 13:14:25	CaffFiles/asd.caff
+29-11-2020 13:15:12	Logging started
+
+29-11-2020 13:15:12	File name= 
+29-11-2020 13:15:12	CaffFiles/sada.caff
+29-11-2020 13:16:02	Logging started
+
+29-11-2020 13:16:02	Logging started
+
+29-11-2020 13:16:02	File name= 
+29-11-2020 13:16:02	CaffFiles/gdf.caff
+29-11-2020 13:16:02	File name= 
+29-11-2020 13:16:02	CaffFiles/sada.caff
+29-11-2020 13:16:04	Logging started
+
+29-11-2020 13:16:04	File name= 
+29-11-2020 13:16:04	CaffFiles/sada.caff
+29-11-2020 13:16:06	Logging started
+
+29-11-2020 13:16:06	File name= 
+29-11-2020 13:16:06	CaffFiles/erte.caff
+29-11-2020 13:16:08	Logging started
+
+29-11-2020 13:16:08	File name= 
+29-11-2020 13:16:08	CaffFiles/asdaads.caff
+29-11-2020 13:16:10	Logging started
+
+29-11-2020 13:16:10	File name= 
+29-11-2020 13:16:10	CaffFiles/wrwee.caff
+29-11-2020 13:16:11	Logging started
+
+29-11-2020 13:16:11	File name= 
+29-11-2020 13:16:11	CaffFiles/asd.caff
+29-11-2020 13:16:12	Logging started
+
+29-11-2020 13:16:12	File name= 
+29-11-2020 13:16:12	CaffFiles/asd.caff
+29-11-2020 13:16:15	Logging started
+
+29-11-2020 13:16:16	File name= 
+29-11-2020 13:16:16	CaffFiles/gdf.caff
+29-11-2020 13:16:17	Logging started
+
+29-11-2020 13:16:17	File name= 
+29-11-2020 13:16:17	CaffFiles/sada.caff
+29-11-2020 13:16:19	Logging started
+
+29-11-2020 13:16:19	File name= 
+29-11-2020 13:16:19	CaffFiles/erte.caff
+29-11-2020 13:16:20	Logging started
+
+29-11-2020 13:16:20	File name= 
+29-11-2020 13:16:20	CaffFiles/asdaads.caff
+29-11-2020 13:16:21	Logging started
+
+29-11-2020 13:16:21	File name= 
+29-11-2020 13:16:21	CaffFiles/wrwee.caff
+29-11-2020 13:16:23	Logging started
+
+29-11-2020 13:16:23	File name= 
+29-11-2020 13:16:23	CaffFiles/asd.caff
+29-11-2020 13:16:25	Logging started
+
+29-11-2020 13:16:25	File name= 
+29-11-2020 13:16:25	CaffFiles/asd.caff
+29-11-2020 13:16:33	Logging started
+
+29-11-2020 13:16:33	File name= 
+29-11-2020 13:16:33	CaffFiles/sada.caff
+29-11-2020 13:24:59	Logging started
+
+29-11-2020 13:24:59	Logging started
+
+29-11-2020 13:24:59	File name= 
+29-11-2020 13:24:59	CaffFiles/gdf.caff
+29-11-2020 13:24:59	File name= 
+29-11-2020 13:24:59	CaffFiles/sada.caff
+29-11-2020 13:25:46	Logging started
+
+29-11-2020 13:25:46	File name= 
+29-11-2020 13:25:46	CaffFiles/gdf.caff
+29-11-2020 13:25:47	Logging started
+
+29-11-2020 13:25:47	File name= 
+29-11-2020 13:25:47	CaffFiles/sada.caff
+29-11-2020 13:25:48	Logging started
+
+29-11-2020 13:25:48	File name= 
+29-11-2020 13:25:48	CaffFiles/erte.caff
+29-11-2020 13:25:50	Logging started
+
+29-11-2020 13:25:50	File name= 
+29-11-2020 13:25:50	CaffFiles/asdaads.caff
+29-11-2020 13:25:51	Logging started
+
+29-11-2020 13:25:51	File name= 
+29-11-2020 13:25:51	CaffFiles/wrwee.caff
+29-11-2020 13:25:52	Logging started
+
+29-11-2020 13:25:52	File name= 
+29-11-2020 13:25:52	CaffFiles/asd.caff
+29-11-2020 13:25:53	Logging started
+
+29-11-2020 13:25:53	File name= 
+29-11-2020 13:25:53	CaffFiles/asd.caff
+29-11-2020 13:27:40	Logging started
+
+29-11-2020 13:27:40	File name= 
+29-11-2020 13:27:40	CaffFiles/gdf.caff
+29-11-2020 13:27:41	Logging started
+
+29-11-2020 13:27:41	File name= 
+29-11-2020 13:27:41	CaffFiles/sada.caff
+29-11-2020 13:27:42	Logging started
+
+29-11-2020 13:27:42	File name= 
+29-11-2020 13:27:42	CaffFiles/erte.caff
+29-11-2020 13:27:43	Logging started
+
+29-11-2020 13:27:43	File name= 
+29-11-2020 13:27:43	CaffFiles/asdaads.caff
+29-11-2020 13:27:45	Logging started
+
+29-11-2020 13:27:45	File name= 
+29-11-2020 13:27:45	CaffFiles/wrwee.caff
+29-11-2020 13:27:46	Logging started
+
+29-11-2020 13:27:46	File name= 
+29-11-2020 13:27:46	CaffFiles/asd.caff
+29-11-2020 13:27:47	Logging started
+
+29-11-2020 13:27:47	File name= 
+29-11-2020 13:27:47	CaffFiles/asd.caff
+29-11-2020 13:27:50	Logging started
+
+29-11-2020 13:27:50	File name= 
+29-11-2020 13:27:50	CaffFiles/gdf.caff
+29-11-2020 13:27:52	Logging started
+
+29-11-2020 13:27:52	File name= 
+29-11-2020 13:27:52	CaffFiles/sada.caff
+29-11-2020 13:27:53	Logging started
+
+29-11-2020 13:27:53	File name= 
+29-11-2020 13:27:53	CaffFiles/erte.caff
+29-11-2020 13:27:54	Logging started
+
+29-11-2020 13:27:54	File name= 
+29-11-2020 13:27:54	CaffFiles/asdaads.caff
+29-11-2020 13:27:55	Logging started
+
+29-11-2020 13:27:56	File name= 
+29-11-2020 13:27:56	CaffFiles/wrwee.caff
+29-11-2020 13:27:57	Logging started
+
+29-11-2020 13:27:57	File name= 
+29-11-2020 13:27:57	CaffFiles/asd.caff
+29-11-2020 13:27:58	Logging started
+
+29-11-2020 13:27:58	File name= 
+29-11-2020 13:27:58	CaffFiles/asd.caff
+29-11-2020 13:28:02	Logging started
+
+29-11-2020 13:28:02	File name= 
+29-11-2020 13:28:02	CaffFiles/gdf.caff
+29-11-2020 13:29:59	Logging started
+
+29-11-2020 13:29:59	Logging started
+
+29-11-2020 13:29:59	File name= 
+29-11-2020 13:29:59	CaffFiles/gdf.caff
+29-11-2020 13:29:59	File name= 
+29-11-2020 13:29:59	CaffFiles/gdf.caff
+29-11-2020 13:30:01	Logging started
+
+29-11-2020 13:30:01	File name= 
+29-11-2020 13:30:01	CaffFiles/sada.caff
+29-11-2020 13:30:03	Logging started
+
+29-11-2020 13:30:03	File name= 
+29-11-2020 13:30:03	CaffFiles/erte.caff
+29-11-2020 13:30:05	Logging started
+
+29-11-2020 13:30:05	File name= 
+29-11-2020 13:30:05	CaffFiles/asdaads.caff
+29-11-2020 13:30:06	Logging started
+
+29-11-2020 13:30:06	File name= 
+29-11-2020 13:30:06	CaffFiles/wrwee.caff
+29-11-2020 13:30:07	Logging started
+
+29-11-2020 13:30:07	File name= 
+29-11-2020 13:30:07	CaffFiles/gdf.caff
+29-11-2020 13:30:08	Logging started
+
+29-11-2020 13:30:08	File name= 
+29-11-2020 13:30:09	CaffFiles/sada.caff
+29-11-2020 13:30:10	Logging started
+
+29-11-2020 13:30:10	File name= 
+29-11-2020 13:30:10	CaffFiles/erte.caff
+29-11-2020 13:30:12	Logging started
+
+29-11-2020 13:30:12	File name= 
+29-11-2020 13:30:12	CaffFiles/asdaads.caff
+29-11-2020 13:30:14	Logging started
+
+29-11-2020 13:30:14	File name= 
+29-11-2020 13:30:14	CaffFiles/wrwee.caff
+29-11-2020 13:30:15	Logging started
+
+29-11-2020 13:30:15	File name= 
+29-11-2020 13:30:15	CaffFiles/asd.caff
+29-11-2020 13:30:17	Logging started
+
+29-11-2020 13:30:17	File name= 
+29-11-2020 13:30:17	CaffFiles/asd.caff
+29-11-2020 13:30:22	Logging started
+
+29-11-2020 13:30:22	File name= 
+29-11-2020 13:30:22	CaffFiles/sada.caff
+29-11-2020 13:30:47	Logging started
+
+29-11-2020 13:30:47	File name= 
+29-11-2020 13:30:47	Logging started
+
+29-11-2020 13:30:47	File name= 
+29-11-2020 13:30:47	CaffFiles/sada.caff
+29-11-2020 13:30:47	CaffFiles/gdf.caff
+29-11-2020 13:38:43	Logging started
+
+29-11-2020 13:38:43	Logging started
+
+29-11-2020 13:38:43	File name= 
+29-11-2020 13:38:43	CaffFiles/gdf.caff
+29-11-2020 13:38:43	File name= 
+29-11-2020 13:38:43	CaffFiles/sada.caff
+29-11-2020 13:39:12	Logging started
+
+29-11-2020 13:39:12	Logging started
+
+29-11-2020 13:39:12	File name= 
+29-11-2020 13:39:12	CaffFiles/gdf.caff
+29-11-2020 13:39:12	File name= 
+29-11-2020 13:39:12	CaffFiles/sada.caff
+29-11-2020 13:40:38	Logging started
+
+29-11-2020 13:40:38	Logging started
+
+29-11-2020 13:40:38	File name= 
+29-11-2020 13:40:38	CaffFiles/gdf.caff
+29-11-2020 13:40:38	File name= 
+29-11-2020 13:40:38	CaffFiles/sada.caff
+29-11-2020 13:40:41	Logging started
+
+29-11-2020 13:40:41	File name= 
+29-11-2020 13:40:41	CaffFiles/sada.caff
+29-11-2020 13:40:43	Logging started
+
+29-11-2020 13:40:43	File name= 
+29-11-2020 13:40:43	CaffFiles/erte.caff
+29-11-2020 13:40:44	Logging started
+
+29-11-2020 13:40:44	File name= 
+29-11-2020 13:40:44	CaffFiles/asdaads.caff
+29-11-2020 13:40:46	Logging started
+
+29-11-2020 13:40:46	File name= 
+29-11-2020 13:40:46	CaffFiles/wrwee.caff
+29-11-2020 13:40:47	Logging started
+
+29-11-2020 13:40:47	File name= 
+29-11-2020 13:40:47	CaffFiles/asd.caff
+29-11-2020 13:40:48	Logging started
+
+29-11-2020 13:40:48	File name= 
+29-11-2020 13:40:48	CaffFiles/asd.caff
+29-11-2020 13:40:53	Logging started
+
+29-11-2020 13:40:53	File name= 
+29-11-2020 13:40:53	CaffFiles/gdf.caff
+29-11-2020 13:42:08	Logging started
+
+29-11-2020 13:42:08	File name= 
+29-11-2020 13:42:08	Logging started
+
+29-11-2020 13:42:08	File name= 
+29-11-2020 13:42:08	CaffFiles/gdf.caff
+29-11-2020 13:42:08	CaffFiles/gdf.caff
+29-11-2020 13:42:11	Logging started
+
+29-11-2020 13:42:11	File name= 
+29-11-2020 13:42:11	CaffFiles/sada.caff
+29-11-2020 13:42:13	Logging started
+
+29-11-2020 13:42:13	File name= 
+29-11-2020 13:42:13	CaffFiles/erte.caff
+29-11-2020 13:42:15	Logging started
+
+29-11-2020 13:42:15	File name= 
+29-11-2020 13:42:15	CaffFiles/asdaads.caff
+29-11-2020 13:42:17	Logging started
+
+29-11-2020 13:42:17	File name= 
+29-11-2020 13:42:17	CaffFiles/wrwee.caff
+29-11-2020 13:42:18	Logging started
+
+29-11-2020 13:42:18	File name= 
+29-11-2020 13:42:18	CaffFiles/asd.caff
+29-11-2020 13:42:19	Logging started
+
+29-11-2020 13:42:19	File name= 
+29-11-2020 13:42:19	CaffFiles/asd.caff
+29-11-2020 13:43:04	Logging started
+
+29-11-2020 13:43:04	Logging started
+
+29-11-2020 13:43:04	File name= 
+29-11-2020 13:43:04	CaffFiles/gdf.caff
+29-11-2020 13:43:04	File name= 
+29-11-2020 13:43:04	CaffFiles/gdf.caff
+29-11-2020 13:43:05	Logging started
+
+29-11-2020 13:43:05	File name= 
+29-11-2020 13:43:05	CaffFiles/sada.caff
+29-11-2020 13:43:06	Logging started
+
+29-11-2020 13:43:06	File name= 
+29-11-2020 13:43:06	CaffFiles/erte.caff
+29-11-2020 13:43:08	Logging started
+
+29-11-2020 13:43:08	File name= 
+29-11-2020 13:43:08	CaffFiles/asdaads.caff
+29-11-2020 13:43:09	Logging started
+
+29-11-2020 13:43:09	File name= 
+29-11-2020 13:43:09	CaffFiles/wrwee.caff
+29-11-2020 13:43:10	Logging started
+
+29-11-2020 13:43:10	File name= 
+29-11-2020 13:43:10	CaffFiles/asd.caff
+29-11-2020 13:43:12	Logging started
+
+29-11-2020 13:43:12	File name= 
+29-11-2020 13:43:12	CaffFiles/asd.caff
+29-11-2020 13:43:38	Logging started
+
+29-11-2020 13:43:38	File name= 
+29-11-2020 13:43:38	CaffFiles/gdf.caff
+29-11-2020 13:43:38	File name= 
+29-11-2020 13:43:38	CaffFiles/gdf.caff
+29-11-2020 13:44:08	Logging started
+
+29-11-2020 13:44:08	Logging started
+
+29-11-2020 13:44:08	File name= 
+29-11-2020 13:44:08	CaffFiles/gdf.caff
+29-11-2020 13:44:08	File name= 
+29-11-2020 13:44:09	CaffFiles/gdf.caff
+29-11-2020 13:44:56	Logging started
+
+29-11-2020 13:44:56	File name= 
+29-11-2020 13:44:56	CaffFiles/gdf.caff
+29-11-2020 13:44:59	Logging started
+
+29-11-2020 13:44:59	File name= 
+29-11-2020 13:44:59	CaffFiles/sada.caff
+29-11-2020 13:45:01	Logging started
+
+29-11-2020 13:45:01	File name= 
+29-11-2020 13:45:01	CaffFiles/erte.caff
+29-11-2020 13:45:02	Logging started
+
+29-11-2020 13:45:02	File name= 
+29-11-2020 13:45:02	CaffFiles/gdf.caff
+29-11-2020 13:45:38	Logging started
+
+29-11-2020 13:45:39	File name= 
+29-11-2020 13:45:39	CaffFiles/gdf.caff
+29-11-2020 13:45:39	Logging started
+
+29-11-2020 13:45:40	File name= 
+29-11-2020 13:45:40	CaffFiles/gdf.caff
+29-11-2020 13:50:02	Logging started
+
+29-11-2020 13:50:02	File name= 
+29-11-2020 13:50:02	CaffFiles/gdf.caff
+29-11-2020 13:50:03	Logging started
+
+29-11-2020 13:50:03	File name= 
+29-11-2020 13:50:03	CaffFiles/gdf.caff
+29-11-2020 13:50:05	Logging started
+
+29-11-2020 13:50:05	File name= 
+29-11-2020 13:50:05	CaffFiles/sada.caff
+29-11-2020 13:50:06	Logging started
+
+29-11-2020 13:50:06	File name= 
+29-11-2020 13:50:06	CaffFiles/erte.caff
+29-11-2020 13:50:08	Logging started
+
+29-11-2020 13:50:08	File name= 
+29-11-2020 13:50:08	CaffFiles/asdaads.caff
+29-11-2020 13:50:10	Logging started
+
+29-11-2020 13:50:10	File name= 
+29-11-2020 13:50:10	CaffFiles/wrwee.caff
+29-11-2020 13:50:11	Logging started
+
+29-11-2020 13:50:11	File name= 
+29-11-2020 13:50:11	CaffFiles/asd.caff
+29-11-2020 13:50:13	Logging started
+
+29-11-2020 13:50:13	File name= 
+29-11-2020 13:50:13	CaffFiles/asd.caff
+29-11-2020 13:50:17	Logging started
+
+29-11-2020 13:50:17	File name= 
+29-11-2020 13:50:17	CaffFiles/sada.caff
+29-11-2020 13:51:25	Logging started
+
+29-11-2020 13:51:25	File name= 
+29-11-2020 13:51:25	CaffFiles/gdf.caff
+29-11-2020 13:51:25	Logging started
+
+29-11-2020 13:51:25	File name= 
+29-11-2020 13:51:25	CaffFiles/sada.caff
+29-11-2020 13:52:17	Logging started
+
+29-11-2020 13:52:18	File name= 
+29-11-2020 13:52:18	CaffFiles/gdf.caff
+29-11-2020 13:52:18	Logging started
+
+29-11-2020 13:52:18	File name= 
+29-11-2020 13:52:18	CaffFiles/sada.caff
+29-11-2020 13:52:22	Logging started
+
+29-11-2020 13:52:22	File name= 
+29-11-2020 13:52:22	CaffFiles/gdf.caff
+29-11-2020 13:52:24	Logging started
+
+29-11-2020 13:52:24	File name= 
+29-11-2020 13:52:24	CaffFiles/sada.caff
+29-11-2020 13:52:26	Logging started
+
+29-11-2020 13:52:26	File name= 
+29-11-2020 13:52:26	CaffFiles/erte.caff
+29-11-2020 13:52:27	Logging started
+
+29-11-2020 13:52:27	File name= 
+29-11-2020 13:52:27	CaffFiles/asdaads.caff
+29-11-2020 13:52:28	Logging started
+
+29-11-2020 13:52:28	File name= 
+29-11-2020 13:52:28	CaffFiles/wrwee.caff
+29-11-2020 13:52:29	Logging started
+
+29-11-2020 13:52:29	File name= 
+29-11-2020 13:52:30	CaffFiles/asd.caff
+29-11-2020 13:52:31	Logging started
+
+29-11-2020 13:52:31	File name= 
+29-11-2020 13:52:31	CaffFiles/asd.caff
+29-11-2020 13:52:36	Logging started
+
+29-11-2020 13:52:36	File name= 
+29-11-2020 13:52:36	CaffFiles/sada.caff
+29-11-2020 13:56:38	Logging started
+
+29-11-2020 13:56:38	Logging started
+
+29-11-2020 13:56:38	File name= 
+29-11-2020 13:56:38	CaffFiles/gdf.caff
+29-11-2020 13:56:38	File name= 
+29-11-2020 13:56:38	CaffFiles/sada.caff
+29-11-2020 13:56:44	Logging started
+
+29-11-2020 13:56:44	File name= 
+29-11-2020 13:56:44	CaffFiles/gdf.caff
+29-11-2020 13:56:45	Logging started
+
+29-11-2020 13:56:45	File name= 
+29-11-2020 13:56:45	CaffFiles/sada.caff
+29-11-2020 13:56:47	Logging started
+
+29-11-2020 13:56:47	File name= 
+29-11-2020 13:56:47	CaffFiles/erte.caff
+29-11-2020 13:56:48	Logging started
+
+29-11-2020 13:56:48	File name= 
+29-11-2020 13:56:48	CaffFiles/asdaads.caff
+29-11-2020 13:56:50	Logging started
+
+29-11-2020 13:56:50	File name= 
+29-11-2020 13:56:50	CaffFiles/wrwee.caff
+29-11-2020 13:56:50	Logging started
+
+29-11-2020 13:56:50	File name= 
+29-11-2020 13:56:51	CaffFiles/gdf.caff
+29-11-2020 13:56:52	Logging started
+
+29-11-2020 13:56:52	File name= 
+29-11-2020 13:56:52	CaffFiles/sada.caff
+29-11-2020 13:56:54	Logging started
+
+29-11-2020 13:56:54	File name= 
+29-11-2020 13:56:54	CaffFiles/erte.caff
+29-11-2020 13:56:55	Logging started
+
+29-11-2020 13:56:55	File name= 
+29-11-2020 13:56:55	CaffFiles/asdaads.caff
+29-11-2020 13:56:57	Logging started
+
+29-11-2020 13:56:57	File name= 
+29-11-2020 13:56:57	CaffFiles/wrwee.caff
+29-11-2020 13:56:58	Logging started
+
+29-11-2020 13:56:58	File name= 
+29-11-2020 13:56:58	CaffFiles/asd.caff
+29-11-2020 13:56:59	Logging started
+
+29-11-2020 13:56:59	File name= 
+29-11-2020 13:56:59	CaffFiles/asd.caff
+29-11-2020 13:57:05	Logging started
+
+29-11-2020 13:57:05	File name= 
+29-11-2020 13:57:05	CaffFiles/gdf.caff
+29-11-2020 13:57:09	Logging started
+
+29-11-2020 13:57:09	File name= 
+29-11-2020 13:57:09	CaffFiles/sada.caff
+29-11-2020 13:57:52	Logging started
+
+29-11-2020 13:57:53	Logging started
+
+29-11-2020 13:57:53	File name= 
+29-11-2020 13:57:53	File name= 
+29-11-2020 13:57:53	CaffFiles/sada.caff
+29-11-2020 13:57:53	CaffFiles/gdf.caff
+29-11-2020 13:57:55	Logging started
+
+29-11-2020 13:57:55	File name= 
+29-11-2020 13:57:55	CaffFiles/sada.caff
+29-11-2020 13:57:57	Logging started
+
+29-11-2020 13:57:57	File name= 
+29-11-2020 13:57:57	CaffFiles/erte.caff
+29-11-2020 13:57:58	Logging started
+
+29-11-2020 13:57:58	File name= 
+29-11-2020 13:57:59	CaffFiles/asdaads.caff
+29-11-2020 13:58:00	Logging started
+
+29-11-2020 13:58:00	File name= 
+29-11-2020 13:58:00	CaffFiles/wrwee.caff
+29-11-2020 13:58:01	Logging started
+
+29-11-2020 13:58:01	File name= 
+29-11-2020 13:58:01	CaffFiles/asd.caff
+29-11-2020 13:58:03	Logging started
+
+29-11-2020 13:58:03	File name= 
+29-11-2020 13:58:03	CaffFiles/asd.caff
+29-11-2020 13:58:03	Logging started
+
+29-11-2020 13:58:03	File name= 
+29-11-2020 13:58:03	CaffFiles/gdf.caff
+29-11-2020 13:58:05	Logging started
+
+29-11-2020 13:58:05	File name= 
+29-11-2020 13:58:05	CaffFiles/sada.caff
+29-11-2020 13:58:07	Logging started
+
+29-11-2020 13:58:07	File name= 
+29-11-2020 13:58:07	CaffFiles/erte.caff
+29-11-2020 13:58:09	Logging started
+
+29-11-2020 13:58:09	File name= 
+29-11-2020 13:58:09	CaffFiles/asdaads.caff
+29-11-2020 13:58:10	Logging started
+
+29-11-2020 13:58:10	File name= 
+29-11-2020 13:58:10	CaffFiles/wrwee.caff
+29-11-2020 13:58:11	Logging started
+
+29-11-2020 13:58:12	File name= 
+29-11-2020 13:58:12	CaffFiles/asd.caff
+29-11-2020 13:58:13	Logging started
+
+29-11-2020 13:58:13	File name= 
+29-11-2020 13:58:13	CaffFiles/asd.caff
+29-11-2020 13:58:18	Logging started
+
+29-11-2020 13:58:18	File name= 
+29-11-2020 13:58:18	CaffFiles/sada.caff
+29-11-2020 13:58:59	Logging started
+
+29-11-2020 13:58:59	Logging started
+
+29-11-2020 13:58:59	File name= 
+29-11-2020 13:58:59	CaffFiles/gdf.caff
+29-11-2020 13:58:59	File name= 
+29-11-2020 13:58:59	CaffFiles/sada.caff
+29-11-2020 13:59:15	Logging started
+
+29-11-2020 13:59:15	Logging started
+
+29-11-2020 13:59:15	File name= 
+29-11-2020 13:59:15	CaffFiles/sada.caff
+29-11-2020 13:59:15	File name= 
+29-11-2020 13:59:15	CaffFiles/gdf.caff
+29-11-2020 14:02:13	Logging started
+
+29-11-2020 14:02:13	File name= 
+29-11-2020 14:02:13	CaffFiles/gdf.caff
+29-11-2020 14:02:13	Logging started
+
+29-11-2020 14:02:13	File name= 
+29-11-2020 14:02:13	CaffFiles/sada.caff
+29-11-2020 14:02:15	Logging started
+
+29-11-2020 14:02:15	File name= 
+29-11-2020 14:02:15	CaffFiles/sada.caff
+29-11-2020 14:02:17	Logging started
+
+29-11-2020 14:02:17	File name= 
+29-11-2020 14:02:17	CaffFiles/erte.caff
+29-11-2020 14:02:19	Logging started
+
+29-11-2020 14:02:19	File name= 
+29-11-2020 14:02:19	CaffFiles/asdaads.caff
+29-11-2020 14:02:20	Logging started
+
+29-11-2020 14:02:20	File name= 
+29-11-2020 14:02:20	CaffFiles/wrwee.caff
+29-11-2020 14:02:22	Logging started
+
+29-11-2020 14:02:22	File name= 
+29-11-2020 14:02:22	CaffFiles/asd.caff
+29-11-2020 14:02:23	Logging started
+
+29-11-2020 14:02:23	File name= 
+29-11-2020 14:02:23	CaffFiles/asd.caff
+29-11-2020 14:02:35	Logging started
+
+29-11-2020 14:02:35	File name= 
+29-11-2020 14:02:35	CaffFiles/gdf.caff
+29-11-2020 14:02:46	Logging started
+
+29-11-2020 14:02:46	File name= 
+29-11-2020 14:02:46	CaffFiles/sada.caff
+29-11-2020 14:03:07	Logging started
+
+29-11-2020 14:03:07	File name= 
+29-11-2020 14:03:07	CaffFiles/gdf.caff
+29-11-2020 14:03:07	Logging started
+
+29-11-2020 14:03:07	File name= 
+29-11-2020 14:03:07	CaffFiles/sada.caff
+29-11-2020 14:03:13	Logging started
+
+29-11-2020 14:03:13	File name= 
+29-11-2020 14:03:13	CaffFiles/gdf.caff
+29-11-2020 14:03:14	Logging started
+
+29-11-2020 14:03:14	File name= 
+29-11-2020 14:03:14	CaffFiles/sada.caff
+29-11-2020 14:03:15	Logging started
+
+29-11-2020 14:03:15	File name= 
+29-11-2020 14:03:16	CaffFiles/erte.caff
+29-11-2020 14:03:17	Logging started
+
+29-11-2020 14:03:17	File name= 
+29-11-2020 14:03:17	CaffFiles/asdaads.caff
+29-11-2020 14:03:18	Logging started
+
+29-11-2020 14:03:18	File name= 
+29-11-2020 14:03:18	CaffFiles/wrwee.caff
+29-11-2020 14:03:19	Logging started
+
+29-11-2020 14:03:19	File name= 
+29-11-2020 14:03:19	CaffFiles/asd.caff
+29-11-2020 14:03:21	Logging started
+
+29-11-2020 14:03:21	File name= 
+29-11-2020 14:03:21	CaffFiles/asd.caff
+29-11-2020 14:03:28	Logging started
+
+29-11-2020 14:03:28	File name= 
+29-11-2020 14:03:28	CaffFiles/sada.caff
+29-11-2020 14:05:32	Logging started
+
+29-11-2020 14:05:32	File name= 
+29-11-2020 14:05:32	CaffFiles/gdf.caff
+29-11-2020 14:05:32	Logging started
+
+29-11-2020 14:05:32	File name= 
+29-11-2020 14:05:32	CaffFiles/sada.caff
+29-11-2020 14:07:45	Logging started
+
+29-11-2020 14:07:45	File name= 
+29-11-2020 14:07:45	CaffFiles/gdf.caff
+29-11-2020 14:07:45	Logging started
+
+29-11-2020 14:07:45	File name= 
+29-11-2020 14:07:45	CaffFiles/sada.caff
+29-11-2020 14:09:58	Logging started
+
+29-11-2020 14:09:58	Logging started
+
+29-11-2020 14:09:58	File name= 
+29-11-2020 14:09:58	CaffFiles/sada.caff
+29-11-2020 14:09:58	File name= 
+29-11-2020 14:09:58	CaffFiles/gdf.caff
+29-11-2020 14:10:00	Logging started
+
+29-11-2020 14:10:00	File name= 
+29-11-2020 14:10:00	CaffFiles/sada.caff
+29-11-2020 14:10:01	Logging started
+
+29-11-2020 14:10:01	File name= 
+29-11-2020 14:10:01	CaffFiles/erte.caff
+29-11-2020 14:10:02	Logging started
+
+29-11-2020 14:10:02	File name= 
+29-11-2020 14:10:02	CaffFiles/asdaads.caff
+29-11-2020 14:10:03	Logging started
+
+29-11-2020 14:10:03	File name= 
+29-11-2020 14:10:03	CaffFiles/wrwee.caff
+29-11-2020 14:10:05	Logging started
+
+29-11-2020 14:10:05	File name= 
+29-11-2020 14:10:05	CaffFiles/asd.caff
+29-11-2020 14:10:06	Logging started
+
+29-11-2020 14:10:06	File name= 
+29-11-2020 14:10:06	CaffFiles/asd.caff
+29-11-2020 14:10:28	Logging started
+
+29-11-2020 14:10:28	File name= 
+29-11-2020 14:10:28	Logging started
+
+29-11-2020 14:10:28	File name= 
+29-11-2020 14:10:28	CaffFiles/gdf.caff
+29-11-2020 14:10:28	CaffFiles/sada.caff
+29-11-2020 14:11:00	Logging started
+
+29-11-2020 14:11:00	File name= 
+29-11-2020 14:11:00	CaffFiles/gdf.caff
+29-11-2020 14:11:02	Logging started
+
+29-11-2020 14:11:02	File name= 
+29-11-2020 14:11:02	CaffFiles/sada.caff
+29-11-2020 14:11:03	Logging started
+
+29-11-2020 14:11:03	File name= 
+29-11-2020 14:11:03	CaffFiles/erte.caff
+29-11-2020 14:11:04	Logging started
+
+29-11-2020 14:11:04	File name= 
+29-11-2020 14:11:04	CaffFiles/asdaads.caff
+29-11-2020 14:11:05	Logging started
+
+29-11-2020 14:11:06	File name= 
+29-11-2020 14:11:06	CaffFiles/wrwee.caff
+29-11-2020 14:11:07	Logging started
+
+29-11-2020 14:11:07	File name= 
+29-11-2020 14:11:07	CaffFiles/asd.caff
+29-11-2020 14:11:08	Logging started
+
+29-11-2020 14:11:08	File name= 
+29-11-2020 14:11:08	CaffFiles/asd.caff
+29-11-2020 14:11:13	Logging started
+
+29-11-2020 14:11:13	File name= 
+29-11-2020 14:11:13	CaffFiles/sada.caff
+29-11-2020 14:15:53	Logging started
+
+29-11-2020 14:15:53	File name= 
+29-11-2020 14:15:54	CaffFiles/gdf.caff
+29-11-2020 14:15:55	Logging started
+
+29-11-2020 14:15:55	File name= 
+29-11-2020 14:15:55	CaffFiles/sada.caff
+29-11-2020 14:15:56	Logging started
+
+29-11-2020 14:15:56	File name= 
+29-11-2020 14:15:56	CaffFiles/gdf.caff
+29-11-2020 14:15:57	Logging started
+
+29-11-2020 14:15:57	File name= 
+29-11-2020 14:15:57	CaffFiles/sada.caff
+29-11-2020 14:15:59	Logging started
+
+29-11-2020 14:15:59	File name= 
+29-11-2020 14:15:59	CaffFiles/erte.caff
+29-11-2020 14:16:01	Logging started
+
+29-11-2020 14:16:01	File name= 
+29-11-2020 14:16:01	CaffFiles/asdaads.caff
+29-11-2020 14:16:02	Logging started
+
+29-11-2020 14:16:02	File name= 
+29-11-2020 14:16:02	CaffFiles/wrwee.caff
+29-11-2020 14:16:04	Logging started
+
+29-11-2020 14:16:04	File name= 
+29-11-2020 14:16:04	CaffFiles/asd.caff
+29-11-2020 14:16:05	Logging started
+
+29-11-2020 14:16:05	File name= 
+29-11-2020 14:16:06	CaffFiles/asd.caff
+29-11-2020 14:16:12	Logging started
+
+29-11-2020 14:16:12	File name= 
+29-11-2020 14:16:12	CaffFiles/gdf.caff
+29-11-2020 14:16:14	Logging started
+
+29-11-2020 14:16:14	File name= 
+29-11-2020 14:16:14	CaffFiles/sada.caff
+29-11-2020 14:16:15	Logging started
+
+29-11-2020 14:16:15	File name= 
+29-11-2020 14:16:15	CaffFiles/erte.caff
+29-11-2020 14:16:17	Logging started
+
+29-11-2020 14:16:17	File name= 
+29-11-2020 14:16:17	CaffFiles/asdaads.caff
+29-11-2020 14:16:18	Logging started
+
+29-11-2020 14:16:18	File name= 
+29-11-2020 14:16:18	CaffFiles/wrwee.caff
+29-11-2020 14:16:19	Logging started
+
+29-11-2020 14:16:19	File name= 
+29-11-2020 14:16:19	CaffFiles/asd.caff
+29-11-2020 14:16:20	Logging started
+
+29-11-2020 14:16:20	File name= 
+29-11-2020 14:16:20	CaffFiles/asd.caff
+29-11-2020 14:17:13	Logging started
+
+29-11-2020 14:17:13	File name= 
+29-11-2020 14:17:14	CaffFiles/sada.caff
+29-11-2020 14:17:48	Logging started
+
+29-11-2020 14:17:48	File name= 
+29-11-2020 14:17:48	CaffFiles/sada.caff
+29-11-2020 14:17:48	Logging started
+
+29-11-2020 14:17:48	File name= 
+29-11-2020 14:17:48	CaffFiles/gdf.caff
+29-11-2020 14:17:50	Logging started
+
+29-11-2020 14:17:50	File name= 
+29-11-2020 14:17:50	CaffFiles/sada.caff
+29-11-2020 14:17:53	Logging started
+
+29-11-2020 14:17:53	File name= 
+29-11-2020 14:17:53	CaffFiles/erte.caff
+29-11-2020 14:17:55	Logging started
+
+29-11-2020 14:17:55	File name= 
+29-11-2020 14:17:55	CaffFiles/asdaads.caff
+29-11-2020 14:17:57	Logging started
+
+29-11-2020 14:17:57	File name= 
+29-11-2020 14:17:57	CaffFiles/wrwee.caff
+29-11-2020 14:17:58	Logging started
+
+29-11-2020 14:17:58	File name= 
+29-11-2020 14:17:58	CaffFiles/asd.caff
+29-11-2020 14:17:59	Logging started
+
+29-11-2020 14:17:59	File name= 
+29-11-2020 14:17:59	CaffFiles/asd.caff
+29-11-2020 17:33:10	Logging started
+
+29-11-2020 17:33:10	Logging started
+
+29-11-2020 17:33:10	File name= 
+29-11-2020 17:33:10	CaffFiles/gdf.caff
+29-11-2020 17:33:10	File name= 
+29-11-2020 17:33:10	CaffFiles/sada.caff
+29-11-2020 18:47:50	Logging started
+
+29-11-2020 18:47:50	File name= 
+29-11-2020 18:47:50	CaffFiles/sada.caff
+29-11-2020 18:47:50	File name= 
+29-11-2020 18:47:50	CaffFiles/gdf.caff
+29-11-2020 18:47:52	Logging started
+
+29-11-2020 18:47:52	File name= 
+29-11-2020 18:47:52	CaffFiles/sada.caff
+29-11-2020 18:47:53	Logging started
+
+29-11-2020 18:47:53	File name= 
+29-11-2020 18:47:53	CaffFiles/erte.caff
+29-11-2020 18:47:54	Logging started
+
+29-11-2020 18:47:55	File name= 
+29-11-2020 18:47:55	CaffFiles/asdaads.caff
+29-11-2020 18:47:56	Logging started
+
+29-11-2020 18:47:56	File name= 
+29-11-2020 18:47:56	CaffFiles/wrwee.caff
+29-11-2020 18:47:57	Logging started
+
+29-11-2020 18:47:57	File name= 
+29-11-2020 18:47:57	CaffFiles/asd.caff
+29-11-2020 18:47:57	Logging started
+
+29-11-2020 18:47:57	File name= 
+29-11-2020 18:47:57	CaffFiles/asd.caff
+29-11-2020 18:48:07	Logging started
+
+29-11-2020 18:48:07	Logging started
+
+29-11-2020 18:48:07	File name= 
+29-11-2020 18:48:07	CaffFiles/sada.caff
+29-11-2020 18:48:07	File name= 
+29-11-2020 18:48:07	CaffFiles/gdf.caff
+29-11-2020 18:48:08	Logging started
+
+29-11-2020 18:48:08	File name= 
+29-11-2020 18:48:08	CaffFiles/sada.caff
+29-11-2020 18:48:09	Logging started
+
+29-11-2020 18:48:09	File name= 
+29-11-2020 18:48:09	CaffFiles/erte.caff
+29-11-2020 18:48:10	Logging started
+
+29-11-2020 18:48:10	File name= 
+29-11-2020 18:48:10	CaffFiles/asdaads.caff
+29-11-2020 18:48:11	Logging started
+
+29-11-2020 18:48:11	File name= 
+29-11-2020 18:48:11	CaffFiles/wrwee.caff
+29-11-2020 18:48:12	Logging started
+
+29-11-2020 18:48:12	File name= 
+29-11-2020 18:48:12	CaffFiles/asd.caff
+29-11-2020 18:48:13	Logging started
+
+29-11-2020 18:48:13	File name= 
+29-11-2020 18:48:13	CaffFiles/asd.caff
+29-11-2020 21:21:18	Logging started
+
+29-11-2020 21:21:18	File name= 
+29-11-2020 21:21:18	CaffFiles/gdf.caff
+29-11-2020 21:21:19	Logging started
+
+29-11-2020 21:21:19	File name= 
+29-11-2020 21:21:19	CaffFiles/sada.caff
+29-11-2020 21:21:21	Logging started
+
+29-11-2020 21:21:21	File name= 
+29-11-2020 21:21:21	CaffFiles/erte.caff
+29-11-2020 21:21:23	Logging started
+
+29-11-2020 21:21:23	File name= 
+29-11-2020 21:21:23	CaffFiles/asdaads.caff
+29-11-2020 21:21:24	Logging started
+
+29-11-2020 21:21:24	File name= 
+29-11-2020 21:21:24	CaffFiles/wrwee.caff
+29-11-2020 21:21:26	Logging started
+
+29-11-2020 21:21:26	File name= 
+29-11-2020 21:21:26	CaffFiles/asd.caff
+29-11-2020 21:21:28	Logging started
+
+29-11-2020 21:21:28	File name= 
+29-11-2020 21:21:28	CaffFiles/asd.caff
+29-11-2020 21:21:30	Logging started
+
+29-11-2020 21:21:30	File name= 
+29-11-2020 21:21:30	CaffFiles/gdf.caff
+29-11-2020 21:21:31	Logging started
+
+29-11-2020 21:21:31	File name= 
+29-11-2020 21:21:31	CaffFiles/sada.caff
+29-11-2020 21:21:33	Logging started
+
+29-11-2020 21:21:33	File name= 
+29-11-2020 21:21:33	CaffFiles/erte.caff
+29-11-2020 21:21:34	Logging started
+
+29-11-2020 21:21:34	File name= 
+29-11-2020 21:21:34	CaffFiles/asdaads.caff
+29-11-2020 21:21:36	Logging started
+
+29-11-2020 21:21:36	File name= 
+29-11-2020 21:21:36	CaffFiles/wrwee.caff
+29-11-2020 21:21:37	Logging started
+
+29-11-2020 21:21:37	File name= 
+29-11-2020 21:21:37	CaffFiles/asd.caff
+29-11-2020 21:21:39	Logging started
+
+29-11-2020 21:21:39	File name= 
+29-11-2020 21:21:39	CaffFiles/asd.caff
+29-11-2020 21:21:42	Logging started
+
+29-11-2020 21:21:42	File name= 
+29-11-2020 21:21:42	CaffFiles/erte.caff
+29-11-2020 21:22:56	Logging started
+
+29-11-2020 21:22:56	Logging started
+
+29-11-2020 21:22:56	File name= 
+29-11-2020 21:22:56	CaffFiles/erte.caff
+29-11-2020 21:22:56	File name= 
+29-11-2020 21:22:56	CaffFiles/gdf.caff
+29-11-2020 21:28:19	Logging started
+
+29-11-2020 21:28:19	File name= 
+29-11-2020 21:28:19	CaffFiles/erte.caff
+29-11-2020 21:29:15	Logging started
+
+29-11-2020 21:29:15	File name= 
+29-11-2020 21:29:15	CaffFiles/gdf.caff
+29-11-2020 21:29:15	Logging started
+
+29-11-2020 21:29:15	File name= 
+29-11-2020 21:29:15	CaffFiles/erte.caff
+29-11-2020 21:29:36	Logging started
+
+29-11-2020 21:29:36	File name= 
+29-11-2020 21:29:36	CaffFiles/gdf.caff
+29-11-2020 21:29:36	Logging started
+
+29-11-2020 21:29:36	File name= 
+29-11-2020 21:29:36	CaffFiles/erte.caff
+29-11-2020 21:29:38	Logging started
+
+29-11-2020 21:29:38	File name= 
+29-11-2020 21:29:38	CaffFiles/sada.caff
+29-11-2020 21:29:40	Logging started
+
+29-11-2020 21:29:40	File name= 
+29-11-2020 21:29:40	CaffFiles/erte.caff
+29-11-2020 21:29:42	Logging started
+
+29-11-2020 21:29:42	File name= 
+29-11-2020 21:29:42	CaffFiles/asdaads.caff
+29-11-2020 21:29:44	Logging started
+
+29-11-2020 21:29:44	File name= 
+29-11-2020 21:29:44	CaffFiles/wrwee.caff
+29-11-2020 21:29:46	Logging started
+
+29-11-2020 21:29:46	File name= 
+29-11-2020 21:29:46	CaffFiles/asd.caff
+29-11-2020 21:29:47	Logging started
+
+29-11-2020 21:29:47	File name= 
+29-11-2020 21:29:47	CaffFiles/asd.caff
+29-11-2020 21:29:57	Logging started
+
+29-11-2020 21:29:57	File name= 
+29-11-2020 21:29:57	CaffFiles/gdf.caff
+29-11-2020 21:29:59	Logging started
+
+29-11-2020 21:29:59	File name= 
+29-11-2020 21:29:59	CaffFiles/sada.caff
+29-11-2020 21:30:00	Logging started
+
+29-11-2020 21:30:00	File name= 
+29-11-2020 21:30:00	CaffFiles/erte.caff
+29-11-2020 21:30:01	Logging started
+
+29-11-2020 21:30:01	File name= 
+29-11-2020 21:30:01	CaffFiles/asdaads.caff
+29-11-2020 21:30:02	Logging started
+
+29-11-2020 21:30:02	File name= 
+29-11-2020 21:30:02	CaffFiles/wrwee.caff
+29-11-2020 21:30:03	Logging started
+
+29-11-2020 21:30:03	File name= 
+29-11-2020 21:30:04	CaffFiles/asd.caff
+29-11-2020 21:30:05	Logging started
+
+29-11-2020 21:30:05	File name= 
+29-11-2020 21:30:05	CaffFiles/asd.caff
+29-11-2020 21:30:10	Logging started
+
+29-11-2020 21:30:10	File name= 
+29-11-2020 21:30:10	CaffFiles/sada.caff
+29-11-2020 21:30:32	Logging started
+
+29-11-2020 21:30:32	Logging started
+
+29-11-2020 21:30:32	File name= 
+29-11-2020 21:30:32	CaffFiles/gdf.caff
+29-11-2020 21:30:32	File name= 
+29-11-2020 21:30:32	CaffFiles/sada.caff
+29-11-2020 21:30:34	Logging started
+
+29-11-2020 21:30:34	File name= 
+29-11-2020 21:30:34	CaffFiles/sada.caff
+29-11-2020 21:30:36	Logging started
+
+29-11-2020 21:30:36	File name= 
+29-11-2020 21:30:36	CaffFiles/erte.caff
+29-11-2020 21:30:37	Logging started
+
+29-11-2020 21:30:37	File name= 
+29-11-2020 21:30:37	CaffFiles/asdaads.caff
+29-11-2020 21:30:39	Logging started
+
+29-11-2020 21:30:39	File name= 
+29-11-2020 21:30:40	CaffFiles/wrwee.caff
+29-11-2020 21:30:41	Logging started
+
+29-11-2020 21:30:41	File name= 
+29-11-2020 21:30:41	CaffFiles/asd.caff
+29-11-2020 21:30:42	Logging started
+
+29-11-2020 21:30:42	File name= 
+29-11-2020 21:30:42	CaffFiles/asd.caff
+29-11-2020 21:31:04	Logging started
+
+29-11-2020 21:31:04	Logging started
+
+29-11-2020 21:31:04	File name= 
+29-11-2020 21:31:04	CaffFiles/gdf.caff
+29-11-2020 21:31:04	File name= 
+29-11-2020 21:31:04	CaffFiles/sada.caff
+29-11-2020 21:31:18	Logging started
+
+29-11-2020 21:31:18	File name= 
+29-11-2020 21:31:18	Logging started
+
+29-11-2020 21:31:18	File name= 
+29-11-2020 21:31:18	CaffFiles/sada.caff
+29-11-2020 21:31:18	CaffFiles/gdf.caff
+29-11-2020 21:31:20	Logging started
+
+29-11-2020 21:31:20	File name= 
+29-11-2020 21:31:20	CaffFiles/sada.caff
+29-11-2020 21:31:22	Logging started
+
+29-11-2020 21:31:22	File name= 
+29-11-2020 21:31:22	CaffFiles/erte.caff
+29-11-2020 21:31:25	Logging started
+
+29-11-2020 21:31:25	File name= 
+29-11-2020 21:31:25	CaffFiles/asdaads.caff
+29-11-2020 21:31:26	Logging started
+
+29-11-2020 21:31:26	File name= 
+29-11-2020 21:31:27	CaffFiles/wrwee.caff
+29-11-2020 21:31:28	Logging started
+
+29-11-2020 21:31:28	File name= 
+29-11-2020 21:31:28	CaffFiles/asd.caff
+29-11-2020 21:31:29	Logging started
+
+29-11-2020 21:31:29	File name= 
+29-11-2020 21:31:29	CaffFiles/asd.caff
+29-11-2020 21:31:50	Logging started
+
+29-11-2020 21:31:50	File name= 
+29-11-2020 21:31:50	CaffFiles/gdf.caff
+29-11-2020 21:31:52	Logging started
+
+29-11-2020 21:31:52	File name= 
+29-11-2020 21:31:52	CaffFiles/sada.caff
+29-11-2020 21:31:53	Logging started
+
+29-11-2020 21:31:53	File name= 
+29-11-2020 21:31:53	CaffFiles/erte.caff
+29-11-2020 21:31:54	Logging started
+
+29-11-2020 21:31:54	File name= 
+29-11-2020 21:31:54	CaffFiles/asdaads.caff
+29-11-2020 21:31:56	Logging started
+
+29-11-2020 21:31:56	File name= 
+29-11-2020 21:31:56	CaffFiles/wrwee.caff
+29-11-2020 21:31:57	Logging started
+
+29-11-2020 21:31:57	File name= 
+29-11-2020 21:31:57	CaffFiles/asd.caff
+29-11-2020 21:31:58	Logging started
+
+29-11-2020 21:31:58	File name= 
+29-11-2020 21:31:58	CaffFiles/asd.caff
+29-11-2020 21:32:00	Logging started
+
+29-11-2020 21:32:00	File name= 
+29-11-2020 21:32:00	CaffFiles/sada.caff
+29-11-2020 21:37:16	Logging started
+
+29-11-2020 21:37:16	File name= 
+29-11-2020 21:37:16	CaffFiles/gdf.caff
+29-11-2020 21:37:17	Logging started
+
+29-11-2020 21:37:17	File name= 
+29-11-2020 21:37:17	CaffFiles/sada.caff
+29-11-2020 21:37:18	Logging started
+
+29-11-2020 21:37:19	File name= 
+29-11-2020 21:37:19	CaffFiles/erte.caff
+29-11-2020 21:37:20	Logging started
+
+29-11-2020 21:37:20	File name= 
+29-11-2020 21:37:20	CaffFiles/asdaads.caff
+29-11-2020 21:37:21	Logging started
+
+29-11-2020 21:37:21	File name= 
+29-11-2020 21:37:21	CaffFiles/wrwee.caff
+29-11-2020 21:37:22	Logging started
+
+29-11-2020 21:37:22	File name= 
+29-11-2020 21:37:22	CaffFiles/asd.caff
+29-11-2020 21:37:23	Logging started
+
+29-11-2020 21:37:23	File name= 
+29-11-2020 21:37:23	CaffFiles/asd.caff
+29-11-2020 21:38:48	Logging started
+
+29-11-2020 21:38:48	File name= 
+29-11-2020 21:38:48	CaffFiles/gdf.caff
+29-11-2020 21:38:49	Logging started
+
+29-11-2020 21:38:49	File name= 
+29-11-2020 21:38:49	CaffFiles/sada.caff
+29-11-2020 21:38:51	Logging started
+
+29-11-2020 21:38:51	File name= 
+29-11-2020 21:38:51	CaffFiles/erte.caff
+29-11-2020 21:38:52	Logging started
+
+29-11-2020 21:38:52	File name= 
+29-11-2020 21:38:52	CaffFiles/asdaads.caff
+29-11-2020 21:38:53	Logging started
+
+29-11-2020 21:38:53	File name= 
+29-11-2020 21:38:53	CaffFiles/wrwee.caff
+29-11-2020 21:38:54	Logging started
+
+29-11-2020 21:38:54	File name= 
+29-11-2020 21:38:54	CaffFiles/asd.caff
+29-11-2020 21:38:55	Logging started
+
+29-11-2020 21:38:55	File name= 
+29-11-2020 21:38:55	CaffFiles/asd.caff
+29-11-2020 21:59:45	Logging started
+
+29-11-2020 21:59:45	File name= 
+29-11-2020 21:59:45	CaffFiles/gdf.caff
+29-11-2020 21:59:46	Logging started
+
+29-11-2020 21:59:46	File name= 
+29-11-2020 21:59:46	CaffFiles/sada.caff
+29-11-2020 21:59:47	Logging started
+
+29-11-2020 21:59:47	File name= 
+29-11-2020 21:59:47	CaffFiles/erte.caff
+29-11-2020 21:59:49	Logging started
+
+29-11-2020 21:59:49	File name= 
+29-11-2020 21:59:49	CaffFiles/asdaads.caff
+29-11-2020 21:59:50	Logging started
+
+29-11-2020 21:59:50	File name= 
+29-11-2020 21:59:50	CaffFiles/wrwee.caff
+29-11-2020 21:59:51	Logging started
+
+29-11-2020 21:59:51	File name= 
+29-11-2020 21:59:51	CaffFiles/asd.caff
+29-11-2020 21:59:52	Logging started
+
+29-11-2020 21:59:52	File name= 
+29-11-2020 21:59:52	CaffFiles/asd.caff
+29-11-2020 22:00:03	Logging started
+
+29-11-2020 22:00:03	File name= 
+29-11-2020 22:00:03	CaffFiles/sada.caff
+29-11-2020 22:02:11	Logging started
+
+29-11-2020 22:02:11	File name= 
+29-11-2020 22:02:11	CaffFiles/gdf.caff
+29-11-2020 22:02:13	Logging started
+
+29-11-2020 22:02:13	File name= 
+29-11-2020 22:02:13	CaffFiles/sada.caff
+29-11-2020 22:02:14	Logging started
+
+29-11-2020 22:02:14	File name= 
+29-11-2020 22:02:14	CaffFiles/erte.caff
+29-11-2020 22:02:15	Logging started
+
+29-11-2020 22:02:15	File name= 
+29-11-2020 22:02:15	CaffFiles/asdaads.caff
+29-11-2020 22:02:16	Logging started
+
+29-11-2020 22:02:16	File name= 
+29-11-2020 22:02:16	CaffFiles/wrwee.caff
+29-11-2020 22:02:17	Logging started
+
+29-11-2020 22:02:17	File name= 
+29-11-2020 22:02:17	CaffFiles/asd.caff
+29-11-2020 22:02:18	Logging started
+
+29-11-2020 22:02:18	File name= 
+29-11-2020 22:02:19	CaffFiles/asd.caff
+29-11-2020 22:02:21	Logging started
+
+29-11-2020 22:02:21	File name= 
+29-11-2020 22:02:21	CaffFiles/sada.caff
+29-11-2020 22:03:16	Logging started
+
+29-11-2020 22:03:16	File name= 
+29-11-2020 22:03:16	CaffFiles/gdf.caff
+29-11-2020 22:03:17	Logging started
+
+29-11-2020 22:03:17	File name= 
+29-11-2020 22:03:17	CaffFiles/sada.caff
+29-11-2020 22:03:19	Logging started
+
+29-11-2020 22:03:19	File name= 
+29-11-2020 22:03:19	CaffFiles/erte.caff
+29-11-2020 22:03:20	Logging started
+
+29-11-2020 22:03:20	File name= 
+29-11-2020 22:03:20	CaffFiles/asdaads.caff
+29-11-2020 22:03:21	Logging started
+
+29-11-2020 22:03:21	File name= 
+29-11-2020 22:03:21	CaffFiles/wrwee.caff
+29-11-2020 22:03:22	Logging started
+
+29-11-2020 22:03:22	File name= 
+29-11-2020 22:03:22	CaffFiles/asd.caff
+29-11-2020 22:03:23	Logging started
+
+29-11-2020 22:03:24	File name= 
+29-11-2020 22:03:24	CaffFiles/asd.caff
+29-11-2020 22:03:25	Logging started
+
+29-11-2020 22:03:25	File name= 
+29-11-2020 22:03:25	CaffFiles/sada.caff
+29-11-2020 22:08:55	Logging started
+
+29-11-2020 22:08:55	File name= 
+29-11-2020 22:08:55	CaffFiles/gdf.caff
+29-11-2020 22:08:56	Logging started
+
+29-11-2020 22:08:56	File name= 
+29-11-2020 22:08:56	CaffFiles/sada.caff
+29-11-2020 22:08:58	Logging started
+
+29-11-2020 22:08:58	File name= 
+29-11-2020 22:08:58	CaffFiles/erte.caff
+29-11-2020 22:08:59	Logging started
+
+29-11-2020 22:08:59	File name= 
+29-11-2020 22:08:59	CaffFiles/asdaads.caff
+29-11-2020 22:09:00	Logging started
+
+29-11-2020 22:09:00	File name= 
+29-11-2020 22:09:00	CaffFiles/wrwee.caff
+29-11-2020 22:09:02	Logging started
+
+29-11-2020 22:09:02	File name= 
+29-11-2020 22:09:02	CaffFiles/asd.caff
+29-11-2020 22:09:04	Logging started
+
+29-11-2020 22:09:04	File name= 
+29-11-2020 22:09:04	CaffFiles/asd.caff
+29-11-2020 22:09:07	Logging started
+
+29-11-2020 22:09:07	File name= 
+29-11-2020 22:09:07	CaffFiles/sada.caff
+29-11-2020 22:11:56	Logging started
+
+29-11-2020 22:11:56	File name= 
+29-11-2020 22:11:56	CaffFiles/gdf.caff
+29-11-2020 22:11:58	Logging started
+
+29-11-2020 22:11:58	File name= 
+29-11-2020 22:11:58	CaffFiles/sada.caff
+29-11-2020 22:11:59	Logging started
+
+29-11-2020 22:11:59	File name= 
+29-11-2020 22:11:59	CaffFiles/erte.caff
+29-11-2020 22:12:00	Logging started
+
+29-11-2020 22:12:01	File name= 
+29-11-2020 22:12:01	CaffFiles/asdaads.caff
+29-11-2020 22:12:02	Logging started
+
+29-11-2020 22:12:02	File name= 
+29-11-2020 22:12:02	CaffFiles/wrwee.caff
+29-11-2020 22:12:04	Logging started
+
+29-11-2020 22:12:04	File name= 
+29-11-2020 22:12:04	CaffFiles/asd.caff
+29-11-2020 22:12:05	Logging started
+
+29-11-2020 22:12:05	File name= 
+29-11-2020 22:12:05	CaffFiles/asd.caff
+29-11-2020 22:12:08	Logging started
+
+29-11-2020 22:12:08	File name= 
+29-11-2020 22:12:08	CaffFiles/sada.caff
+29-11-2020 22:14:40	Logging started
+
+29-11-2020 22:14:40	File name= 
+29-11-2020 22:14:40	CaffFiles/gdf.caff
+29-11-2020 22:14:41	Logging started
+
+29-11-2020 22:14:41	File name= 
+29-11-2020 22:14:41	CaffFiles/sada.caff
+29-11-2020 22:14:42	Logging started
+
+29-11-2020 22:14:43	File name= 
+29-11-2020 22:14:43	CaffFiles/erte.caff
+29-11-2020 22:14:44	Logging started
+
+29-11-2020 22:14:44	File name= 
+29-11-2020 22:14:44	CaffFiles/asdaads.caff
+29-11-2020 22:14:46	Logging started
+
+29-11-2020 22:14:46	File name= 
+29-11-2020 22:14:46	CaffFiles/wrwee.caff
+29-11-2020 22:14:47	Logging started
+
+29-11-2020 22:14:47	File name= 
+29-11-2020 22:14:47	CaffFiles/asd.caff
+29-11-2020 22:14:49	Logging started
+
+29-11-2020 22:14:49	File name= 
+29-11-2020 22:14:49	CaffFiles/asd.caff
+29-11-2020 22:14:52	Logging started
+
+29-11-2020 22:14:52	File name= 
+29-11-2020 22:14:52	CaffFiles/sada.caff
+29-11-2020 22:16:51	Logging started
+
+29-11-2020 22:16:51	File name= 
+29-11-2020 22:16:51	CaffFiles/gdf.caff
+29-11-2020 22:16:52	Logging started
+
+29-11-2020 22:16:52	File name= 
+29-11-2020 22:16:52	CaffFiles/sada.caff
+29-11-2020 22:16:53	Logging started
+
+29-11-2020 22:16:53	File name= 
+29-11-2020 22:16:53	CaffFiles/erte.caff
+29-11-2020 22:16:54	Logging started
+
+29-11-2020 22:16:54	File name= 
+29-11-2020 22:16:54	CaffFiles/asdaads.caff
+29-11-2020 22:16:55	Logging started
+
+29-11-2020 22:16:55	File name= 
+29-11-2020 22:16:55	CaffFiles/wrwee.caff
+29-11-2020 22:16:56	Logging started
+
+29-11-2020 22:16:56	File name= 
+29-11-2020 22:16:56	CaffFiles/asd.caff
+29-11-2020 22:16:57	Logging started
+
+29-11-2020 22:16:57	File name= 
+29-11-2020 22:16:57	CaffFiles/asd.caff
+29-11-2020 22:17:00	Logging started
+
+29-11-2020 22:17:00	File name= 
+29-11-2020 22:17:00	CaffFiles/sada.caff
+29-11-2020 22:18:21	Logging started
+
+29-11-2020 22:18:21	File name= 
+29-11-2020 22:18:21	CaffFiles/gdf.caff
+29-11-2020 22:18:23	Logging started
+
+29-11-2020 22:18:23	File name= 
+29-11-2020 22:18:23	CaffFiles/sada.caff
+29-11-2020 22:18:24	Logging started
+
+29-11-2020 22:18:24	File name= 
+29-11-2020 22:18:24	CaffFiles/erte.caff
+29-11-2020 22:18:25	Logging started
+
+29-11-2020 22:18:25	File name= 
+29-11-2020 22:18:25	CaffFiles/asdaads.caff
+29-11-2020 22:18:26	Logging started
+
+29-11-2020 22:18:26	File name= 
+29-11-2020 22:18:26	CaffFiles/wrwee.caff
+29-11-2020 22:18:28	Logging started
+
+29-11-2020 22:18:28	File name= 
+29-11-2020 22:18:28	CaffFiles/asd.caff
+29-11-2020 22:18:29	Logging started
+
+29-11-2020 22:18:29	File name= 
+29-11-2020 22:18:29	CaffFiles/asd.caff
+29-11-2020 22:18:31	Logging started
+
+29-11-2020 22:18:31	File name= 
+29-11-2020 22:18:31	CaffFiles/sada.caff
+29-11-2020 22:18:45	Logging started
+
+29-11-2020 22:18:45	File name= 
+29-11-2020 22:18:45	CaffFiles/gdf.caff
+29-11-2020 22:18:47	Logging started
+
+29-11-2020 22:18:47	File name= 
+29-11-2020 22:18:47	CaffFiles/sada.caff
+29-11-2020 22:18:48	Logging started
+
+29-11-2020 22:18:48	File name= 
+29-11-2020 22:18:48	CaffFiles/erte.caff
+29-11-2020 22:18:49	Logging started
+
+29-11-2020 22:18:49	File name= 
+29-11-2020 22:18:49	CaffFiles/asdaads.caff
+29-11-2020 22:18:50	Logging started
+
+29-11-2020 22:18:50	File name= 
+29-11-2020 22:18:50	CaffFiles/wrwee.caff
+29-11-2020 22:18:51	Logging started
+
+29-11-2020 22:18:51	File name= 
+29-11-2020 22:18:51	CaffFiles/asd.caff
+29-11-2020 22:18:52	Logging started
+
+29-11-2020 22:18:52	File name= 
+29-11-2020 22:18:52	CaffFiles/asd.caff
+29-11-2020 22:18:54	Logging started
+
+29-11-2020 22:18:54	File name= 
+29-11-2020 22:18:55	CaffFiles/sada.caff
+29-11-2020 22:20:04	Logging started
+
+29-11-2020 22:20:04	File name= 
+29-11-2020 22:20:04	CaffFiles/gdf.caff
+29-11-2020 22:20:05	Logging started
+
+29-11-2020 22:20:05	File name= 
+29-11-2020 22:20:05	CaffFiles/sada.caff
+29-11-2020 22:20:06	Logging started
+
+29-11-2020 22:20:06	File name= 
+29-11-2020 22:20:06	CaffFiles/erte.caff
+29-11-2020 22:20:08	Logging started
+
+29-11-2020 22:20:08	File name= 
+29-11-2020 22:20:08	CaffFiles/asdaads.caff
+29-11-2020 22:20:09	Logging started
+
+29-11-2020 22:20:09	File name= 
+29-11-2020 22:20:09	CaffFiles/wrwee.caff
+29-11-2020 22:20:10	Logging started
+
+29-11-2020 22:20:10	File name= 
+29-11-2020 22:20:10	CaffFiles/asd.caff
+29-11-2020 22:20:11	Logging started
+
+29-11-2020 22:20:11	File name= 
+29-11-2020 22:20:11	CaffFiles/asd.caff
+29-11-2020 22:20:13	Logging started
+
+29-11-2020 22:20:13	File name= 
+29-11-2020 22:20:13	CaffFiles/sada.caff
+29-11-2020 22:20:33	Logging started
+
+29-11-2020 22:20:33	File name= 
+29-11-2020 22:20:33	CaffFiles/gdf.caff
+29-11-2020 22:20:34	Logging started
+
+29-11-2020 22:20:34	File name= 
+29-11-2020 22:20:34	CaffFiles/sada.caff
+29-11-2020 22:20:36	Logging started
+
+29-11-2020 22:20:36	File name= 
+29-11-2020 22:20:36	CaffFiles/erte.caff
+29-11-2020 22:20:37	Logging started
+
+29-11-2020 22:20:37	File name= 
+29-11-2020 22:20:37	CaffFiles/asdaads.caff
+29-11-2020 22:20:38	Logging started
+
+29-11-2020 22:20:38	File name= 
+29-11-2020 22:20:38	CaffFiles/wrwee.caff
+29-11-2020 22:20:39	Logging started
+
+29-11-2020 22:20:39	File name= 
+29-11-2020 22:20:39	CaffFiles/asd.caff
+29-11-2020 22:20:41	Logging started
+
+29-11-2020 22:20:41	File name= 
+29-11-2020 22:20:41	CaffFiles/asd.caff
+29-11-2020 22:20:44	Logging started
+
+29-11-2020 22:20:44	File name= 
+29-11-2020 22:20:44	CaffFiles/sada.caff
+29-11-2020 22:28:05	Logging started
+
+29-11-2020 22:28:05	File name= 
+29-11-2020 22:28:05	CaffFiles/gdf.caff
+29-11-2020 22:28:07	Logging started
+
+29-11-2020 22:28:07	File name= 
+29-11-2020 22:28:07	CaffFiles/sada.caff
+29-11-2020 22:28:08	Logging started
+
+29-11-2020 22:28:08	File name= 
+29-11-2020 22:28:08	CaffFiles/erte.caff
+29-11-2020 22:28:10	Logging started
+
+29-11-2020 22:28:10	File name= 
+29-11-2020 22:28:10	CaffFiles/asdaads.caff
+29-11-2020 22:28:11	Logging started
+
+29-11-2020 22:28:11	File name= 
+29-11-2020 22:28:11	CaffFiles/wrwee.caff
+29-11-2020 22:28:12	Logging started
+
+29-11-2020 22:28:13	File name= 
+29-11-2020 22:28:13	CaffFiles/asd.caff
+29-11-2020 22:28:14	Logging started
+
+29-11-2020 22:28:14	File name= 
+29-11-2020 22:28:14	CaffFiles/asd.caff
+29-11-2020 22:28:15	Logging started
+
+29-11-2020 22:28:15	File name= 
+29-11-2020 22:28:15	CaffFiles/sada.caff
+29-11-2020 22:29:32	Logging started
+
+29-11-2020 22:29:32	File name= 
+29-11-2020 22:29:32	CaffFiles/gdf.caff
+29-11-2020 22:29:34	Logging started
+
+29-11-2020 22:29:34	File name= 
+29-11-2020 22:29:34	CaffFiles/sada.caff
+29-11-2020 22:29:35	Logging started
+
+29-11-2020 22:29:35	File name= 
+29-11-2020 22:29:35	CaffFiles/erte.caff
+29-11-2020 22:29:36	Logging started
+
+29-11-2020 22:29:36	File name= 
+29-11-2020 22:29:36	CaffFiles/asdaads.caff
+29-11-2020 22:29:38	Logging started
+
+29-11-2020 22:29:38	File name= 
+29-11-2020 22:29:38	CaffFiles/wrwee.caff
+29-11-2020 22:29:39	Logging started
+
+29-11-2020 22:29:39	File name= 
+29-11-2020 22:29:39	CaffFiles/asd.caff
+29-11-2020 22:29:40	Logging started
+
+29-11-2020 22:29:40	File name= 
+29-11-2020 22:29:40	CaffFiles/asd.caff
+29-11-2020 22:29:42	Logging started
+
+29-11-2020 22:29:42	File name= 
+29-11-2020 22:29:42	CaffFiles/sada.caff
+29-11-2020 22:31:15	Logging started
+
+29-11-2020 22:31:15	File name= 
+29-11-2020 22:31:15	CaffFiles/gdf.caff
+29-11-2020 22:31:17	Logging started
+
+29-11-2020 22:31:17	File name= 
+29-11-2020 22:31:17	CaffFiles/sada.caff
+29-11-2020 22:31:18	Logging started
+
+29-11-2020 22:31:18	File name= 
+29-11-2020 22:31:18	CaffFiles/erte.caff
+29-11-2020 22:31:19	Logging started
+
+29-11-2020 22:31:19	File name= 
+29-11-2020 22:31:19	CaffFiles/asdaads.caff
+29-11-2020 22:31:21	Logging started
+
+29-11-2020 22:31:21	File name= 
+29-11-2020 22:31:21	CaffFiles/wrwee.caff
+29-11-2020 22:31:22	Logging started
+
+29-11-2020 22:31:22	File name= 
+29-11-2020 22:31:22	CaffFiles/asd.caff
+29-11-2020 22:31:23	Logging started
+
+29-11-2020 22:31:23	File name= 
+29-11-2020 22:31:23	CaffFiles/asd.caff
+29-11-2020 22:31:25	Logging started
+
+29-11-2020 22:31:25	File name= 
+29-11-2020 22:31:25	CaffFiles/sada.caff
+29-11-2020 22:31:31	Logging started
+
+29-11-2020 22:31:31	File name= 
+29-11-2020 22:31:31	CaffFiles/gdf.caff
+29-11-2020 22:31:32	Logging started
+
+29-11-2020 22:31:32	File name= 
+29-11-2020 22:31:32	CaffFiles/sada2.caff
+29-11-2020 22:31:33	Logging started
+
+29-11-2020 22:31:33	File name= 
+29-11-2020 22:31:33	CaffFiles/erte.caff
+29-11-2020 22:31:35	Logging started
+
+29-11-2020 22:31:35	File name= 
+29-11-2020 22:31:35	CaffFiles/asdaads.caff
+29-11-2020 22:31:36	Logging started
+
+29-11-2020 22:31:36	File name= 
+29-11-2020 22:31:36	CaffFiles/wrwee.caff
+29-11-2020 22:31:37	Logging started
+
+29-11-2020 22:31:37	File name= 
+29-11-2020 22:31:37	CaffFiles/asd.caff
+29-11-2020 22:31:38	Logging started
+
+29-11-2020 22:31:38	File name= 
+29-11-2020 22:31:38	CaffFiles/asd.caff
+29-11-2020 22:31:52	Logging started
+
+29-11-2020 22:31:52	File name= 
+29-11-2020 22:31:52	CaffFiles/gdf.caff
+29-11-2020 22:31:53	Logging started
+
+29-11-2020 22:31:53	File name= 
+29-11-2020 22:31:53	CaffFiles/sada2.caff
+29-11-2020 22:31:55	Logging started
+
+29-11-2020 22:31:55	File name= 
+29-11-2020 22:31:55	CaffFiles/erte.caff
+29-11-2020 22:31:56	Logging started
+
+29-11-2020 22:31:56	File name= 
+29-11-2020 22:31:56	CaffFiles/asdaads.caff
+29-11-2020 22:31:57	Logging started
+
+29-11-2020 22:31:57	File name= 
+29-11-2020 22:31:57	CaffFiles/wrwee.caff
+29-11-2020 22:31:58	Logging started
+
+29-11-2020 22:31:58	File name= 
+29-11-2020 22:31:58	CaffFiles/asd.caff
+29-11-2020 22:31:59	Logging started
+
+29-11-2020 22:31:59	File name= 
+29-11-2020 22:31:59	CaffFiles/asd.caff
+29-11-2020 22:32:02	Logging started
+
+29-11-2020 22:32:02	File name= 
+29-11-2020 22:32:02	CaffFiles/sada2.caff
+29-11-2020 22:32:19	Logging started
+
+29-11-2020 22:32:19	File name= 
+29-11-2020 22:32:19	CaffFiles/gdf.caff
+29-11-2020 22:32:21	Logging started
+
+29-11-2020 22:32:21	File name= 
+29-11-2020 22:32:21	CaffFiles/sada23.caff
+29-11-2020 22:32:23	Logging started
+
+29-11-2020 22:32:23	File name= 
+29-11-2020 22:32:23	CaffFiles/erte.caff
+29-11-2020 22:32:24	Logging started
+
+29-11-2020 22:32:24	File name= 
+29-11-2020 22:32:24	CaffFiles/asdaads.caff
+29-11-2020 22:32:25	Logging started
+
+29-11-2020 22:32:25	File name= 
+29-11-2020 22:32:25	CaffFiles/wrwee.caff
+29-11-2020 22:32:26	Logging started
+
+29-11-2020 22:32:26	File name= 
+29-11-2020 22:32:26	CaffFiles/asd.caff
+29-11-2020 22:32:27	Logging started
+
+29-11-2020 22:32:27	File name= 
+29-11-2020 22:32:27	CaffFiles/asd.caff
+29-11-2020 22:33:05	Logging started
+
+29-11-2020 22:33:05	File name= 
+29-11-2020 22:33:05	CaffFiles/gdf.caff
+29-11-2020 22:33:06	Logging started
+
+29-11-2020 22:33:06	File name= 
+29-11-2020 22:33:06	CaffFiles/sada23.caff
+29-11-2020 22:33:07	Logging started
+
+29-11-2020 22:33:07	File name= 
+29-11-2020 22:33:07	CaffFiles/erte.caff
+29-11-2020 22:33:09	Logging started
+
+29-11-2020 22:33:09	File name= 
+29-11-2020 22:33:09	CaffFiles/asdaads.caff
+29-11-2020 22:33:10	Logging started
+
+29-11-2020 22:33:10	File name= 
+29-11-2020 22:33:10	CaffFiles/wrwee.caff
+29-11-2020 22:33:11	Logging started
+
+29-11-2020 22:33:11	File name= 
+29-11-2020 22:33:11	CaffFiles/asd.caff
+29-11-2020 22:33:13	Logging started
+
+29-11-2020 22:33:13	File name= 
+29-11-2020 22:33:13	CaffFiles/asd.caff
+29-11-2020 22:33:15	Logging started
+
+29-11-2020 22:33:15	File name= 
+29-11-2020 22:33:15	CaffFiles/sada23.caff

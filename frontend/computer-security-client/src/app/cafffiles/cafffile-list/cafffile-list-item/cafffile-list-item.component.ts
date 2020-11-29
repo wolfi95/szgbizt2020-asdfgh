@@ -23,7 +23,9 @@ export class CafffileListItemComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private service: CafffileService,
     private authService: AuthenticationService
-  ) { }
+  ) {
+    this.authService.user.subscribe(x => this.user = x);
+  }
 
   ngOnInit(): void {
     this.imageSource = this.sanitizer.bypassSecurityTrustResourceUrl(`data:image/png;base64, ${this.caffFile.imageData}`);
@@ -34,7 +36,12 @@ export class CafffileListItemComponent implements OnInit {
   }
 
   deleteCaffFile() {
-    this.service.deleteCaffFile(this.caffFile.id).subscribe();
+    this.service.deleteCaffFile(this.caffFile.id).subscribe(res => {
+      this.service.getAllCaffFiles().subscribe(res => {
+        this.service.cafffileListChanged.next(res);
+      });
+    }
+    );
   }
 
 }

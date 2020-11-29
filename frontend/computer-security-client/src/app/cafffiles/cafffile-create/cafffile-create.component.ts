@@ -46,7 +46,10 @@ export class CafffileCreateComponent implements OnInit {
       name: this.f.name.value,
       data: this.file as Blob
     }
-    this.caffFileService.uploadCaffFile(model).subscribe(_ => { 
+    this.caffFileService.uploadCaffFile(model).subscribe(res => { 
+      this.caffFileService.getAllCaffFiles().subscribe(res => {
+        this.caffFileService.cafffileListChanged.next(res);
+      });
       this.loading = false;
       this.router.navigate(['/caffs']);
     });

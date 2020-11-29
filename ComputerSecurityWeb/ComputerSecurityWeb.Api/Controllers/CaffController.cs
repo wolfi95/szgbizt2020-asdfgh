@@ -136,7 +136,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = Role.User)]
+        [Authorize(Roles = Role.Administrator)]
         [Route("getallusers")]
         [ProducesResponseType(typeof(List<EditUserDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

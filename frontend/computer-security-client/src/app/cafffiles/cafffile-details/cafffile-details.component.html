@@ -1,19 +1,58 @@
-<h1>{{caffFile?.name}}</h1>
-<button class="btn btn-success" (click)="downloadCaffFile()">Download CAFF file</button>
-<img [src]="imageSource" alt="Preview" class="img-fluid" style="max-height: 8rem;">
-<div *ngFor="let comment of comments">
-    <h4>{{comment.userName}}</h4>
-    <div>{{comment.content}}</div>
+<div class="wrapper fadeInDown">
+    <div id="formContent" style="padding: 10px">
+        <div class="container">
+            <div class="row" *ngIf="isAdmin">
+                <form [formGroup]="caffNameForm" (ngSubmit)="editName()" *ngIf="isAdmin">
+                    <div class="form-group">
+                        <input type="text" formControlName="name" class="form-control fadeIn second" />
+                    </div>
+                    <button type="submit" class="btn btn-info">Edit</button>
+                </form>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col" style="background-color: #c2d9f78c;">
+                <div class="row justify-content-center">
+                    <h1>{{caffFile?.name}}</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <img [src]="imageSource" alt="Preview" class="img-fluid" style="max-height: 8rem;">
+                </div>
+                <div class="row justify-content-center">
+                    <button class="btn btn-success" (click)="downloadCaffFile()">Download CAFF file</button>
+                </div>
+              </div>
+              <div class="col" style="margin: 10px">
+                <div class="row justify-content-center">
+                    <h4>Add new Comment</h4>
+                </div>
+                <div class="row justify-content-center">
+                    <form [formGroup]="caffForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <textarea formControlName="comment" class="form-control fadeIn second"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info">Add new Comment</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <h4 *ngIf=hasComment()>Comments</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                        <div *ngFor="let comment of comments">
+                            <div class="row justify-content-center">
+                            <div class="card bg-light mb-3 mx-auto" style="width: 26rem;">
+                                <div class="card-header">From: {{comment.userName}}</div>
+                                <div class="card-body">
+                                    <p class="card-text">{{comment.content}}</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+    </div>
 </div>
-<form [formGroup]="caffForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <textarea formControlName="comment" class="form-control fadeIn second"></textarea>
-    </div>
-    <button type="submit" class="btn btn-info">Add new Comment</button>
-</form>
-<form [formGroup]="caffNameForm" (ngSubmit)="editName()" *ngIf="isAdmin">
-    <div class="form-group">
-        <input type="text" formControlName="name" class="form-control fadeIn second"/>
-    </div>
-    <button type="submit" class="btn btn-info">Edit</button>
-</form>
