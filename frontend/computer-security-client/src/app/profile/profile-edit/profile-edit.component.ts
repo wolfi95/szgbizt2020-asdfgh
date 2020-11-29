@@ -20,10 +20,9 @@ export class ProfileEditComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     private autService: AuthenticationService,
-    private service: UserService
+    private service: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
