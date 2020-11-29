@@ -12,20 +12,14 @@ import { UserService } from '../core/services/user.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
-  
   user: IUserModel;
   faEdit = faEdit;
 
   constructor(
-    private userService: UserService,
     private autService: AuthenticationService  
-    ) {
-    
-  }
+    ) {}
 
   ngOnInit(): void {
     this.user = this.autService.userValue;
   }
-
 }

@@ -23,6 +23,8 @@ import { FilterPipe } from './shared/filter.pipe';
 import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 import { CafffileListItemComponent } from './cafffiles/cafffile-list/cafffile-list-item/cafffile-list-item.component';
 import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-start.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -30,6 +32,8 @@ import { CafffileStartComponent } from './cafffiles/cafffile-start/cafffile-star
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    MatTableModule,
+    MatButtonModule,
     FontAwesomeModule,
     FormsModule
   ],

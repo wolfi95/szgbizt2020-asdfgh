@@ -7,6 +7,11 @@ export interface ICaffFileListItemModel {
     
 }
 
+export interface ICaffEditModel {
+    name: string;
+    id: string;
+}
+
 export interface ICaffFileUploadModel {
     name: string;
     data: Blob;

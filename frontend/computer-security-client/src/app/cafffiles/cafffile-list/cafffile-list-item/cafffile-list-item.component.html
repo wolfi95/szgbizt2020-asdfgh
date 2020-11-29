@@ -8,5 +8,8 @@
                 <img [src]="imageSource" alt="Preview" class="img-fluid" style="max-height: 8rem;">
             </span>
         </div>
+        <div class="col-sm" *ngIf="isAdmin">
+            <button mat-button (click)="deleteCaffFile()">Delete</button>
+        </div>
     </div>
 </div>

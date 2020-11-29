@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ICaffFileUploadModel } from 'src/app/core/models/cafffile';
 import { CafffileService } from 'src/app/core/services/cafffile.service';
 
@@ -17,7 +18,8 @@ export class CafffileCreateComponent implements OnInit {
   
   constructor(
     private caffFileService: CafffileService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -44,9 +46,10 @@ export class CafffileCreateComponent implements OnInit {
       name: this.f.name.value,
       data: this.file as Blob
     }
-    console.log(model);
-    this.caffFileService.uploadCaffFile(model).subscribe(_ => { this.loading = false; } 
-    );
+    this.caffFileService.uploadCaffFile(model).subscribe(_ => { 
+      this.loading = false;
+      this.router.navigate(['/caffs']);
+    });
   }
 
 }

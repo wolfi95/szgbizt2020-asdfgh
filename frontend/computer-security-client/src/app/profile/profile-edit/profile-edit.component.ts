@@ -56,9 +56,10 @@ export class ProfileEditComponent implements OnInit {
       firstName: this.f.firstName.value,
       lastName: this.f.lastName.value,
     };
-    this.service.editUser(model).subscribe(_ =>
+    this.service.editUser(model).subscribe(_ => {
+      this.router.navigate(['/profile']);
       this.loading = false
-    );
+    });
   }
 
 }

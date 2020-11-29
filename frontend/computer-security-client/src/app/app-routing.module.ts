@@ -14,7 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/caffs', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   {
     path: 'caffs', component: CafffilesComponent, children: [
       { path: '', component: CafffileStartComponent },
@@ -24,16 +24,11 @@ const routes: Routes = [
 
     ]
   },
-  // {
-  //     path: '',
-  //     component: HomeComponent,
-  //     canActivate: [AuthGuard]
-  // },
   {
       path: 'admin',
       component: AdminComponent,
-      canActivate: [AuthGuard],
-      data: { roles: [Role.Admin] }
+      // canActivate: [AuthGuard],
+      // data: { roles: [Role.Admin] }
   },
   {
       path: 'login',

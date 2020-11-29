@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUserModel } from '../core/models/user';
+import { UserService } from '../core/services/user.service';
 
 @Component({
   templateUrl: './admin.component.html',
@@ -7,11 +8,20 @@ import { IUserModel } from '../core/models/user';
 })
 export class AdminComponent implements OnInit {
   loading = false;
-  users: IUserModel[] = [];
+  dataSource: IUserModel[] = [];
+  columnsToDisplay = ['email', 'firstName', 'lastName'];
 
-  constructor() { }
+  constructor(private service: UserService) { }
 
   ngOnInit() {
-      this.loading = true;
+    this.loading = true;
+    this.getAllUsers();
+  }
+
+  getAllUsers() {
+    this.service.getAllUsers().subscribe(res => {
+      this.dataSource = res;
+      this.loading = false;
+    })
   }
 }

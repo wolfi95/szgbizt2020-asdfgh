@@ -15,11 +15,10 @@ export class UserService {
     private getAllUserClient: CaffGetallusersClient,
     private getUserbyIdClient: CaffGetuserdatabyidClient,
     private editUserdataClient: CaffEdituserdataClient,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
   ) { }
 
   getAllUsers(): Observable<IUserEditModel[]> {
-
     return this.getAllUserClient.getAllUsers().pipe(map(
       (dtos: EditUserDto[]): IUserEditModel[] => this.dtosToModels(dtos)
     ));
@@ -43,6 +42,7 @@ export class UserService {
         id: dto.id,
         firstName: dto.firstName,
         lastName: dto.lastName,
+        email: dto.email,
         role: (<any>Role)[dto.role],
         token: this.authService.userValue.token
       };
@@ -75,7 +75,4 @@ export class UserService {
     };
     return user;
   }
-
-
-
 }

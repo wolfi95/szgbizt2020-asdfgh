@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CaffCafffilesClient, CaffHeader, CaffUploadClient, CaffCommentClient, FileParameter, CaffGetcafffilebyidClient, CaffFileDto, CaffDownloadClient } from 'src/app/shared/clients';
+import { CaffCafffilesClient, CaffHeader, CaffUploadClient, CaffCommentClient, FileParameter, CaffGetcafffilebyidClient, CaffFileDto, CaffDownloadClient, FileResponse, CaffDeletecaffClient, CaffEditcaffClient } from 'src/app/shared/clients';
 import { map } from 'rxjs/operators';
-import { ICaffFileDetails, ICaffFileListItemModel, ICaffFileUploadModel, IComment, ICommentCreate } from '../models/cafffile';
+import { ICaffEditModel, ICaffFileDetails, ICaffFileListItemModel, ICaffFileUploadModel, IComment, ICommentCreate } from '../models/cafffile';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -16,7 +16,8 @@ export class CafffileService {
     private caffDownloadClient: CaffDownloadClient,
     private caffCommentClient: CaffCommentClient,
     private caffGetbyidClient: CaffGetcafffilebyidClient,
-    private httpClient: HttpClient
+    private caffDeleteClient: CaffDeletecaffClient,
+    private caffEditClient: CaffEditcaffClient
   ) { }
 
   getAllCaffFiles(): Observable<ICaffFileListItemModel[]> {
@@ -35,7 +36,7 @@ export class CafffileService {
     return this.caffUploadClient.uploadCaffFile(name, fileParam);
   }
 
-  downloadCaffFile(id: string): Observable<void> {
+  downloadCaffFile(id: string): Observable<FileResponse> {
     return this.caffDownloadClient.downloadCaffFileById(id);
   }
 
@@ -45,10 +46,20 @@ export class CafffileService {
     return this.caffCommentClient.comment(message, id);
   }
 
+  editName(model: ICaffEditModel): Observable<void> {
+    const name = model.name;
+    const id = model.id;
+    return this.caffEditClient.editCaff(id, name);
+  }
+
   getCaffFilebyId(id: string): Observable<ICaffFileDetails> {
     return this.caffGetbyidClient.getFCaffFileById(id).pipe(map(
       (dto: CaffFileDto): ICaffFileDetails => this.caffDetailsToModel(dto)
     ));
+  }
+
+  deleteCaffFile(id: string): Observable<void> {
+    return this.caffDeleteClient.deleteCaffFile(id);
   }
 
   private caffDetailsToModel(dto: CaffFileDto): ICaffFileDetails {
