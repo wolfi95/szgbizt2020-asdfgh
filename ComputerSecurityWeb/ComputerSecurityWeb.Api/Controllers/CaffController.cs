@@ -1,5 +1,7 @@
-﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
+﻿using ComputerSecurityWeb.Api.Common;
+using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.Dtos.User;
+using ComputerSecurityWeb.Bll.DTOs.User;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -20,7 +22,7 @@ namespace ComputerSecurityWeb.Api.Controllers
     [Route("caff")]
     [Authorize]
     [ApiController]
-    public class CaffController : ControllerBase
+    public class CaffController : ComputerSecurityControllerBase
     {
         private readonly ICaffService caffService;
         private readonly UserManager<AppUser> userManager;
@@ -37,7 +39,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> UploadCaffFile(string fileName, IFormFile data)
+        public async Task<IActionResult> UploadCaffFile([FromQuery]string fileName, [FromForm] IFormFile data)
         {
             if (data.Length > 0)
             {
@@ -63,7 +65,7 @@ namespace ComputerSecurityWeb.Api.Controllers
 
         [HttpGet]
         [Route("download")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
         public async Task<IActionResult> DownloadCaffFileById(Guid caffFileId)
@@ -82,9 +84,9 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(typeof(List<CaffHeader>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> GetAllCaffFiles()
+        public async Task<List<CaffHeader>> GetAllCaffFiles()
         {
-            return new JsonResult(await this.caffService.GetAllCaffFiles());
+            return await caffService.GetAllCaffFiles();
         }
 
         [HttpPost]
@@ -92,7 +94,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> Comment(string message, Guid caffFileId)
+        public async Task<IActionResult> Comment([FromBody]string message, Guid caffFileId)
         {
             var userId = this.userManager.GetUserId(User);
             await this.caffService.AddComment(new Guid(userId), caffFileId, message);
@@ -105,7 +107,7 @@ namespace ComputerSecurityWeb.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> Comment(Guid caffId, string newName)
+        public async Task<IActionResult> EditCaff(Guid caffId, [FromBody] string newName)
         {
             await this.caffService.EditCaffFile(caffId, newName);
             return new OkResult();
@@ -144,16 +146,15 @@ namespace ComputerSecurityWeb.Api.Controllers
             return new JsonResult(await this.caffService.GetAllUsers());
         }
 
-        [HttpPost]
+        [HttpPut]
         [Authorize]
         [Route("edituserdata")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(UserDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<IActionResult> EditUser(EditUserDto dto)
+        public async Task<IActionResult> EditUser([FromBody] EditUserDto dto)
         {
-            await this.caffService.EditUserData(dto);
-            return new OkResult();
+            return new JsonResult(await this.caffService.EditUserData(dto));
         }
 
         [HttpGet]

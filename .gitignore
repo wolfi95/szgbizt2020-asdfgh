@@ -3,3 +3,17 @@
 **/[Dd]ebug/
 **/[Rr]elease/
 
+
+ComputerSecurityWeb/ComputerSecurityWeb.Api/bin/
+
+ComputerSecurityWeb/ComputerSecurityWeb.Api/obj/
+
+ComputerSecurityWeb/ComputerSecurityWeb.Bll/bin/
+
+ComputerSecurityWeb/ComputerSecurityWeb.Bll/obj/
+
+ComputerSecurityWeb/ComputerSecurityWeb.Dal/bin/
+
+ComputerSecurityWeb/ComputerSecurityWeb.Dal/obj/
+
+ComputerSecurityWeb/TSClientGenerator/obj/

@@ -1,0 +1,15 @@
+<div style="cursor: pointer" [routerLink]="[caffFile.id]" routerLinkActive="active" class="list-group-item">
+    <div class="row">
+        <div class="col-sm">
+            <h5 class="list-group-item-heading">{{caffFile.name}}</h5>
+        </div>
+        <div class="col-sm">
+            <span class="pull-right">
+                <img [src]="imageSource" alt="Preview" class="img-fluid" style="max-height: 8rem;">
+            </span>
+        </div>
+        <div class="col-sm" *ngIf="isAdmin">
+            <button mat-button (click)="deleteCaffFile()">Delete</button>
+        </div>
+    </div>
+</div>

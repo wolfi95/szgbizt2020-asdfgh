@@ -95,7 +95,6 @@ namespace ComputerSecurityWeb.Api
             {
                 opt.Filters.Add(typeof(ValidateDtoActionFilter));
             })
-              .AddJsonOptions(o => o.JsonSerializerOptions.PropertyNamingPolicy = null)
             .AddFluentValidation(opt =>
             {
                 opt.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
@@ -131,8 +130,8 @@ namespace ComputerSecurityWeb.Api
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins("https://localhost:44319")
-                .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+                builder.WithOrigins("http://localhost:4200")
+               .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
             });
 
             app.UseRouting();

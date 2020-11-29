@@ -1,5 +1,6 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.Dtos.User;
+using ComputerSecurityWeb.Bll.DTOs.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,7 +26,7 @@ namespace ComputerSecurityWeb.Bll.ServiceInterfaces
 
         Task<List<EditUserDto>> GetAllUsers();
 
-        Task EditUserData(EditUserDto dto);
+        Task<UserDTO> EditUserData(EditUserDto dto);
 
         Task<EditUserDto> GetUserData(Guid userId);
 

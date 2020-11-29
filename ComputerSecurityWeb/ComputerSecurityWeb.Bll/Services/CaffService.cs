@@ -1,5 +1,6 @@
 ﻿using ComputerSecurityWeb.Bll.Dtos.Caff;
 using ComputerSecurityWeb.Bll.Dtos.User;
+using ComputerSecurityWeb.Bll.DTOs.User;
 using ComputerSecurityWeb.Bll.ServiceInterfaces;
 using ComputerSecurityWeb.Dal;
 using ComputerSecurityWeb.Dal.Models;
@@ -208,7 +209,7 @@ namespace ComputerSecurityWeb.Bll.Services
             return userDtoList;
         }
 
-        public async Task EditUserData(EditUserDto dto)
+        public async Task<UserDTO> EditUserData(EditUserDto dto)
         {
             var user = await this.context.Users.SingleOrDefaultAsync(x => x.Id == dto.Id);
             if(user is null)
@@ -221,6 +222,14 @@ namespace ComputerSecurityWeb.Bll.Services
             user.Email = dto.Email;
 
             await this.context.SaveChangesAsync();
+            return new UserDTO
+            {
+                Id = user.Id,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Role = user.Role
+            };
         }
 
         public async Task<EditUserDto> GetUserData(Guid userId)

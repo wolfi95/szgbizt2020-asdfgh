@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TSClientGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "\"$(SolutionDir)src\\frontend\\web\\projects\\sales\\src\\app\\shared\\clients\\index.ts\" \"$(SolutionDir)src\\backend\\sales\\IFPS.Sales.API\\bin\\$(ConfigurationName)\\netcoreapp2.2\\IFPS.Sales.API.dll\" \"IFPS.Sales.API.Common.IFPSControllerBase\""
+    }
+  }
+}
