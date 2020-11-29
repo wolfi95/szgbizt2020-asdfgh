@@ -55,6 +55,51 @@ using std::ifstream;
 using std::ofstream;
 using std::ios;
 
+std::string getDateString() {
+    time_t rawtime;
+    struct tm* timeinfo;
+    char buffer[80];
+
+    time(&rawtime);
+    timeinfo = localtime(&rawtime);
+
+    strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
+    std::string datetimeString(buffer);
+
+    return datetimeString;
+}
+
+void logMessage(const char* msg) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s\n", datetimeString.c_str(), msg);
+    fclose(logFile);
+}
+
+void logMessage(const char* msg1, const char* msg2) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s%s\n", datetimeString.c_str(), msg1, msg2);
+    fclose(logFile);
+}
+
+void logMessage(const char* msg1, const char* msg2, const char* msg3, const char* msg4) {
+    FILE* logFile;
+    logFile = fopen(LOGFILE, "a");
+
+    std::string datetimeString = getDateString();
+
+    fprintf(logFile, "%s\t%s%s%s%s\n", datetimeString.c_str(), msg1, msg2, msg3, msg4);
+    fclose(logFile);
+}
+
+
 /*
     Returns the number of bytes needed for padding.
     BMP images can only handly horizontal rows when their size is the multiple of 4 bytes, so a padding might be necessary
@@ -265,6 +310,11 @@ void checkWidthAndHeight(int64_t width, int64_t height) {
         std::cerr << "width: " << width << ", height: " << height << endl;
         throw "Can not generate bmp file with the given CAFF's width and height dimensions.";
     }
+
+    if (width < 0 || height < 0) {
+        std::cerr << "width: " << width << ", height: " << height << endl;
+        throw "CAFF file has negative width or height";
+    }
 }
 
 /*
@@ -294,6 +344,8 @@ void parseCaff(const char* caffFileName, const char* bmpFileName)
         int64_t blockLength;
         fread_s(&blockLength, sizeof(int64_t), 1, caffFile);
         cout << "block length: " << blockLength << endl;
+        if (blockLength < 0)
+            throw "Invalid value: block length can not be negative.";
 
         //move to next block
         fseek_s(caffFile, blockLength, SEEK_CUR, caffFileSize);
@@ -367,50 +419,6 @@ void checkCaffName(const char* caffName) {
     if (!endsWith(caffName, ".caff")) {
         throw "input has to be a .caff file.";
     }
-}
-
-std::string getDateString() {
-    time_t rawtime;
-    struct tm* timeinfo;
-    char buffer[80];
-
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
-
-    strftime(buffer, sizeof(buffer), "%d-%m-%Y %H:%M:%S", timeinfo);
-    std::string datetimeString(buffer);
-
-    return datetimeString;
-}
-
-void logMessage(const char* msg) {
-    FILE* logFile;
-    logFile = fopen(LOGFILE, "a");
-
-    std::string datetimeString = getDateString();
-
-    fprintf(logFile, "%s\t%s\n", datetimeString.c_str(), msg);
-    fclose(logFile);
-}
-
-void logMessage(const char* msg1, const char* msg2) {
-    FILE* logFile;
-    logFile = fopen(LOGFILE, "a");
-
-    std::string datetimeString = getDateString();
-
-    fprintf(logFile, "%s\t%s%s\n", datetimeString.c_str(), msg1, msg2);
-    fclose(logFile);
-}
-
-void logMessage(const char* msg1, const char* msg2, const char* msg3, const char* msg4) {
-    FILE* logFile;
-    logFile = fopen(LOGFILE, "a");
-
-    std::string datetimeString = getDateString();
-
-    fprintf(logFile, "%s\t%s%s%s%s\n", datetimeString.c_str(), msg1, msg2, msg3, msg4);
-    fclose(logFile);
 }
 
 /*  Returns BMP file in a char*
