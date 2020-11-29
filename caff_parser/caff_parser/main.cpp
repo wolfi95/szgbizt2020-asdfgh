@@ -14,6 +14,7 @@ CAFF parser
 #include <stdlib.h>
 #include <math.h>
 #include <ctime>
+#include <string.h>
 
 
 #define CAFF_BLOCK_LENGTH_OFFSET 1
@@ -351,8 +352,8 @@ void checkArguments(int argc, char* argv[]) {
         throw "output has to be a .bmp file.";
     }
 
-    size_t inputFileNameLength = std::strlen(inputFileName);
-    size_t outputFileNameLength = std::strlen(outputFileName);
+    size_t inputFileNameLength = strlen(inputFileName);
+    size_t outputFileNameLength = strlen(outputFileName);
     cout << "Input file name length: " << inputFileNameLength << ", output File name length: " << outputFileNameLength << endl;
     if (inputFileNameLength < 6 || outputFileNameLength < 5) {
         throw "file names must be at least 1 character long (without the extension).";
@@ -360,19 +361,6 @@ void checkArguments(int argc, char* argv[]) {
     if (inputFileNameLength > 200 || outputFileNameLength > 200) {
         throw "file names must be at most 200 characters long.";
     }
-}
-
-char* readFileBytes(const char* fileName)
-{
-    FILE* f = fopen(fileName, "rb");
-    fseek(f, 0, SEEK_END);
-    long length = ftell(f);
-    char* fileBytes = (char*) malloc(length);   //TODO: free - lehet kell egy freePointer dll endpoint is
-    fseek(f, 0, SEEK_SET);
-    fread(fileBytes, 1, length, f);
-    fclose(f);
-
-    return fileBytes;
 }
 
 void checkCaffName(const char* caffName) {
@@ -441,9 +429,6 @@ void logMessage(const char* msg1, const char* msg2, const char* msg3, const char
         const char* outputFileName = "preview2.bmp";
 
         parseCaff(caffName, outputFileName);
-
-        long fileLength;    //TODO: remove
-        char* returnValue = readFileBytes(outputFileName);   //TODO: remove fileLength parameter?
     }
     catch (const char* msg) {
         logMessage("ERROR: ", msg);
